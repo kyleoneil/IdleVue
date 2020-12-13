@@ -1,0 +1,231 @@
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:17:16.999Z"}
+{"message":"POST /api/auth/login 200 162.282 ms - 322","level":"info","timestamp":"2020-12-13T15:17:20.570Z"}
+{"message":"GET /api/businesses/ 200 62.643 ms - 443","level":"info","timestamp":"2020-12-13T15:17:30.058Z"}
+{"message":"GET /api/branches/ 200 10.514 ms - 853","level":"info","timestamp":"2020-12-13T15:17:36.090Z"}
+{"status":404,"level":"error","message":"undefined","timestamp":"2020-12-13T15:17:40.584Z"}
+{"message":"{\"message\":\"API does not exist.\",\"statusCode\":404}","level":"error","timestamp":"2020-12-13T15:17:40.584Z"}
+{"status":404,"level":"error","message":"undefined","timestamp":"2020-12-13T15:17:40.585Z"}
+{"message":"GET /api/queues/1/currentqueue 404 6.868 ms - 33","level":"info","timestamp":"2020-12-13T15:17:40.586Z"}
+{"status":404,"level":"error","message":"undefined","timestamp":"2020-12-13T15:17:43.718Z"}
+{"message":"{\"message\":\"API does not exist.\",\"statusCode\":404}","level":"error","timestamp":"2020-12-13T15:17:43.719Z"}
+{"status":404,"level":"error","message":"undefined","timestamp":"2020-12-13T15:17:43.719Z"}
+{"message":"GET /api/queues/1/currentqueue 404 7.658 ms - 33","level":"info","timestamp":"2020-12-13T15:17:43.720Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-13T15:18:02.499Z"}
+{"message":"{\"message\":\"WHERE parameter \\\"service_id\\\" has invalid \\\"undefined\\\" value\",\"statusCode\":500}","level":"error","timestamp":"2020-12-13T15:18:02.500Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-13T15:18:02.500Z"}
+{"message":"GET /api/queues/currentqueue 500 7.799 ms - 76","level":"info","timestamp":"2020-12-13T15:18:02.501Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:18:19.640Z"}
+{"status":404,"level":"error","message":"undefined","timestamp":"2020-12-13T15:18:21.829Z"}
+{"message":"{\"message\":\"API does not exist.\",\"statusCode\":404}","level":"error","timestamp":"2020-12-13T15:18:21.830Z"}
+{"status":404,"level":"error","message":"undefined","timestamp":"2020-12-13T15:18:21.830Z"}
+{"message":"GET /api/queues/currentqueue 404 20.892 ms - 33","level":"info","timestamp":"2020-12-13T15:18:21.835Z"}
+{"message":"GET /api/queues/1/currentqueue 200 9.208 ms - 517","level":"info","timestamp":"2020-12-13T15:18:25.382Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:18:45.086Z"}
+{"message":"GET /api/queues/1/currentqueue 200 15.667 ms - 517","level":"info","timestamp":"2020-12-13T15:18:46.313Z"}
+{"message":"GET /api/branches/ 200 17.279 ms - 853","level":"info","timestamp":"2020-12-13T15:18:55.393Z"}
+{"message":"GET /api/businesses/ 200 7.067 ms - 443","level":"info","timestamp":"2020-12-13T15:18:58.488Z"}
+{"name":"SequelizeDatabaseError","parent":{"fatal":false,"errno":1327,"sqlState":"42000","code":"ER_SP_UNDECLARED_VAR","sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId` FROM `queues` AS `Queue` WHERE `Queue`.`deleted_at` IS NULL LIMIT NaN, 1;"},"original":{"fatal":false,"errno":1327,"sqlState":"42000","code":"ER_SP_UNDECLARED_VAR","sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId` FROM `queues` AS `Queue` WHERE `Queue`.`deleted_at` IS NULL LIMIT NaN, 1;"},"sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId` FROM `queues` AS `Queue` WHERE `Queue`.`deleted_at` IS NULL LIMIT NaN, 1;","level":"error","message":"undefined","timestamp":"2020-12-13T15:19:01.266Z"}
+{"message":"{\"message\":\"(conn=464, no: 1327, SQLState: 42000) Undeclared variable: NaN\\nsql: SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId` FROM `queues` AS `Queue` WHERE `Queue`.`deleted_at` IS NULL LIMIT NaN, 1; - parameters:[]\",\"statusCode\":500}","level":"error","timestamp":"2020-12-13T15:19:01.267Z"}
+{"name":"SequelizeDatabaseError","parent":{"fatal":false,"errno":1327,"sqlState":"42000","code":"ER_SP_UNDECLARED_VAR","sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId` FROM `queues` AS `Queue` WHERE `Queue`.`deleted_at` IS NULL LIMIT NaN, 1;"},"original":{"fatal":false,"errno":1327,"sqlState":"42000","code":"ER_SP_UNDECLARED_VAR","sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId` FROM `queues` AS `Queue` WHERE `Queue`.`deleted_at` IS NULL LIMIT NaN, 1;"},"sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId` FROM `queues` AS `Queue` WHERE `Queue`.`deleted_at` IS NULL LIMIT NaN, 1;","level":"error","message":"undefined","timestamp":"2020-12-13T15:19:01.268Z"}
+{"message":"GET /api/queues 500 13.757 ms - 349","level":"info","timestamp":"2020-12-13T15:19:01.269Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:20:38.318Z"}
+{"name":"SequelizeDatabaseError","parent":{"fatal":false,"errno":1327,"sqlState":"42000","code":"ER_SP_UNDECLARED_VAR","sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`service_id` = 10) LIMIT NaN, 1;"},"original":{"fatal":false,"errno":1327,"sqlState":"42000","code":"ER_SP_UNDECLARED_VAR","sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`service_id` = 10) LIMIT NaN, 1;"},"sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`service_id` = 10) LIMIT NaN, 1;","level":"error","message":"undefined","timestamp":"2020-12-13T15:20:39.898Z"}
+{"message":"{\"message\":\"(conn=466, no: 1327, SQLState: 42000) Undeclared variable: NaN\\nsql: SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`service_id` = 10) LIMIT NaN, 1; - parameters:[]\",\"statusCode\":500}","level":"error","timestamp":"2020-12-13T15:20:39.899Z"}
+{"name":"SequelizeDatabaseError","parent":{"fatal":false,"errno":1327,"sqlState":"42000","code":"ER_SP_UNDECLARED_VAR","sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`service_id` = 10) LIMIT NaN, 1;"},"original":{"fatal":false,"errno":1327,"sqlState":"42000","code":"ER_SP_UNDECLARED_VAR","sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`service_id` = 10) LIMIT NaN, 1;"},"sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`service_id` = 10) LIMIT NaN, 1;","level":"error","message":"undefined","timestamp":"2020-12-13T15:20:39.899Z"}
+{"message":"GET /api/queues 500 25.894 ms - 381","level":"info","timestamp":"2020-12-13T15:20:39.904Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:21:51.440Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:21:59.212Z"}
+{"name":"SequelizeDatabaseError","parent":{"fatal":false,"errno":1327,"sqlState":"42000","code":"ER_SP_UNDECLARED_VAR","sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`service_id` = 10) LIMIT NaN, 1;"},"original":{"fatal":false,"errno":1327,"sqlState":"42000","code":"ER_SP_UNDECLARED_VAR","sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`service_id` = 10) LIMIT NaN, 1;"},"sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`service_id` = 10) LIMIT NaN, 1;","level":"error","message":"undefined","timestamp":"2020-12-13T15:22:00.387Z"}
+{"message":"{\"message\":\"(conn=470, no: 1327, SQLState: 42000) Undeclared variable: NaN\\nsql: SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`service_id` = 10) LIMIT NaN, 1; - parameters:[]\",\"statusCode\":500}","level":"error","timestamp":"2020-12-13T15:22:00.388Z"}
+{"name":"SequelizeDatabaseError","parent":{"fatal":false,"errno":1327,"sqlState":"42000","code":"ER_SP_UNDECLARED_VAR","sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`service_id` = 10) LIMIT NaN, 1;"},"original":{"fatal":false,"errno":1327,"sqlState":"42000","code":"ER_SP_UNDECLARED_VAR","sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`service_id` = 10) LIMIT NaN, 1;"},"sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`service_id` = 10) LIMIT NaN, 1;","level":"error","message":"undefined","timestamp":"2020-12-13T15:22:00.388Z"}
+{"message":"GET /api/queues 500 22.615 ms - 381","level":"info","timestamp":"2020-12-13T15:22:00.393Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:22:15.529Z"}
+{"message":"GET /api/queues 200 18.487 ms - 1241","level":"info","timestamp":"2020-12-13T15:22:17.455Z"}
+{"message":"GET /api/services 200 11.201 ms - 930","level":"info","timestamp":"2020-12-13T15:22:29.956Z"}
+{"message":"GET /api/services/1 200 8.769 ms - 181","level":"info","timestamp":"2020-12-13T15:22:35.884Z"}
+{"message":"GET /api/services/ 200 13.121 ms - 930","level":"info","timestamp":"2020-12-13T15:22:38.499Z"}
+{"status":404,"level":"error","message":"undefined","timestamp":"2020-12-13T15:22:44.418Z"}
+{"message":"{\"message\":\"API does not exist.\",\"statusCode\":404}","level":"error","timestamp":"2020-12-13T15:22:44.418Z"}
+{"status":404,"level":"error","message":"undefined","timestamp":"2020-12-13T15:22:44.419Z"}
+{"message":"GET /api/services/4/queues 404 4.801 ms - 33","level":"info","timestamp":"2020-12-13T15:22:44.420Z"}
+{"status":404,"level":"error","message":"undefined","timestamp":"2020-12-13T15:23:05.324Z"}
+{"message":"{\"message\":\"API does not exist.\",\"statusCode\":404}","level":"error","timestamp":"2020-12-13T15:23:05.325Z"}
+{"status":404,"level":"error","message":"undefined","timestamp":"2020-12-13T15:23:05.326Z"}
+{"message":"GET /api/services/4/queue 404 7.827 ms - 33","level":"info","timestamp":"2020-12-13T15:23:05.327Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:24:18.054Z"}
+{"status":404,"level":"error","message":"undefined","timestamp":"2020-12-13T15:24:21.302Z"}
+{"message":"{\"message\":\"API does not exist.\",\"statusCode\":404}","level":"error","timestamp":"2020-12-13T15:24:21.302Z"}
+{"status":404,"level":"error","message":"undefined","timestamp":"2020-12-13T15:24:21.303Z"}
+{"message":"GET /api/services/4/queue 404 15.878 ms - 33","level":"info","timestamp":"2020-12-13T15:24:21.308Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-13T15:24:22.848Z"}
+{"message":"{\"message\":\"Services is not defined\",\"statusCode\":500}","level":"error","timestamp":"2020-12-13T15:24:22.849Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-13T15:24:22.849Z"}
+{"message":"GET /api/services/4/queues 500 7.713 ms - 37","level":"info","timestamp":"2020-12-13T15:24:22.851Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-13T15:24:24.322Z"}
+{"message":"{\"message\":\"Services is not defined\",\"statusCode\":500}","level":"error","timestamp":"2020-12-13T15:24:24.322Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-13T15:24:24.323Z"}
+{"message":"GET /api/services/4/queues 500 6.417 ms - 37","level":"info","timestamp":"2020-12-13T15:24:24.324Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:24:35.684Z"}
+{"message":"GET /api/services/4/queues 200 25.232 ms - 252","level":"info","timestamp":"2020-12-13T15:24:36.672Z"}
+{"message":"GET /api/services/1/queues 200 18.897 ms - 970","level":"info","timestamp":"2020-12-13T15:24:48.962Z"}
+{"message":"{\"message\":\"jwt expired\",\"statusCode\":401}","level":"error","timestamp":"2020-12-13T15:24:53.933Z"}
+{"name":"UnauthorizedError","message":"jwt expired","code":"invalid_token","status":401,"inner":{"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2020-12-13T15:01:09.000Z"},"level":"error","timestamp":"2020-12-13T15:24:53.934Z"}
+{"message":"GET /api/me/queues 401 5.030 ms - 25","level":"info","timestamp":"2020-12-13T15:24:53.937Z"}
+{"message":"GET /api/me/queues 200 10.534 ms - 433","level":"info","timestamp":"2020-12-13T15:24:58.486Z"}
+{"message":"GET /api/services/ 200 13.673 ms - 930","level":"info","timestamp":"2020-12-13T15:25:02.131Z"}
+{"message":"GET /api/services 200 5.908 ms - 930","level":"info","timestamp":"2020-12-13T15:25:04.022Z"}
+{"message":"GET /api/queues 200 9.416 ms - 1241","level":"info","timestamp":"2020-12-13T15:25:05.840Z"}
+{"message":"GET /api/queues/1/currentqueue 200 8.132 ms - 517","level":"info","timestamp":"2020-12-13T15:25:08.334Z"}
+{"message":"GET /api/branches/ 200 6.678 ms - 853","level":"info","timestamp":"2020-12-13T15:25:10.168Z"}
+{"message":"PATCH /api/queues/4?status=IN_QUEUE 403 15.401 ms - 62","level":"info","timestamp":"2020-12-13T15:25:12.117Z"}
+{"message":"PATCH /api/queues/4?status=IN_QUEUE 200 17.719 ms - 215","level":"info","timestamp":"2020-12-13T15:25:14.658Z"}
+{"message":"PATCH /api/queues/4?status=IN_QUEUE 200 4.622 ms - 215","level":"info","timestamp":"2020-12-13T15:25:32.139Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:26:25.274Z"}
+{"message":"PATCH /api/queues/4?status=IN_QUEUE 200 28.794 ms - 215","level":"info","timestamp":"2020-12-13T15:26:27.335Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:27:03.330Z"}
+{"message":"PATCH /api/queues/4?status=IN_QUEUE 200 26.717 ms - 215","level":"info","timestamp":"2020-12-13T15:27:06.400Z"}
+{"message":"PATCH /api/queues/3?status=IN_QUEUE 200 8.717 ms - 217","level":"info","timestamp":"2020-12-13T15:27:21.909Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:27:44.432Z"}
+{"message":"PATCH /api/queues/3?status=IN_QUEUE 200 23.558 ms - 217","level":"info","timestamp":"2020-12-13T15:27:49.630Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:28:15.156Z"}
+{"message":"PATCH /api/queues/3?status=IN_QUEUE 200 31.860 ms - 214","level":"info","timestamp":"2020-12-13T15:28:16.857Z"}
+{"message":"PATCH /api/queues/3?status=NO_SHOW 200 8.154 ms - 213","level":"info","timestamp":"2020-12-13T15:28:26.994Z"}
+{"status":404,"level":"error","message":"undefined","timestamp":"2020-12-13T15:28:38.158Z"}
+{"message":"{\"message\":\"API does not exist.\",\"statusCode\":404}","level":"error","timestamp":"2020-12-13T15:28:38.158Z"}
+{"status":404,"level":"error","message":"undefined","timestamp":"2020-12-13T15:28:38.159Z"}
+{"message":"PUT /api/businesses/3 404 7.301 ms - 33","level":"info","timestamp":"2020-12-13T15:28:38.160Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:29:09.129Z"}
+{"message":"PUT /api/businesses/3 400 26.261 ms - 38","level":"info","timestamp":"2020-12-13T15:29:10.262Z"}
+{"message":"PUT /api/businesses/3 200 23.191 ms - 51","level":"info","timestamp":"2020-12-13T15:29:16.310Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:29:29.347Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:29:42.685Z"}
+{"message":"PUT /api/businesses/3 400 33.811 ms - 38","level":"info","timestamp":"2020-12-13T15:30:57.156Z"}
+{"message":"PUT /api/branches/3 200 11.976 ms - 45","level":"info","timestamp":"2020-12-13T15:31:02.253Z"}
+{"message":"PUT /api/branches/3 200 19.397 ms - 45","level":"info","timestamp":"2020-12-13T15:31:11.480Z"}
+{"status":404,"level":"error","message":"undefined","timestamp":"2020-12-13T15:31:19.492Z"}
+{"message":"{\"message\":\"API does not exist.\",\"statusCode\":404}","level":"error","timestamp":"2020-12-13T15:31:19.492Z"}
+{"status":404,"level":"error","message":"undefined","timestamp":"2020-12-13T15:31:19.493Z"}
+{"message":"PATCH /api/services/1/nextqueue 404 5.804 ms - 33","level":"info","timestamp":"2020-12-13T15:31:19.494Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:31:52.591Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:32:02.238Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-13T15:32:04.010Z"}
+{"message":"{\"message\":\"Cannot read property 'id' of null\",\"statusCode\":500}","level":"error","timestamp":"2020-12-13T15:32:04.010Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-13T15:32:04.011Z"}
+{"message":"PATCH /api/services/1/nextqueue 500 18.112 ms - 47","level":"info","timestamp":"2020-12-13T15:32:04.014Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:32:32.845Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-13T15:32:34.077Z"}
+{"message":"{\"message\":\"Cannot read property 'id' of null\",\"statusCode\":500}","level":"error","timestamp":"2020-12-13T15:32:34.077Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-13T15:32:34.078Z"}
+{"message":"PATCH /api/services/1/nextqueue 500 19.148 ms - 47","level":"info","timestamp":"2020-12-13T15:32:34.081Z"}
+{"message":"PATCH /api/services/1/nextqueue 200 24.713 ms - 49","level":"info","timestamp":"2020-12-13T15:33:01.358Z"}
+{"message":"{\"message\":\"jwt expired\",\"statusCode\":401}","level":"error","timestamp":"2020-12-13T15:33:12.897Z"}
+{"name":"UnauthorizedError","message":"jwt expired","code":"invalid_token","status":401,"inner":{"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2020-12-13T14:04:50.000Z"},"level":"error","timestamp":"2020-12-13T15:33:12.898Z"}
+{"message":"PATCH /api/services/2 401 18.988 ms - 25","level":"info","timestamp":"2020-12-13T15:33:12.900Z"}
+{"status":404,"level":"error","message":"undefined","timestamp":"2020-12-13T15:33:19.758Z"}
+{"message":"{\"message\":\"API does not exist.\",\"statusCode\":404}","level":"error","timestamp":"2020-12-13T15:33:19.758Z"}
+{"status":404,"level":"error","message":"undefined","timestamp":"2020-12-13T15:33:19.759Z"}
+{"message":"PATCH /api/services/2 404 10.260 ms - 33","level":"info","timestamp":"2020-12-13T15:33:19.760Z"}
+{"message":"PUT /api/services/2 200 13.120 ms - 46","level":"info","timestamp":"2020-12-13T15:33:28.297Z"}
+{"message":"PUT /api/services/2 200 20.117 ms - 46","level":"info","timestamp":"2020-12-13T15:33:38.850Z"}
+{"message":"{\"message\":\"jwt expired\",\"statusCode\":401}","level":"error","timestamp":"2020-12-13T15:33:47.265Z"}
+{"name":"UnauthorizedError","message":"jwt expired","code":"invalid_token","status":401,"inner":{"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2020-12-13T14:04:50.000Z"},"level":"error","timestamp":"2020-12-13T15:33:47.266Z"}
+{"message":"DELETE /api/services/2 401 5.573 ms - 25","level":"info","timestamp":"2020-12-13T15:33:47.269Z"}
+{"message":"DELETE /api/services/2 200 15.617 ms - 43","level":"info","timestamp":"2020-12-13T15:33:50.668Z"}
+{"message":"DELETE /api/businesses/2 200 21.063 ms - 44","level":"info","timestamp":"2020-12-13T15:34:31.837Z"}
+{"message":"PATCH /api/queues/3?status=NO_SHOW 200 15.131 ms - 213","level":"info","timestamp":"2020-12-13T15:36:01.880Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:36:30.438Z"}
+{"message":"PATCH /api/queues/3?status=NO_SHOW 200 38.095 ms - 213","level":"info","timestamp":"2020-12-13T15:36:31.554Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:36:40.826Z"}
+{"message":"PATCH /api/queues/3?status=NO_SHOW 200 30.751 ms - 213","level":"info","timestamp":"2020-12-13T15:36:42.006Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:37:21.213Z"}
+{"message":"PATCH /api/queues/3?status=NO_SHOW 200 31.394 ms - 213","level":"info","timestamp":"2020-12-13T15:37:22.245Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:37:34.059Z"}
+{"message":"PATCH /api/queues/3?status=NO_SHOW 200 37.492 ms - 213","level":"info","timestamp":"2020-12-13T15:37:35.478Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:38:36.643Z"}
+{"message":"PATCH /api/queues/3?status=NO_SHOW 200 33.064 ms - 213","level":"info","timestamp":"2020-12-13T15:38:37.940Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:38:51.395Z"}
+{"message":"PATCH /api/queues/3?status=NO_SHOW 200 25.603 ms - 213","level":"info","timestamp":"2020-12-13T15:38:52.556Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:39:06.604Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:41:59.173Z"}
+{"message":"PATCH /api/queues/3?status=NO_SHOW 200 28.181 ms - 213","level":"info","timestamp":"2020-12-13T15:42:01.090Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:42:55.470Z"}
+{"message":"PATCH /api/queues/3?status=NO_SHOW 200 34.296 ms - 213","level":"info","timestamp":"2020-12-13T15:42:56.911Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:43:22.118Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-13T15:43:23.523Z"}
+{"message":"{\"message\":\"Association with alias \\\"teller_id\\\" does not exist on Queue\",\"statusCode\":500}","level":"error","timestamp":"2020-12-13T15:43:23.523Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-13T15:43:23.524Z"}
+{"message":"PATCH /api/queues/3?status=NO_SHOW 500 34.008 ms - 74","level":"info","timestamp":"2020-12-13T15:43:23.527Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:43:31.582Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-13T15:43:32.575Z"}
+{"message":"{\"message\":\"Association with alias \\\"tellerId\\\" does not exist on Queue\",\"statusCode\":500}","level":"error","timestamp":"2020-12-13T15:43:32.575Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-13T15:43:32.577Z"}
+{"message":"PATCH /api/queues/3?status=NO_SHOW 500 30.153 ms - 73","level":"info","timestamp":"2020-12-13T15:43:32.580Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:44:05.355Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-13T15:44:07.033Z"}
+{"message":"{\"message\":\"attr.includes is not a function\",\"statusCode\":500}","level":"error","timestamp":"2020-12-13T15:44:07.034Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-13T15:44:07.034Z"}
+{"message":"PATCH /api/queues/3?status=NO_SHOW 500 33.360 ms - 45","level":"info","timestamp":"2020-12-13T15:44:07.037Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-13T15:44:14.360Z"}
+{"message":"{\"message\":\"attr.includes is not a function\",\"statusCode\":500}","level":"error","timestamp":"2020-12-13T15:44:14.360Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-13T15:44:14.361Z"}
+{"message":"PATCH /api/queues/3?status=NO_SHOW 500 6.726 ms - 45","level":"info","timestamp":"2020-12-13T15:44:14.362Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:44:25.841Z"}
+{"name":"SequelizeDatabaseError","parent":{"fatal":false,"errno":1054,"sqlState":"42S22","code":"ER_BAD_FIELD_ERROR","sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `tellerId` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '3');"},"original":{"fatal":false,"errno":1054,"sqlState":"42S22","code":"ER_BAD_FIELD_ERROR","sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `tellerId` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '3');"},"sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `tellerId` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '3');","level":"error","message":"undefined","timestamp":"2020-12-13T15:44:27.453Z"}
+{"message":"{\"message\":\"(conn=853, no: 1054, SQLState: 42S22) Unknown column 'tellerId' in 'field list'\\nsql: SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `tellerId` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '3'); - parameters:[]\",\"statusCode\":500}","level":"error","timestamp":"2020-12-13T15:44:27.454Z"}
+{"name":"SequelizeDatabaseError","parent":{"fatal":false,"errno":1054,"sqlState":"42S22","code":"ER_BAD_FIELD_ERROR","sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `tellerId` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '3');"},"original":{"fatal":false,"errno":1054,"sqlState":"42S22","code":"ER_BAD_FIELD_ERROR","sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `tellerId` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '3');"},"sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `tellerId` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '3');","level":"error","message":"undefined","timestamp":"2020-12-13T15:44:27.454Z"}
+{"message":"PATCH /api/queues/3?status=NO_SHOW 500 32.981 ms - 390","level":"info","timestamp":"2020-12-13T15:44:27.459Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:44:36.794Z"}
+{"message":"PATCH /api/queues/3?status=NO_SHOW 200 32.071 ms - 230","level":"info","timestamp":"2020-12-13T15:44:37.733Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:44:48.364Z"}
+{"message":"PATCH /api/queues/3?status=NO_SHOW 200 28.664 ms - 230","level":"info","timestamp":"2020-12-13T15:44:50.903Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:45:54.524Z"}
+{"message":"PATCH /api/queues/3?status=NO_SHOW 200 34.121 ms - 230","level":"info","timestamp":"2020-12-13T15:45:56.322Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:46:03.520Z"}
+{"message":"PATCH /api/queues/3?status=NO_SHOW 200 29.366 ms - 230","level":"info","timestamp":"2020-12-13T15:46:19.271Z"}
+{"message":"PATCH /api/queues/3?status=IN_PROGRESS 200 16.259 ms - 234","level":"info","timestamp":"2020-12-13T15:46:25.063Z"}
+{"message":"PATCH /api/queues/3?status=IN_PROGRESS 200 11.746 ms - 234","level":"info","timestamp":"2020-12-13T15:47:19.899Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:47:32.649Z"}
+{"message":"PATCH /api/queues/3?status=IN_PROGRESS 200 33.579 ms - 234","level":"info","timestamp":"2020-12-13T15:47:33.808Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:47:41.054Z"}
+{"message":"PATCH /api/queues/3?status=IN_PROGRESS 200 36.414 ms - 234","level":"info","timestamp":"2020-12-13T15:47:42.143Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:47:50.072Z"}
+{"message":"PATCH /api/queues/3?status=IN_PROGRESS 200 37.971 ms - 234","level":"info","timestamp":"2020-12-13T15:47:51.725Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:48:10.322Z"}
+{"message":"PATCH /api/queues/3?status=IN_PROGRESS 200 31.954 ms - 234","level":"info","timestamp":"2020-12-13T15:48:11.741Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:48:22.793Z"}
+{"message":"PATCH /api/queues/3?status=IN_PROGRESS 200 30.165 ms - 234","level":"info","timestamp":"2020-12-13T15:48:24.189Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:52:41.271Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:56:24.043Z"}
+{"message":"PATCH /api/queues/3?status=IN_PROGRESS 200 43.736 ms - 234","level":"info","timestamp":"2020-12-13T15:56:25.712Z"}
+{"message":"PATCH /api/queues/3?status=IN_PROGRESS 200 15.152 ms - 234","level":"info","timestamp":"2020-12-13T15:57:23.633Z"}
+{"message":"PATCH /api/queues/3?status=NO_SHOW 200 16.064 ms - 234","level":"info","timestamp":"2020-12-13T15:57:32.053Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T15:59:52.524Z"}
+{"message":"GET /api/businesses/ 200 20.415 ms - 570","level":"info","timestamp":"2020-12-13T16:03:11.004Z"}
+{"message":"GET /api/branches/ 200 11.658 ms - 849","level":"info","timestamp":"2020-12-13T16:03:16.320Z"}
+{"message":"GET /api/queues/1/currentqueue 200 16.570 ms - 11","level":"info","timestamp":"2020-12-13T16:03:19.816Z"}
+{"message":"GET /api/queues/2/currentqueue 200 4.845 ms - 11","level":"info","timestamp":"2020-12-13T16:03:24.607Z"}
+{"message":"GET /api/queues/3/currentqueue 200 6.514 ms - 11","level":"info","timestamp":"2020-12-13T16:03:26.270Z"}
+{"message":"GET /api/queues/4/currentqueue 200 6.597 ms - 11","level":"info","timestamp":"2020-12-13T16:03:26.987Z"}
+{"message":"GET /api/queues/5/currentqueue 200 4.537 ms - 11","level":"info","timestamp":"2020-12-13T16:03:27.661Z"}
+{"message":"GET /api/queues 200 6.335 ms - 1232","level":"info","timestamp":"2020-12-13T16:03:40.451Z"}
+{"message":"GET /api/services/ 200 7.865 ms - 929","level":"info","timestamp":"2020-12-13T16:03:47.143Z"}
+{"message":"GET /api/services/1 200 7.755 ms - 181","level":"info","timestamp":"2020-12-13T16:03:50.605Z"}
+{"message":"GET /api/services/2 200 4.468 ms - 187","level":"info","timestamp":"2020-12-13T16:03:52.762Z"}
+{"message":"GET /api/services/1/queues 200 15.578 ms - 960","level":"info","timestamp":"2020-12-13T16:03:55.350Z"}
+{"message":"GET /api/me/queues 200 18.697 ms - 427","level":"info","timestamp":"2020-12-13T16:03:57.980Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T16:07:18.994Z"}
+{"message":"GET /api/services/1/queues 200 26.591 ms - 684","level":"info","timestamp":"2020-12-13T16:07:22.209Z"}
+{"message":"GET /api/services/2 200 29.558 ms - 148","level":"info","timestamp":"2020-12-13T16:07:24.234Z"}
+{"message":"GET /api/services 200 6.306 ms - 929","level":"info","timestamp":"2020-12-13T16:07:26.705Z"}
+{"message":"PUT /api/services/2 200 19.561 ms - 46","level":"info","timestamp":"2020-12-13T16:07:34.054Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T16:08:10.124Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T16:08:19.712Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T16:08:28.078Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T16:08:39.763Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T16:09:36.664Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-13T16:10:15.976Z"}
+{"message":"PUT /api/services/2 200 36.470 ms - 46","level":"info","timestamp":"2020-12-13T16:10:24.227Z"}
+{"message":"GET /api/services/1/queues 200 22.912 ms - 684","level":"info","timestamp":"2020-12-13T16:10:28.500Z"}
+{"message":"GET /api/services/2 200 14.317 ms - 148","level":"info","timestamp":"2020-12-13T16:10:30.273Z"}
+{"message":"GET /api/services 200 8.948 ms - 929","level":"info","timestamp":"2020-12-13T16:10:32.139Z"}
+{"message":"App exited gracefully","level":"info","timestamp":"2020-12-13T16:21:34.925Z"}
