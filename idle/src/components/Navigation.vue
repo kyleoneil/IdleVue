@@ -112,20 +112,13 @@
               >
             </v-list-item-content>
           </v-list-item>
+          <router-link to="/business" style="color: #a4cff4">
           <v-list-item>
-            <v-list-item-content class="ml-10 pl-4 list-item">
-              <router-link to="/business/edit" style="color: #a4cff4"
-                >Edit Business</router-link
-              >
+            <v-list-item-content class="ml-10 pl-4 list-item" style="color: #a4cff4">
+                Business List
             </v-list-item-content>
           </v-list-item>
-          <v-list-item>
-            <v-list-item-content class="ml-10 pl-4 list-item">
-              <router-link to="/business/delete" style="color: #a4cff4"
-                >Delete Business</router-link
-              >
-            </v-list-item-content>
-          </v-list-item>
+          </router-link>
         </v-list-group>
       </v-list-item-group>
     </v-list>
@@ -142,6 +135,9 @@
 <style scoped>
 .list-item {
   font-size: 14px;
+}
+a {
+  text-decoration: none;
 }
 </style>
 <script>
