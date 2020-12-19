@@ -131,6 +131,9 @@ export default {
                 this.message=error; 
             });
         }
+    },
+    beforeMount(){
+        this.$store.state.count=0;
     }
 }
 </script>

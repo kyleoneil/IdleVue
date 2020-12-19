@@ -8,7 +8,7 @@
       height="200px"
     ></v-img>
 
-    <v-card-title  style="color:#1c88e5;font-size: 1.5vw; ">
+    <v-card-title  style="color:#1c88e5;font-size: 1.4vw;  ">
       Top western road trips
     </v-card-title>
 
@@ -19,7 +19,7 @@
     <v-card-actions>
       <v-btn
         color="primary"
-        style="color:green;font-size: .6vw;margin-left:2%;margin-top:-3%;margin-bottom:2%;font-family:Arial"
+        style="font-size: .6vw;margin-left:2%;margin-top:-3%;margin-bottom:2%;font-family:Arial"
       >
         START
       </v-btn>

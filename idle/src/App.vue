@@ -1,10 +1,10 @@
-<template>
+<template >
 
   <v-app>
     <div>
       <router-view></router-view>
     </div>
-    <Navigation v-if=" this.$store.state.count==1"></Navigation>
+    <Navigation v-if=" this.$store.state.count==1" ></Navigation>
     
    <v-main>
     </v-main>
