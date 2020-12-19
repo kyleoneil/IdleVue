@@ -112,7 +112,7 @@ export default {
         email:"",
         password:"",
         step:1,
-        image:{ backgroundImage:"url(https://i.pinimg.com/originals/80/cf/b7/80cfb725b38d732dd1c26646eaf2d1e1.jpg)" },
+        image:{ backgroundImage:"url(https://i.pinimg.com/originals/80/cf/b7/80cfb725b38d732dd1c26646eaf2d1e1.jpg)"},
     }),
     props:{
         source: String
@@ -123,7 +123,10 @@ export default {
             console.log(data);
             axios.post('http://proxy101.callcruncher.com/idle/api/auth/login',data).then((data)=>{
                  console.log(data);
-                 this.$router.push({path:'/queueList',params:{data}});
+
+                 this.$store.commit('increment');
+               
+                 this.$router.push({path:'/queueList',params:{data}});            
             }).catch((error)=>{
                 this.message=error; 
             });

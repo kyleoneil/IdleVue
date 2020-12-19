@@ -1,12 +1,12 @@
 <template>
 
   <v-app>
-    <!-- <div>
+    <div>
       <router-view></router-view>
-    </div> -->
-    <Navigation></Navigation>
-    <v-main>
-      <router-view></router-view>
+    </div>
+    <Navigation v-if=" this.$store.state.count==1"></Navigation>
+    
+   <v-main>
     </v-main>
   </v-app>
 
@@ -18,14 +18,14 @@ import Navigation from './components/Navigation.vue';
 
 export default {
   name: 'App',
-
   components: {
     Navigation,
-  
   },
-
   data: () => ({
-    
   }),
+  
 };
 </script>
+
+
+              
