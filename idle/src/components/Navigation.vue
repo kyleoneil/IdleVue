@@ -20,17 +20,16 @@
             >
           </v-list-item-content>
         </v-list-item>
-
+        <router-link to="/queueList" >
         <v-list-item class="white--text">
           <v-list-item-icon class="ma-0 mt-2 mr-2">
             <v-icon small style="color: #d1e7f9">mdi-human-queue</v-icon>
           </v-list-item-icon>
-          <v-list-item-content>
-            <router-link to="/queue" style="color: #d1e7f9"
-              >Queue</router-link
-            ></v-list-item-content
-          >
+          <v-list-item-content style="color: #d1e7f9">
+              Queue
+          </v-list-item-content>
         </v-list-item>
+        </router-link>
 
         <v-list-group color="white">
           <template v-slot:activator>
