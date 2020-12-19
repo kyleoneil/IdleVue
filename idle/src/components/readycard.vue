@@ -9,7 +9,7 @@
     ></v-img>
 
     <v-card-title  style="color:#1c88e5;font-size: 1.4vw;  ">
-      Top western road trips
+      X-Ray
     </v-card-title>
 
     <v-card-subtitle style="margin-top:1%">
@@ -20,7 +20,8 @@
       <v-btn
         color="primary"
         style="font-size: .6vw;margin-left:2%;margin-top:-3%;margin-bottom:2%;font-family:Arial"
-      >
+        v-on:click="xd2"
+        >
         START
       </v-btn>
 
@@ -51,5 +52,21 @@
     data: () => ({
       show: false,
     }),
+    props:{
+      data:{
+        type: Boolean,
+      }
+    },
+    methods:{
+      xd2: function(){
+        this.$emit('update:data',!this.data);
+      }
+    },
+    computed:{
+      xd: function(){
+        this.xd2();
+        return false;
+      }
+    }
   }
 </script>

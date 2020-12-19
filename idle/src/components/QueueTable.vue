@@ -4,7 +4,7 @@
     
     </div>
     <template>
-      <div>
+      <div style="max-width:80%;margin-left:10%">
         <v-data-table
           :headers="headers"
           :items="desserts"
@@ -19,7 +19,7 @@
 </template>
 <script>
 export default {
-  name: "MgmtTable",
+  name: "queueTable",
   data() {
     return {
       search: "",
