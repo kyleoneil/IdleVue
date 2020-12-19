@@ -1,31 +1,31 @@
 <template>
 
-  <!-- <v-app> -->
+  <v-app>
     <div>
       <router-view></router-view>
     </div>
-    <!-- <Navigation></Navigation> -->
-    <!-- <v-main>
-      
+    <Navigation v-if=" this.$store.state.count==1"></Navigation>
+    
+   <v-main>
     </v-main>
-  </v-app> -->
+  </v-app>
 
 </template>
 
 <script>
-// import Navigation from './components/Navigation.vue';
+import Navigation from './components/Navigation.vue';
 
 
 export default {
   name: 'App',
-
   components: {
-    // Navigation,
-  
+    Navigation,
   },
-
   data: () => ({
-    
   }),
+  
 };
 </script>
+
+
+              
