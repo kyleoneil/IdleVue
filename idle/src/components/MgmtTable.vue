@@ -37,7 +37,7 @@
           :search="search"
           :custom-filter="filter"
         >
-          <template v-slot:item.controls="props">
+          <!-- <template v-slot:item.controls="props">
             <slot name="editBtn"></slot>
             <v-btn
               color="red"
@@ -48,7 +48,7 @@
               DELETE <v-icon small>mdi-delete-outline</v-icon>
             </v-btn>
             <slot name="serviceBtn"></slot>
-          </template>
+          </template> -->
         </v-data-table>
       </div>
     </template>
