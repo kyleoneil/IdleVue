@@ -42,11 +42,12 @@
             <v-btn
               color="red"
               small
+              class="ml-3 white--text"
               v-on:click="onButtonClick(props.item)"
-              class="white--text ml-3 mr-7"
             >
               DELETE <v-icon small>mdi-delete-outline</v-icon>
             </v-btn>
+            <slot name="serviceBtn"></slot>
           </template>
         </v-data-table>
       </div>
