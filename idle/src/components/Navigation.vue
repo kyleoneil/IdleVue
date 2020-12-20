@@ -1,4 +1,5 @@
 <template>
+
   <v-navigation-drawer color="rgb(20, 118, 210)" permanent app>
     <v-list-item>
       <v-list-item-content class="mt-2 ml-2">
@@ -9,6 +10,7 @@
     <v-divider></v-divider>
 
     <v-list dense nav>
+
       <v-list-item-group color="blue">
         <v-list-item class="white--text">
           <v-list-item-icon class="ma-0 mt-2 mr-2">
@@ -89,7 +91,14 @@ export default {
   data() {
     return {
       drawer: null,
+      role: null,
     };
   },
+  methods: {
+
+  },
+   beforeMount(){
+      
+    }
 };
 </script>

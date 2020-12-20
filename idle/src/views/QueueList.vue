@@ -31,7 +31,7 @@
                 </v-card-text>
                 <span></span>
                 <v-card-actions>
-                <v-list-item class="mt-5">
+                <v-list-item>
                     <v-list-item-avatar color="grey darken-3">
                     <v-img
                         class="elevation-6"
