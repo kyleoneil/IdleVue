@@ -2,7 +2,7 @@
   <v-container>
     <MgmtTable v-bind:data="data">
       <span class="white--text text-h5" slot="headerTitle">Branch</span>
-      <v-dialog v-model="add" persistent max-width="600px" slot="addBtn">
+      <v-dialog v-model="addBranch" persistent max-width="600px" slot="addBtn">
         <template v-slot:activator="{ on, attrs }">
           <v-btn sm="2" v-bind="attrs" v-on="on" dense class="ml-15" rounded>
             Add Branch
@@ -26,14 +26,14 @@
           </v-card-text>
           <v-card-actions class="pr-8 pb-8">
             <v-spacer></v-spacer>
-            <v-btn rounded class="px-8" v-on:click="add = false">
+            <v-btn rounded class="px-8" v-on:click="addBranch = false">
               Cancel
             </v-btn>
             <v-btn
               color="primary"
               class="px-10"
               rounded
-              v-on:click="add = false"
+              v-on:click="addBranch = false"
             >
               Add
             </v-btn>
@@ -41,7 +41,12 @@
         </v-card>
       </v-dialog>
 
-      <v-dialog v-model="edit" persistent max-width="600px" slot="editBtn">
+      <v-dialog
+        v-model="editBranch"
+        persistent
+        max-width="600px"
+        slot="editBtn"
+      >
         <template v-slot:activator="{ on, attrs }">
           <v-btn
             color="amber darken-2"
@@ -71,14 +76,14 @@
           </v-card-text>
           <v-card-actions class="pr-8 pb-8">
             <v-spacer></v-spacer>
-            <v-btn rounded class="px-8" v-on:click="edit = false">
+            <v-btn rounded class="px-8" v-on:click="editBranch = false">
               Cancel
             </v-btn>
             <v-btn
               color="primary"
               class="px-10"
               rounded
-              v-on:click="edit = false"
+              v-on:click="editBranch = false"
             >
               Save
             </v-btn>
@@ -116,7 +121,61 @@
           </v-toolbar>
           <v-card-text class="pb-0">
             <template>
-              <div>
+              <div class="ma-10 mx-15">
+                <v-dialog
+                  v-model="addService"
+                  persistent
+                  max-width="600px"
+                >
+                  <template v-slot:activator="{ on, attrs }">
+                    <v-btn
+                      sm="2"
+                      v-bind="attrs"
+                      v-on="on"
+                      dense
+                      class="mb-5"
+                      rounded
+                      color="primary"
+                    >
+                      Add Service
+                    </v-btn>
+                  </template>
+                  <v-card>
+                    <v-card-title>
+                      <span class="headline pl-3 pt-3">Add Service</span>
+                    </v-card-title>
+                    <v-card-text class="pb-0">
+                      <v-container>
+                        <v-text-field
+                          label="Name*"
+                          hide-details
+                          outlined
+                          dense
+                          required
+                        ></v-text-field>
+                      </v-container>
+                      <small class="ml-5">*indicates required field</small>
+                    </v-card-text>
+                    <v-card-actions class="pr-8 pb-8">
+                      <v-spacer></v-spacer>
+                      <v-btn
+                        rounded
+                        class="px-8"
+                        v-on:click="addService = false"
+                      >
+                        Cancel
+                      </v-btn>
+                      <v-btn
+                        color="primary"
+                        class="px-10"
+                        rounded
+                        v-on:click="addService = false"
+                      >
+                        Add
+                      </v-btn>
+                    </v-card-actions>
+                  </v-card>
+                </v-dialog>
                 <v-data-table
                   :headers="serviceHeaders"
                   :items="services"
@@ -126,7 +185,58 @@
                   :custom-filter="filter"
                 >
                   <template v-slot:item.controls="props">
-                    <slot name="editBtn"></slot>
+                    <v-dialog
+                      v-model="editService"
+                      persistent
+                      max-width="600px"
+                    >
+                      <template v-slot:activator="{ on, attrs }">
+                        <v-btn
+                          color="amber darken-2"
+                          small
+                          v-bind="attrs"
+                          v-on="on"
+                          class="white--text"
+                        >
+                          EDIT <v-icon small>mdi-pencil</v-icon>
+                        </v-btn>
+                      </template>
+                      <v-card>
+                        <v-card-title>
+                          <span class="headline pl-3 pt-3">Edit Service</span>
+                        </v-card-title>
+                        <v-card-text class="pb-0">
+                          <v-container>
+                            <v-text-field
+                              label="Name*"
+                              hide-details
+                              outlined
+                              dense
+                              required
+                            ></v-text-field>
+                          </v-container>
+                          <small class="ml-5">*indicates required field</small>
+                        </v-card-text>
+                        <v-card-actions class="pr-8 pb-8">
+                          <v-spacer></v-spacer>
+                          <v-btn
+                            rounded
+                            class="px-8"
+                            v-on:click="editService = false"
+                          >
+                            Cancel
+                          </v-btn>
+                          <v-btn
+                            color="primary"
+                            class="px-10"
+                            rounded
+                            v-on:click="editService = false"
+                          >
+                            Save
+                          </v-btn>
+                        </v-card-actions>
+                      </v-card>
+                    </v-dialog>
                     <v-btn
                       color="red"
                       small
@@ -157,8 +267,10 @@ export default {
   name: "ManageBranch",
   data() {
     return {
-      add: false,
-      edit: false,
+      addBranch: false,
+      editBranch: false,
+      editService: false,
+      addService: false,
       service: false,
       data: [
         {
@@ -186,15 +298,15 @@ export default {
           ],
         },
       ],
-      services : [
+      services: [
         {
-          name: "hi"
-        }
+          name: "hi",
+        },
       ],
       serviceHeaders: [
         { text: "Service", value: "name" },
         { text: "", value: "controls", sortable: false, align: "end" },
-      ]
+      ],
     };
   },
 };
