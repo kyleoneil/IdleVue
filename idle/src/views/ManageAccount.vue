@@ -14,76 +14,101 @@
           </v-card-title>
           <v-card-text class="pb-0">
             <v-container>
-              <v-text-field
-                label="Name*"
-                hide-details
-                outlined
-                dense
-                required
-                prepend-icon="mdi-account"
-                class="mb-5"
-              ></v-text-field>
-              <v-select
-                :items="branches"
-                label="Branch*"
-                outlined
-                hide-details
-                class="mb-2"
-                prepend-icon="mdi-source-branch"
-                dense
-              ></v-select>
-              <v-row>
-                <v-col sm="5">
-                  <v-select
-                    label="Month*"
-                    v-bind:items="months"
-                    item-text="text"
-                    item-value="value"
-                    outlined
-                    hide-details
-                    class="mb-2"
-                    dense
-                    prepend-icon="mdi-cake-variant"
-                  ></v-select>
-                </v-col>
-                <v-col sm="3">
-                  <v-select
-                    v-bind:items="days"
-                    label="Day*"
-                    outlined
-                    hide-details
-                    class="mb-2"
-                    dense
-                  ></v-select>
-                </v-col>
-                <v-col sm="4">
-                  <v-text-field
-                    label="Year*"
-                    hide-details
-                    outlined
-                    dense
-                    required
-                  ></v-text-field>
-                </v-col>
-              </v-row>
+              <v-form>
+                <v-row>
+                  <v-col sm="6" class="py-0 pr-2 ma-0">
+                    <v-text-field
+                      label="First Name*"
+                      v-model="input.firstname"
+                      hide-details
+                      outlined
+                      dense
+                      required
+                      prepend-icon="mdi-account"
+                      class="mb-5"
+                    ></v-text-field>
+                  </v-col>
+                  <v-col sm="6" class="py-0 pl-1 ma-0">
+                    <v-text-field
+                      label="Last Name*"
+                      v-model="input.lastname"
+                      hide-details
+                      outlined
+                      dense
+                      required
+                      class="mb-5"
+                    ></v-text-field>
+                  </v-col>
+                </v-row>
 
-              <v-text-field
-                label="Email*"
-                hide-details
-                outlined
-                dense
-                required
-                prepend-icon="mdi-email"
-                class="mb-5"
-              ></v-text-field>
-              <v-text-field
-                label="Password*"
-                hide-details
-                outlined
-                dense
-                prepend-icon="mdi-lock"
-                required
-              ></v-text-field>
+                <v-select
+                  :items="branches"
+                  v-model="input.branch"
+                  label="Branch*"
+                  outlined
+                  hide-details
+                  class="mb-2"
+                  prepend-icon="mdi-source-branch"
+                  dense
+                ></v-select>
+                <v-row>
+                  <v-col sm="5">
+                    <v-select
+                      label="Month*"
+                      v-model="input.month"
+                      v-bind:items="months"
+                      item-text="text"
+                      item-value="value"
+                      outlined
+                      hide-details
+                      class="mb-2"
+                      dense
+                      prepend-icon="mdi-cake-variant"
+                    ></v-select>
+                  </v-col>
+                  <v-col sm="3">
+                    <v-select
+                      v-bind:items="days"
+                      v-model="input.day"
+                      label="Day*"
+                      outlined
+                      hide-details
+                      class="mb-2"
+                      dense
+                    ></v-select>
+                  </v-col>
+                  <v-col sm="4">
+                    <v-text-field
+                      label="Year*"
+                      v-model="input.year"
+                      hide-details
+                      outlined
+                      dense
+                      required
+                    ></v-text-field>
+                  </v-col>
+                </v-row>
+
+                <v-text-field
+                  label="Email*"
+                  v-model="input.email"
+                  hide-details
+                  outlined
+                  dense
+                  required
+                  prepend-icon="mdi-email"
+                  class="mb-5"
+                ></v-text-field>
+                <v-text-field
+                  label="Password*"
+                  v-model="input.password"
+                  hide-details
+                  outlined
+                  dense
+                  prepend-icon="mdi-lock"
+                  required
+                ></v-text-field>
+              </v-form>
             </v-container>
           </v-card-text>
           <v-card-actions class="pr-8 pt-5 pb-8">
@@ -95,7 +120,7 @@
               color="primary"
               class="px-10"
               rounded
-              v-on:click="add = false"
+              v-on:click="addAccount(input)"
             >
               Add
             </v-btn>
@@ -217,6 +242,7 @@
 </style>
 <script>
 import MgmtTable from "../components/MgmtTable.vue";
+import axios from "axios";
 export default {
   components: { MgmtTable },
   name: "ManageAccount",
@@ -224,6 +250,17 @@ export default {
     return {
       add: false,
       edit: false,
+      input: {
+        firstname: "",
+        lastname: "",
+        branch: "",
+        month: "",
+        day: "",
+        year: "",
+        birthdate: "",
+        email: "",
+        password: "",
+      },
       data: [
         {
           business: [
@@ -278,15 +315,15 @@ export default {
         { text: "December", value: "12" },
       ],
       days: [
-        "1",
-        "2",
-        "3",
-        "4",
-        "5",
-        "6",
-        "7",
-        "8",
-        "9",
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
         "10",
         "11",
         "12",
@@ -311,6 +348,22 @@ export default {
         "31",
       ],
     };
+  },
+  methods: {
+    addAccount: function (input) {
+      console.log(input);
+      var date = input.month + "/" + input.day + "/" + input.year;
+      input.birthdate = date;
+      axios
+        .post("http://proxy101.callcruncher.com/idle/api/users", input)  //asa kuhaon ang data
+        .then((data) => {         //response if successful
+          console.log(data.data);
+        })
+        .catch((error) => {
+          console.log(error.response.data.message); //catches error
+        });
+      this.add = false;
+    },
   },
 };
 </script>

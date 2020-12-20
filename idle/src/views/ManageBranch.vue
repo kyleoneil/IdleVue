@@ -181,8 +181,6 @@
                   :items="services"
                   item-key="id"
                   class="elevation-1"
-                  :search="search"
-                  :custom-filter="filter"
                 >
                   <template v-slot:item.controls="props">
                     <v-dialog
