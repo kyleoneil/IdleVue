@@ -33,69 +33,27 @@
         </v-list-item>
         </router-link>
 
-        <v-list-group color="white">
-          <template v-slot:activator>
-            <v-list-item-icon class="ma-0 mt-2 mr-2">
-              <v-icon small style="color: #d1e7f9">mdi-source-branch</v-icon>
-            </v-list-item-icon>
-            <v-list-item-content style="color: #d1e7f9">
+        <router-link to="/branch" >
+        <v-list-item class="white--text">
+          <v-list-item-icon class="ma-0 mt-2 mr-2">
+            <v-icon small style="color: #d1e7f9">mdi-source-branch</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content style="color: #d1e7f9">
               Manage Branch
-            </v-list-item-content>
-          </template>
-          <v-list-item>
-            <v-list-item-content class="ml-10 pl-4 list-item">
-              <router-link to="/branch/add" style="color: #a4cff4"
-                >Add Branch</router-link
-              >
-            </v-list-item-content>
-          </v-list-item>
-          <v-list-item>
-            <v-list-item-content class="ml-10 pl-4 list-item">
-              <router-link to="/branch/edit" style="color: #a4cff4"
-                >Edit Branch</router-link
-              >
-            </v-list-item-content>
-          </v-list-item>
-          <v-list-item>
-            <v-list-item-content class="ml-10 pl-4 list-item">
-              <router-link to="/branch/delete" style="color: #a4cff4"
-                >Delete Branch</router-link
-              >
-            </v-list-item-content>
-          </v-list-item>
-        </v-list-group>
+          </v-list-item-content>
+        </v-list-item>
+        </router-link>
 
-        <v-list-group color="white">
-          <template v-slot:activator>
-            <v-list-item-icon class="ma-0 mt-2 mr-2">
-              <v-icon small style="color: #d1e7f9">mdi-account-group</v-icon>
-            </v-list-item-icon>
-            <v-list-item-content style="color: #d1e7f9">
+        <router-link to="/account" >
+        <v-list-item class="white--text">
+          <v-list-item-icon class="ma-0 mt-2 mr-2">
+            <v-icon small style="color: #d1e7f9">mdi-account-group</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content style="color: #d1e7f9">
               Manage Account
-            </v-list-item-content>
-          </template>
-          <v-list-item>
-            <v-list-item-content class="ml-10 pl-4 list-item">
-              <router-link to="/account/add" style="color: #a4cff4"
-                >Add Account</router-link
-              >
-            </v-list-item-content>
-          </v-list-item>
-          <v-list-item>
-            <v-list-item-content class="ml-10 pl-4 list-item">
-              <router-link to="/account/edit" style="color: #a4cff4"
-                >Edit Account</router-link
-              >
-            </v-list-item-content>
-          </v-list-item>
-          <v-list-item>
-            <v-list-item-content class="ml-10 pl-4 list-item">
-              <router-link to="/account/delete" style="color: #a4cff4"
-                >Delete Account</router-link
-              >
-            </v-list-item-content>
-          </v-list-item>
-        </v-list-group>
+          </v-list-item-content>
+        </v-list-item>
+        </router-link>
 
         <router-link to="/business" >
         <v-list-item class="white--text">
@@ -103,7 +61,7 @@
             <v-icon small style="color: #d1e7f9">mdi-domain</v-icon>
           </v-list-item-icon>
           <v-list-item-content style="color: #d1e7f9">
-              ManageBusiness
+              Manage Business
           </v-list-item-content>
         </v-list-item>
         </router-link>
