@@ -1,57 +1,86 @@
 <template>
   <v-container>
-    <v-container
-      rounded
-      class="ma-2 pa-6 pt-2 mt-6 pb-0 mb-0 px-9"
-      style="background: rgb(20, 118, 210)"
-    >
-      <v-row justify="center">
-        <v-col sm="9">
-          <h2 class="white--text text-h5">Business Management</h2>
-        </v-col>
-        <v-col sm="3">
-          <v-dialog v-model="dialog" persistent max-width="600px">
-            <template v-slot:activator="{ on, attrs }">
-              <v-btn
-                sm="2"
-                v-bind="attrs"
-                v-on="on"
+    <MgmtTable v-bind:data="data">
+      <span class="white--text text-h5" slot="headerTitle">Branch</span>
+      <v-dialog v-model="add" persistent max-width="600px" slot="addBtn">
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn sm="2" v-bind="attrs" v-on="on" dense class="ml-15" rounded>
+            Add Branch
+          </v-btn>
+        </template>
+        <v-card>
+          <v-card-title>
+            <span class="headline pl-3 pt-3">Add Branch</span>
+          </v-card-title>
+          <v-card-text class="pb-0">
+            <v-container>
+              <v-text-field
+                label="Name*"
+                hide-details
+                outlined
                 dense
-                class="ml-15"
-                rounded
-              >
-                Add Business
-              </v-btn>
-            </template>
+                required
+              ></v-text-field>
+            </v-container>
+            <small class="ml-5">*indicates required field</small>
+          </v-card-text>
+          <v-card-actions class="pr-8 pb-8">
+            <v-spacer></v-spacer>
+            <v-btn rounded class="px-8" v-on:click="add = false">
+              Cancel
+            </v-btn>
+            <v-btn
+              color="primary"
+              class="px-10"
+              rounded
+              v-on:click="add = false"
+            >
+              Add
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
+
+      <v-dialog v-model="edit" persistent max-width="600px" slot="editBtn">
+              <template v-slot:activator="{ on, attrs }">
+            <v-btn
+              color="amber darken-2"
+              small
+              v-bind="attrs"
+                v-on="on"
+              class="white--text"
+            >
+              EDIT <v-icon small>mdi-pencil</v-icon>
+            </v-btn>
+             </template>
             <v-card>
               <v-card-title>
-                <span class="headline">Add Business</span>
+                <span class="headline pl-3 pt-3">Edit Branch</span>
               </v-card-title>
-              <v-card-text>
+              <v-card-text class="pb-0">
                 <v-container>
                   <v-text-field
                     label="Name*"
                     hide-details
+                    outlined
+                    dense
                     required
                   ></v-text-field>
                 </v-container>
                 <small class="ml-5">*indicates required field</small>
               </v-card-text>
-              <v-card-actions>
+              <v-card-actions class="pr-8 pb-8">
                 <v-spacer></v-spacer>
-                <v-btn color="blue darken-1" text @click="dialog = false">
-                  Close
+                <v-btn rounded class="px-8" v-on:click="edit = false">
+                  Cancel
                 </v-btn>
-                <v-btn color="blue darken-1" text @click="dialog = false">
+                <v-btn color="primary" class="px-10" rounded v-on:click="edit = false">
                   Save
                 </v-btn>
               </v-card-actions>
             </v-card>
           </v-dialog>
-        </v-col>
-      </v-row>
-    </v-container>
-    <MgmtTable v-bind:data="data"> </MgmtTable>
+    </MgmtTable>
   </v-container>
 </template>
 
@@ -61,10 +90,11 @@
 import MgmtTable from "../components/MgmtTable.vue";
 export default {
   components: { MgmtTable },
-  name: "ManageBusiness",
+  name: "ManageBranch",
   data() {
     return {
-      dialog: false,
+      add: false,
+      edit: false,
       data: [
         {
           business: [
