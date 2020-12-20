@@ -17,7 +17,8 @@ const store = new Vuex.Store({
     storage: window.sessionStorage,
   })],
   state:{
-    count:0
+    count:0,
+    role:0,
   },
   mutations: {
     increment (state){

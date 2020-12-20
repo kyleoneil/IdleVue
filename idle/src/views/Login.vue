@@ -122,11 +122,17 @@ export default {
             const data ={email:a,password:b};
             console.log(data);
             axios.post('http://proxy101.callcruncher.com/idle/api/auth/login',data).then((data)=>{
-                 console.log(data);
-
+                 this.$store.state.role=data.data.roleName;
+                 console.log(this.$store.role);
                  this.$store.commit('increment');
-               
-                 this.$router.push({path:'/queueList',params:{data}});            
+                if(this.$store.state.role == "SUPER_ADMIN"){
+                    this.$router.push({path:'/business',params:{data}});
+                }else if(this.$store.state.role =="ADMIN"){
+                    this.$router.push({path:'/branch',params:{data}});
+                }else if (this.$store.state.role=="TELLER"){
+                    this.$router.push({path:'/queueList',params:{data}});
+                }
+                             
             }).catch((error)=>{
                 this.message=error; 
             });

@@ -12,6 +12,7 @@
     <v-list dense nav>
 
       <v-list-item-group color="blue">
+<!-- 
         <v-list-item class="white--text">
           <v-list-item-icon class="ma-0 mt-2 mr-2">
             <v-icon small style="color: #d1e7f9">mdi-view-dashboard</v-icon>
@@ -20,9 +21,10 @@
             <router-link to="/dashboard" style="color: #d1e7f9"
               >Dashboard</router-link
             >
-          </v-list-item-content>
-        </v-list-item>
-        <router-link to="/queueList" >
+          </v-list-item-content> 
+        </v-list-item> -->
+
+        <router-link v-if="role == 3" to="/queueList" >
         <v-list-item class="white--text">
           <v-list-item-icon class="ma-0 mt-2 mr-2">
             <v-icon small style="color: #d1e7f9">mdi-human-queue</v-icon>
@@ -33,7 +35,7 @@
         </v-list-item>
         </router-link>
 
-        <router-link to="/branch" >
+        <router-link to="/branch" v-if="role==2">
         <v-list-item class="white--text">
           <v-list-item-icon class="ma-0 mt-2 mr-2">
             <v-icon small style="color: #d1e7f9">mdi-source-branch</v-icon>
@@ -44,7 +46,7 @@
         </v-list-item>
         </router-link>
 
-        <router-link to="/account" >
+        <router-link to="/account" v-if="role==2 || role==1">
         <v-list-item class="white--text">
           <v-list-item-icon class="ma-0 mt-2 mr-2">
             <v-icon small style="color: #d1e7f9">mdi-account-group</v-icon>
@@ -55,7 +57,7 @@
         </v-list-item>
         </router-link>
 
-        <router-link to="/business" >
+        <router-link to="/business" v-if="role==1">
         <v-list-item class="white--text">
           <v-list-item-icon class="ma-0 mt-2 mr-2">
             <v-icon small style="color: #d1e7f9">mdi-domain</v-icon>
@@ -98,7 +100,13 @@ export default {
 
   },
    beforeMount(){
-      
+      if(this.$store.state.role == "SUPER_ADMIN"){
+        this.role = 1;
+      }else if(this.$store.state.role =="ADMIN"){
+        this.role = 2;
+      }else if (this.$store.state.role=="TELLER"){
+        this.role = 3;
+      }
     }
 };
 </script>
