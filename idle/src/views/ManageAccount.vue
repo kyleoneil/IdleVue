@@ -35,8 +35,10 @@
               <v-row>
                 <v-col sm="5">
                   <v-select
-                    :items="branches"
                     label="Month*"
+                    v-bind:items="months"
+                    item-text="text"
+                    item-value="value"
                     outlined
                     hide-details
                     class="mb-2"
@@ -46,7 +48,7 @@
                 </v-col>
                 <v-col sm="3">
                   <v-select
-                    :items="branches"
+                    v-bind:items="days"
                     label="Day*"
                     outlined
                     hide-details
@@ -55,14 +57,13 @@
                   ></v-select>
                 </v-col>
                 <v-col sm="4">
-                  <v-select
-                    :items="branches"
+                  <v-text-field
                     label="Year*"
-                    outlined
                     hide-details
-                    class="mb-2"
+                    outlined
                     dense
-                  ></v-select>
+                    required
+                  ></v-text-field>
                 </v-col>
               </v-row>
 
@@ -141,8 +142,10 @@
               <v-row>
                 <v-col sm="5">
                   <v-select
-                    :items="branches"
                     label="Month*"
+                    v-bind:items="months"
+                    item-text="text"
+                    item-value="value"
                     outlined
                     hide-details
                     class="mb-2"
@@ -152,7 +155,7 @@
                 </v-col>
                 <v-col sm="3">
                   <v-select
-                    :items="branches"
+                    v-bind:items="days"
                     label="Day*"
                     outlined
                     hide-details
@@ -161,14 +164,13 @@
                   ></v-select>
                 </v-col>
                 <v-col sm="4">
-                  <v-select
-                    :items="branches"
+                  <v-text-field
                     label="Year*"
-                    outlined
                     hide-details
-                    class="mb-2"
+                    outlined
                     dense
-                  ></v-select>
+                    required
+                  ></v-text-field>
                 </v-col>
               </v-row>
 
@@ -261,6 +263,53 @@ export default {
         },
       ],
       branches: ["Hi", "Hello"],
+      months: [
+        { text: "January", value: "01" },
+        { text: "February", value: "02" },
+        { text: "March", value: "03" },
+        { text: "April", value: "04" },
+        { text: "May", value: "05" },
+        { text: "June", value: "06" },
+        { text: "July", value: "07" },
+        { text: "August", value: "08" },
+        { text: "September", value: "09" },
+        { text: "October", value: "10" },
+        { text: "November", value: "11" },
+        { text: "December", value: "12" },
+      ],
+      days: [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+      ],
     };
   },
 };
