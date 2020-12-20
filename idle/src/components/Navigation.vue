@@ -95,30 +95,16 @@
           </v-list-item>
         </v-list-group>
 
-        <v-list-group color="white">
-          <template v-slot:activator>
-            <v-list-item-icon class="ma-0 mt-2 mr-2">
-              <v-icon small style="color: #d1e7f9">mdi-domain</v-icon>
-            </v-list-item-icon>
-            <v-list-item-content style="color: #d1e7f9">
-              Manage Business
-            </v-list-item-content>
-          </template>
-          <v-list-item>
-            <v-list-item-content class="ml-10 pl-4 list-item">
-              <router-link to="/business/add" style="color: #a4cff4"
-                >Add Business</router-link
-              >
-            </v-list-item-content>
-          </v-list-item>
-          <router-link to="/business" style="color: #a4cff4">
-          <v-list-item>
-            <v-list-item-content class="ml-10 pl-4 list-item" style="color: #a4cff4">
-                Business List
-            </v-list-item-content>
-          </v-list-item>
-          </router-link>
-        </v-list-group>
+        <router-link to="/business" >
+        <v-list-item class="white--text">
+          <v-list-item-icon class="ma-0 mt-2 mr-2">
+            <v-icon small style="color: #d1e7f9">mdi-domain</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content style="color: #d1e7f9">
+              ManageBusiness
+          </v-list-item-content>
+        </v-list-item>
+        </router-link>
       </v-list-item-group>
     </v-list>
     <template v-slot:append>
