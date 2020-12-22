@@ -243,6 +243,7 @@
 <script>
 import MgmtTable from "../components/MgmtTable.vue";
 import axios from "axios";
+//import Vue from "vue";
 export default {
   components: { MgmtTable },
   name: "ManageAccount",
@@ -264,24 +265,6 @@ export default {
       data: [
         {
           business: [
-            {
-              id: "0001",
-              name: "Sample",
-              branch: "Dummy",
-              birthdate: "12/25/2020",
-              email: "sample@gmail.com",
-              password: "a131jgjdsasjhda8asbfa",
-              createdAt: "12/15/2020",
-            },
-            {
-              id: "0002",
-              name: "Chongyun",
-              branch: "Liyue",
-              birthdate: "09/07/2020",
-              email: "chonghyun@gmail.com",
-              password: "asghdj3hdas8b32l1asld",
-              createdAt: "12/15/2020",
-            },
           ],
           headers: [
             {
@@ -355,8 +338,9 @@ export default {
       var date = input.month + "/" + input.day + "/" + input.year;
       input.birthdate = date;
       axios
-        .post("http://proxy101.callcruncher.com/idle/api/users", input)  //asa kuhaon ang data
-        .then((data) => {         //response if successful
+        .post("http://proxy101.callcruncher.com/idle/api/users", input) //asa kuhaon ang data
+        .then((data) => {
+          //response if successful
           console.log(data.data);
         })
         .catch((error) => {
@@ -365,5 +349,44 @@ export default {
       this.add = false;
     },
   },
+  beforeMount(){
+       const data =  this.$store.state.token;
+       let head = {
+           headers:{
+               Authorization: data
+           }
+       }
+       axios
+      .get("http://proxy101.callcruncher.com/idle/api/users", head)
+      .then((res) => {
+        var name, bday;
+        var catcher = res.data.data;
+        console.log(catcher);
+        for(var i = 0; i < catcher.length; i++){
+          const addData = {
+            id:"",
+            name:"",
+            branch: "",
+            birthdate:"",
+            email:"",
+            password:"",
+            createdAt: ""
+          };
+          addData.id = catcher[i].id;
+          name = catcher[i].name.split(", ")[1] + " " + catcher[i].name.split(", ")[0]
+          bday = catcher[i].birthdate.split("-")[1] + "/" + catcher[i].birthdate.split("-")[2] + "/" + catcher[i].birthdate.split("-")[0]
+          addData.name = name
+          addData.email = catcher[i].email
+          addData.birthdate = bday;
+          addData.email = catcher[i].email
+          this.data[0].business.push(addData);
+          console.log(addData.name);
+        }
+        //console.log(this.data[0].business)
+      })
+      .catch((error) => {
+        console.log(error.response.data.message);
+      });
+  }
 };
 </script>
