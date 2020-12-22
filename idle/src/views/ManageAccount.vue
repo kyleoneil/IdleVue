@@ -129,7 +129,7 @@
         </v-card>
       </v-dialog>
 
-      <v-dialog v-model="edit" persistent max-width="600px" slot="editBtn">
+      <v-dialog v-model="edit" persistent max-width="600px" :retain-focus="false" slot="editBtn" >
         <template v-slot:activator="{ on, attrs }">
           <v-btn
             color="amber darken-2"

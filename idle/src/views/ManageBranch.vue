@@ -46,6 +46,7 @@
         persistent
         max-width="600px"
         slot="editBtn"
+        :retain-focus="false"
       >
         <template v-slot:activator="{ on, attrs }">
           <v-btn
@@ -187,6 +188,7 @@
                       v-model="editService"
                       persistent
                       max-width="600px"
+                      :retain-focus="false"
                     >
                       <template v-slot:activator="{ on, attrs }">
                         <v-btn
