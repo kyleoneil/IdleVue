@@ -44,6 +44,7 @@
                 <v-select
                   :items="branches"
                   v-model="input.branch"
+                  v-on:click="showBranches()"
                   label="Branch*"
                   outlined
                   hide-details
@@ -78,14 +79,14 @@
                     ></v-select>
                   </v-col>
                   <v-col sm="4">
-                    <v-text-field
+                    <v-select
+                      v-bind:items="years"
                       label="Year*"
-                      v-model="input.year"
-                      hide-details
                       outlined
+                      hide-details
+                      class="mb-2"
                       dense
-                      required
-                    ></v-text-field>
+                    ></v-select>
                   </v-col>
                 </v-row>
 
@@ -189,13 +190,14 @@
                   ></v-select>
                 </v-col>
                 <v-col sm="4">
-                  <v-text-field
+                  <v-select
+                    v-bind:items="years"
                     label="Year*"
-                    hide-details
                     outlined
+                    hide-details
+                    class="mb-2"
                     dense
-                    required
-                  ></v-text-field>
+                  ></v-select>
                 </v-col>
               </v-row>
 
@@ -243,7 +245,7 @@
 <script>
 import MgmtTable from "../components/MgmtTable.vue";
 import axios from "axios";
-//import Vue from "vue";
+
 export default {
   components: { MgmtTable },
   name: "ManageAccount",
@@ -282,7 +284,7 @@ export default {
           ],
         },
       ],
-      branches: ["Hi", "Hello"],
+      branches: [ ],
       months: [
         { text: "January", value: "01" },
         { text: "February", value: "02" },
@@ -297,39 +299,8 @@ export default {
         { text: "November", value: "11" },
         { text: "December", value: "12" },
       ],
-      days: [
-        "01",
-        "02",
-        "03",
-        "04",
-        "05",
-        "06",
-        "07",
-        "08",
-        "09",
-        "10",
-        "11",
-        "12",
-        "13",
-        "14",
-        "15",
-        "16",
-        "17",
-        "18",
-        "19",
-        "20",
-        "21",
-        "22",
-        "23",
-        "24",
-        "25",
-        "26",
-        "27",
-        "28",
-        "29",
-        "30",
-        "31",
-      ],
+      days: [],
+      years: []
     };
   },
   methods: {
@@ -348,7 +319,24 @@ export default {
         });
       this.add = false;
     },
+    showBranches: function(){
+      const data =  this.$store.state.token;
+       let head = {
+           headers:{
+               Authorization: data
+           }
+       }
+      axios
+      .get("https://proxy101.callcruncher.com/idle/api/branches/1", head)
+      .then((res) => {
+          this.branches = res.data.branch_details.name;
+      })
+      .catch((error) => {
+        console.log(error.response.data.message);
+      });
+    }
   },
+
   beforeMount(){
        const data =  this.$store.state.token;
        let head = {
@@ -361,7 +349,6 @@ export default {
       .then((res) => {
         var name, bday;
         var catcher = res.data.data;
-        console.log(catcher);
         for(var i = 0; i < catcher.length; i++){
           const addData = {
             id:"",
@@ -380,13 +367,18 @@ export default {
           addData.birthdate = bday;
           addData.email = catcher[i].email
           this.data[0].business.push(addData);
-          console.log(addData.name);
         }
-        //console.log(this.data[0].business)
       })
       .catch((error) => {
         console.log(error.response.data.message);
       });
+
+    for(var yr = 2020; yr > 1960; yr--){
+      this.years.push(yr);
+    }
+    for(var d = 1; d <= 31; d++){
+      this.days.push(d);
+    }
   }
 };
 </script>
