@@ -1,10 +1,10 @@
 <template>
   <v-container>
-    <MgmtTable v-bind:data="data" v-on:deleteBtn="deleteBusiness($event)">
+    <MgmtTable v-bind:data="data" v-on:editBtn="editBusiness($event)" v-on:deleteBtn="deleteBusiness($event)">
       <span class="white--text text-h5" slot="headerTitle">Business</span>
       <v-dialog v-model="add" persistent max-width="600px" slot="addBtn">
         <template v-slot:activator="{ on, attrs }">
-          <v-btn sm="2" v-bind="attrs" v-on="on" dense class="ml-15" rounded>
+          <v-btn sm="2" v-bind="attrs" v-on="on" dense class="ml-15" v-on:click="resetValues()" rounded>
             Add Business
           </v-btn>
         </template>
@@ -44,18 +44,11 @@
         </v-card>
       </v-dialog>
 
-      <v-dialog v-model="edit" persistent max-width="600px" slot="editBtn" :retain-focus="false">
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn
-            color="amber darken-2"
-            small
-            v-bind="attrs"
-            v-on="on"
-            class="white--text"
-          >
-            EDIT <v-icon small>mdi-pencil</v-icon>
-          </v-btn>
-        </template>
+      <v-dialog 
+       v-model="edit"
+       persistent max-width="600px"
+       slot="editDialog"
+       :retain-focus="false">
         <v-card>
           <v-card-title>
             <span class="headline pl-3 pt-3">Edit Business</span>
@@ -64,6 +57,7 @@
             <v-container>
               <v-text-field
                 label="Name*"
+                v-model="input"
                 hide-details
                 outlined
                 dense
@@ -136,12 +130,19 @@ export default {
     addBusiness: function (input) {
       var name = input;
       console.log(name);
-
       this.add = false;
+    },
+    editBusiness: function (data) {
+      this.edit = true;
+      this.input = data.name;
+      console.log(data);
     },
     deleteBusiness: function(data){
       console.log(data);
     },
+    resetValues: function(){
+      this.input = '';
+    }
   },
 };
 </script>

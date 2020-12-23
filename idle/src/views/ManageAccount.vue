@@ -8,7 +8,7 @@
       <span class="white--text text-h5" slot="headerTitle">Account</span>
       <v-dialog v-model="add" persistent max-width="600px" slot="addBtn">
         <template v-slot:activator="{ on, attrs }">
-          <v-btn sm="2" v-bind="attrs" v-on="on" dense class="ml-15" rounded>
+          <v-btn sm="2" v-bind="attrs" v-on="on" dense class="ml-15" v-on:click="resetValues()" rounded>
             Add Account
           </v-btn>
         </template>
@@ -383,6 +383,16 @@ export default {
       this.input.password = data.password;
       console.log(this.input);
     },
+    resetValues: function(){
+      this.input.firstname = '';
+      this.input.lastname = '';
+      this.input.branch = '';
+      this.input.month = '';
+      this.input.day = '';
+      this.input.year = '';
+      this.input.email = '';
+      this.input.password = '';
+    }
   },
 
   beforeMount() {
