@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <MgmtTable v-bind:data="data">
+    <MgmtTable v-bind:data="data" v-on:deleteBtn="deleteAccount($event)">
       <span class="white--text text-h5" slot="headerTitle">Account</span>
       <v-dialog v-model="add" persistent max-width="600px" slot="addBtn">
         <template v-slot:activator="{ on, attrs }">
@@ -129,7 +129,13 @@
         </v-card>
       </v-dialog>
 
-      <v-dialog v-model="edit" persistent max-width="600px" :retain-focus="false" slot="editBtn" >
+      <template v-slot:editBtn>
+      <v-dialog
+       v-model="edit"
+       persistent
+       max-width="600px"
+       :retain-focus="false"
+       >
         <template v-slot:activator="{ on, attrs }">
           <v-btn
             color="amber darken-2"
@@ -157,14 +163,16 @@
                 class="mb-5"
               ></v-text-field>
               <v-select
-                :items="branches"
-                label="Branch*"
-                outlined
-                hide-details
-                class="mb-2"
-                prepend-icon="mdi-source-branch"
-                dense
-              ></v-select>
+                  :items="branches"
+                  v-model="input.branch"
+                  v-on:click="showBranches()"
+                  label="Branch*"
+                  outlined
+                  hide-details
+                  class="mb-2"
+                  prepend-icon="mdi-source-branch"
+                  dense
+                ></v-select>
               <v-row>
                 <v-col sm="5">
                   <v-select
@@ -236,6 +244,7 @@
           </v-card-actions>
         </v-card>
       </v-dialog>
+      </template>
     </MgmtTable>
   </v-container>
 </template>
@@ -334,7 +343,10 @@ export default {
       .catch((error) => {
         console.log(error.response.data.message);
       });
-    }
+    },
+    deleteAccount: function(data){
+      console.log(data);
+    },
   },
 
   beforeMount(){

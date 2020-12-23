@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <MgmtTable v-bind:data="data">
+    <MgmtTable v-bind:data="data" v-on:deleteBtn="deleteBranch($event)">
       <span class="white--text text-h5" slot="headerTitle">Branch</span>
       <v-dialog v-model="addBranch" persistent max-width="600px" slot="addBtn">
         <template v-slot:activator="{ on, attrs }">
@@ -309,5 +309,10 @@ export default {
       ],
     };
   },
+  methods: {
+    deleteBranch: function(data){
+      console.log(data);
+    },
+  }
 };
 </script>

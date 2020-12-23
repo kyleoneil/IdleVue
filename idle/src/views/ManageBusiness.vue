@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <MgmtTable v-bind:data="data">
+    <MgmtTable v-bind:data="data" v-on:deleteBtn="deleteBusiness($event)">
       <span class="white--text text-h5" slot="headerTitle">Business</span>
       <v-dialog v-model="add" persistent max-width="600px" slot="addBtn">
         <template v-slot:activator="{ on, attrs }">
@@ -138,6 +138,9 @@ export default {
       console.log(name);
 
       this.add = false;
+    },
+    deleteBusiness: function(data){
+      console.log(data);
     },
   },
 };

@@ -43,7 +43,7 @@
               color="red"
               small
               class="ml-3 white--text"
-              v-on:click="onButtonClick(props.item)"
+              v-on:click="deleteBtn(props.item)"
             >
               DELETE <v-icon small>mdi-delete-outline</v-icon>
             </v-btn>
@@ -80,6 +80,9 @@ export default {
           .indexOf(search.toLocaleUpperCase()) !== -1
       );
     },
+    deleteBtn: function(data){
+      this.$emit('deleteBtn', data)
+    }
   },
 };
 </script>
