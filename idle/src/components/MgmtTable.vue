@@ -38,7 +38,15 @@
           :custom-filter="filter"
         >
           <template v-slot:item.controls="props">
-            <slot name="editBtn"></slot>
+            <v-btn
+              color="amber darken-2"
+              small
+              class="white--text"
+              v-on:click="editBtn(props.item)"
+            >
+              EDIT <v-icon small>mdi-pencil</v-icon>
+            </v-btn>
+            <slot name="editDialog"></slot>
             <v-btn
               color="red"
               small
@@ -82,7 +90,10 @@ export default {
     },
     deleteBtn: function(data){
       this.$emit('deleteBtn', data)
-    }
+    },
+    editBtn: function(data){
+      this.$emit('editBtn', data)
+    },
   },
 };
 </script>
