@@ -1,20 +1,22 @@
 <template>
   <v-container>
     <div class="my-6">
-    
+      
     </div>
     <template>
       <div style="max-width:80%;margin-left:10%">
         <v-data-table
           :headers="headers"
-          :items="dataqueue"
+          :items="this.data"
           item-key="id  "
           class="elevation-1"
 
         >
         </v-data-table>
       </div> </template
-  ></v-container>
+  >
+  </v-container>
+ 
 </template>
 <script>
 // import axios from 'axios'
@@ -39,7 +41,7 @@ export default {
     };
   },
   props:{
-    dataqueue:{
+    data:{
       type: Array
     }
   },
@@ -47,7 +49,9 @@ export default {
   
   },
   methods: {
-   
+   sd:function(){
+     console.log(this.data);
+   }
     //  beforeMount(){
     //    console.log("xd");
     //         axios.get('http://proxy101.callcruncher.com/idle/apis/queues').then((data)=>{
@@ -57,5 +61,6 @@ export default {
     //         });
     //     },
   },
+ 
 };
 </script>

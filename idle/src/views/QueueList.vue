@@ -22,12 +22,15 @@
 
                 <span class="title font-weight-light">Idle</span>
                 </v-card-title>
-
-                <v-card-text class="font-weight-bold text-center mt-16 mb-10" style="font-size: 10vw;">
+               
+                <v-card-text class="font-weight-bold text-center mt-10 mb-10" style="font-size: 10vw;">
                     {{number}}
                 </v-card-text>
-                 <v-card-text class="font-weight-bold text-center mt-14" style="font-size: 2vw;">
-                 NOW SERVING
+                 <v-card-text class="font-weight-bold text-center" style="font-size: 1vw;">
+                    {{service}}
+                </v-card-text>
+                 <v-card-text class="font-weight-bold text-center " style="font-size: 2vw;">
+                NOW SERVING
                 </v-card-text>
                 <span></span>
                 <v-card-actions>
@@ -49,12 +52,14 @@
                           color="blue-grey"
                         style="font-size: .6vw;font-family:Arial"
                         class="mr-6"
+                        v-on:click="noShow"
                         >
                         NO SHOW
                         </v-btn>
                          <v-btn
                          color="success"
                         style="font-size: .6vw;font-family:Arial;margin-right:2%"
+                        v-on:click="next"
                         >
                         NEXT
                         </v-btn>
@@ -63,18 +68,19 @@
                 </v-card-actions>
             </v-card>
          
-           <queue v-if="render" v-bind="queuedata"></queue> <!--QUEUE QUEUE QUEUE QUEUE QUEUE QUEUE QUEUE QUEUE QUEUE-->
-
-           <div class="" style="margin-left:44%;margin-top:-10%"   v-show="!visible">
-            <v-btn
-            color="error"
-            style="font-size: 1vw;font-family:Arial;"
-            v-on:click="visible=!visible"
-            class="mx-auto mt-16"
-            >
-            FINISH
-            </v-btn>
+           <queue v-if="!visible" v-bind:data="queuedata"></queue> <!--QUEUE QUEUE QUEUE QUEUE QUEUE QUEUE QUEUE QUEUE QUEUE-->
+            
+           <div class="" style="margin-left:44%;"   v-show="!visible">
+                <v-btn
+                color="error"
+                style="font-size: 1vw;font-family:Arial;"
+                v-on:click="visible=!visible"
+                class="mx-auto mt-16"
+                >
+                FINISH
+                </v-btn>
            </div>
+          
             <v-col v-show="visible"> 
                 <v-container v-if="!check">
                     <v-row dense>
@@ -134,49 +140,76 @@ export default {
         // readycard
     },
     data:()=>({
-      number: 5,
+      number: 0,
+      name:"",
+      service:"",
       visible: true,
       datalist:[],
       queuedata:[],
       check: true,
-      render:false,
+      currentid:"",
+      currentserviceid:"",
     }),
     props:{
         source: String
     },
     methods:{
-     getqueue: function(event){
-        const id=    event.currentTarget.id;
+     next: function(){
         const data = this.$store.state.token;
-
+       console.log(data);
+        let head = 
+            {
+           headers:{
+            authorization: data,
+            }
+        };
+        let send =
+        {
+         "status":"COMPLETED"
+        }
+        console.log(this.currentid);
+         axios.patch('http://proxy101.callcruncher.com/idle/api/queues/'+this.currentid,send,head).then((data)=>{
+                console.log(data.data);
+         }).catch((error)=>{
+            console.log(error.response.data.message)
+        });
+      
+         
+     },
+     noShow: function(){
+        this.next();
+     },
+     getqueue: function(event){
+         this.currentserviceid=    event.currentTarget.id;
+        const data = this.$store.state.token;
           let head = {
            headers:{
                Authorization:data
-              
            }
        }
-
-        axios.get('http://proxy101.callcruncher.com/idle/api/queues?serviceId='+id,head).then((data)=>{
-            
+//   const PROTOCOL ="localhost:3000/api/queues?serviceId=";
+        axios.get('http://proxy101.callcruncher.com/idle/api/queues?serviceId='+this.currentserviceid,head).then((data)=>{
             var catcher = data.data.data;
             // this.queuedata = data.data.data.data;
             this.queuedata=[];
-            const adddata = {name:"",queuenum:"",email:"",birthdate:""};
-
+            var adddata;
+            console.log(data.data.data.data);
+            this.name = catcher.data[0].ServiceId;//name dapat
+            this.number = catcher.data[0].queue_number;
+            this.service = "XD";//serviec name dapat
+            this.currentid= catcher.data[0].id;
             for(var a=0; a<catcher.totalRecords;a++){
+                adddata = {name:"",queuenum:"",email:"",birthdate:""};
                 adddata.name = catcher.data[a].ServiceId;//namedapat
                 adddata.queuenum = catcher.data[a].queue_number
                 adddata.email=catcher.data[a].UserId //email dapat
                 adddata.birthdate=catcher.data[a].status; //bday dapat
                 this.queuedata.push(adddata);
             }
-
-            this.render=true;
-            console.log(this.queuedata[0].birthdate);
-            // console.log(this.queuedata);
         }).catch((error)=>{
             console.log(error.response.data.message)
         });
+    
       },
     },
     beforeMount(){
