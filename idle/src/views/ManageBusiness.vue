@@ -1,10 +1,10 @@
 <template>
   <v-container>
-    <MgmtTable v-bind:data="data">
+    <MgmtTable v-bind:data="data" v-on:editBtn="editBusiness($event)" v-on:deleteBtn="deleteBusiness($event)">
       <span class="white--text text-h5" slot="headerTitle">Business</span>
       <v-dialog v-model="add" persistent max-width="600px" slot="addBtn">
         <template v-slot:activator="{ on, attrs }">
-          <v-btn sm="2" v-bind="attrs" v-on="on" dense class="ml-15" rounded>
+          <v-btn sm="2" v-bind="attrs" v-on="on" dense class="ml-15" v-on:click="resetValues()" rounded>
             Add Business
           </v-btn>
         </template>
@@ -14,8 +14,50 @@
           </v-card-title>
           <v-card-text class="pb-0">
             <v-container>
+              <v-form>
+                <v-text-field
+                  label="Name*"
+                  v-model="input"
+                  hide-details
+                  outlined
+                  dense
+                  required
+                ></v-text-field>
+              </v-form>
+            </v-container>
+            <small class="ml-5">*indicates required field</small>
+          </v-card-text>
+          <v-card-actions class="pr-8 pb-8">
+            <v-spacer></v-spacer>
+            <v-btn rounded v-on:click="add = false" class="px-8">
+              Cancel
+            </v-btn>
+            <v-btn
+              color="primary"
+              class="px-10"
+              rounded
+              v-on:click="addBusiness(input)"
+            >
+              Add
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
+
+      <v-dialog 
+       v-model="edit"
+       persistent max-width="600px"
+       slot="editDialog"
+       :retain-focus="false">
+        <v-card>
+          <v-card-title>
+            <span class="headline pl-3 pt-3">Edit Business</span>
+          </v-card-title>
+          <v-card-text class="pb-0">
+            <v-container>
               <v-text-field
                 label="Name*"
+                v-model="input"
                 hide-details
                 outlined
                 dense
@@ -26,60 +68,20 @@
           </v-card-text>
           <v-card-actions class="pr-8 pb-8">
             <v-spacer></v-spacer>
-            <v-btn rounded class="px-8" v-on:click="add = false">
+            <v-btn rounded class="px-8" v-on:click="edit = false">
               Cancel
             </v-btn>
             <v-btn
               color="primary"
               class="px-10"
               rounded
-              v-on:click="add = false"
+              v-on:click="edit = false"
             >
-              Add
+              Save
             </v-btn>
           </v-card-actions>
         </v-card>
       </v-dialog>
-
-      <v-dialog v-model="edit" persistent max-width="600px" slot="editBtn">
-              <template v-slot:activator="{ on, attrs }">
-            <v-btn
-              color="amber darken-2"
-              small
-              v-bind="attrs"
-                v-on="on"
-              class="white--text"
-            >
-              EDIT <v-icon small>mdi-pencil</v-icon>
-            </v-btn>
-             </template>
-            <v-card>
-              <v-card-title>
-                <span class="headline pl-3 pt-3">Edit Business</span>
-              </v-card-title>
-              <v-card-text class="pb-0">
-                <v-container>
-                  <v-text-field
-                    label="Name*"
-                    hide-details
-                    outlined
-                    dense
-                    required
-                  ></v-text-field>
-                </v-container>
-                <small class="ml-5">*indicates required field</small>
-              </v-card-text>
-              <v-card-actions class="pr-8 pb-8">
-                <v-spacer></v-spacer>
-                <v-btn rounded class="px-8" v-on:click="edit = false">
-                  Cancel
-                </v-btn>
-                <v-btn color="primary" class="px-10" rounded v-on:click="edit = false">
-                  Save
-                </v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-dialog>
     </MgmtTable>
   </v-container>
 </template>
@@ -95,6 +97,7 @@ export default {
     return {
       add: false,
       edit: false,
+      input: "",
       data: [
         {
           business: [
@@ -122,6 +125,24 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    addBusiness: function (input) {
+      var name = input;
+      console.log(name);
+      this.add = false;
+    },
+    editBusiness: function (data) {
+      this.edit = true;
+      this.input = data.name;
+      console.log(data);
+    },
+    deleteBusiness: function(data){
+      console.log(data);
+    },
+    resetValues: function(){
+      this.input = '';
+    }
   },
 };
 </script>

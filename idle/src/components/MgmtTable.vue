@@ -37,18 +37,26 @@
           :search="search"
           :custom-filter="filter"
         >
-          <!-- <template v-slot:item.controls="props">
-            <slot name="editBtn"></slot>
+          <template v-slot:item.controls="props">
+            <v-btn
+              color="amber darken-2"
+              small
+              class="white--text"
+              v-on:click="editBtn(props.item)"
+            >
+              EDIT <v-icon small>mdi-pencil</v-icon>
+            </v-btn>
+            <slot name="editDialog"></slot>
             <v-btn
               color="red"
               small
               class="ml-3 white--text"
-              v-on:click="onButtonClick(props.item)"
+              v-on:click="deleteBtn(props.item)"
             >
               DELETE <v-icon small>mdi-delete-outline</v-icon>
             </v-btn>
             <slot name="serviceBtn"></slot>
-          </template> -->
+          </template>
         </v-data-table>
       </div>
     </template>
@@ -79,6 +87,12 @@ export default {
           .toLocaleUpperCase()
           .indexOf(search.toLocaleUpperCase()) !== -1
       );
+    },
+    deleteBtn: function(data){
+      this.$emit('deleteBtn', data)
+    },
+    editBtn: function(data){
+      this.$emit('editBtn', data)
     },
   },
 };

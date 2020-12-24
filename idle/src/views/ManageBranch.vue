@@ -1,10 +1,10 @@
 <template>
   <v-container>
-    <MgmtTable v-bind:data="data">
+    <MgmtTable v-bind:data="data" v-on:deleteBtn="deleteBranchBtn($event)" v-on:editBtn="editBranchBtn($event)">
       <span class="white--text text-h5" slot="headerTitle">Branch</span>
       <v-dialog v-model="addBranch" persistent max-width="600px" slot="addBtn">
         <template v-slot:activator="{ on, attrs }">
-          <v-btn sm="2" v-bind="attrs" v-on="on" dense class="ml-15" rounded>
+          <v-btn sm="2" v-bind="attrs" v-on="on" dense class="ml-15" v-on:click="resetValues()" rounded>
             Add Branch
           </v-btn>
         </template>
@@ -16,6 +16,7 @@
             <v-container>
               <v-text-field
                 label="Name*"
+                v-model="input"
                 hide-details
                 outlined
                 dense
@@ -33,7 +34,7 @@
               color="primary"
               class="px-10"
               rounded
-              v-on:click="addBranch = false"
+              v-on:click="addBranchBtn(input)"
             >
               Add
             </v-btn>
@@ -45,19 +46,9 @@
         v-model="editBranch"
         persistent
         max-width="600px"
-        slot="editBtn"
+        slot="editDialog"
+        :retain-focus="false"
       >
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn
-            color="amber darken-2"
-            small
-            v-bind="attrs"
-            v-on="on"
-            class="white--text"
-          >
-            EDIT <v-icon small>mdi-pencil</v-icon>
-          </v-btn>
-        </template>
         <v-card>
           <v-card-title>
             <span class="headline pl-3 pt-3">Edit Branch</span>
@@ -66,6 +57,7 @@
             <v-container>
               <v-text-field
                 label="Name*"
+                v-model="input"
                 hide-details
                 outlined
                 dense
@@ -181,14 +173,13 @@
                   :items="services"
                   item-key="id"
                   class="elevation-1"
-                  :search="search"
-                  :custom-filter="filter"
                 >
                   <template v-slot:item.controls="props">
                     <v-dialog
                       v-model="editService"
                       persistent
                       max-width="600px"
+                      :retain-focus="false"
                     >
                       <template v-slot:activator="{ on, attrs }">
                         <v-btn
@@ -267,6 +258,7 @@ export default {
   name: "ManageBranch",
   data() {
     return {
+      input: '',
       addBranch: false,
       editBranch: false,
       editService: false,
@@ -309,5 +301,23 @@ export default {
       ],
     };
   },
+  methods: {
+    addBranchBtn: function (input) {
+      var name = input;
+      console.log(name);
+      this.add = false;
+    },
+    editBranchBtn: function (data) {
+      this.editBranch = true;
+      this.input = data.name;
+      console.log(data);
+    },
+    deleteBranchBtn: function(data){
+      console.log(data);
+    },
+    resetValues: function(){
+      this.input = '';
+    }
+  }
 };
 </script>
