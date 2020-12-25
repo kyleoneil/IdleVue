@@ -147,7 +147,6 @@ export default {
       .then((res) => {
         var name;
         var catcher = res.data.data;
-        console.log(catcher);
         for (var i = 0; i < catcher.length; i++) {
           const addData = {
             id: "",

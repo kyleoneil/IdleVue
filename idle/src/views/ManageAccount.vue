@@ -242,15 +242,6 @@
                   prepend-icon="mdi-email"
                   class="mb-5"
                 ></v-text-field>
-                <v-text-field
-                  label="Password*"
-                  v-model="input.password"
-                  hide-details
-                  outlined
-                  dense
-                  prepend-icon="mdi-lock"
-                  required
-                ></v-text-field>
               </v-form>
             </v-container>
           </v-card-text>
@@ -287,6 +278,7 @@ export default {
     return {
       add: false,
       edit: false,
+      businessId: '',
       input: {
         firstname: "",
         lastname: "",
@@ -311,7 +303,6 @@ export default {
             { text: "Branch", value: "branch" },
             { text: "Birthday", value: "birthdate" },
             { text: "Email", value: "email" },
-            { text: "Password", value: "password" },
             { text: "Date Created", value: "createdAt" },
             { text: "", value: "controls", sortable: false, align: "end" },
           ],
@@ -359,9 +350,9 @@ export default {
         },
       };
       axios
-        .get("https://proxy101.callcruncher.com/idle/api/branches/1", head)
+        .get("http://localhost:3000/api/branches?businessId="+this.businessId, head)
         .then((res) => {
-          this.branches = res.data.branch_details.name;
+          this.branches = res.data.data;
         })
         .catch((error) => {
           console.log(error.response.data.message);
@@ -379,7 +370,6 @@ export default {
       this.input.day = data.birthdate.split("/")[1];
       this.input.year = data.birthdate.split("/")[2];
       this.input.email = data.email;
-      this.input.password = data.password;
       console.log(this.input);
     },
     resetValues: function(){
@@ -396,6 +386,7 @@ export default {
 
   beforeMount() {
     const data = this.$store.state.token;
+    this.businessId = this.$store.state.businessId;
     let head = {
       headers: {
         Authorization: data,
@@ -406,7 +397,6 @@ export default {
       .then((res) => {
         var name, bday;
         var catcher = res.data.data;
-        console.log(catcher);
         for (var i = 0; i < catcher.length; i++) {
           const addData = {
             id: "",
@@ -414,7 +404,6 @@ export default {
             branch: "",
             birthdate: "",
             email: "",
-            password: "",
             createdAt: "",
           };
           addData.id = catcher[i].id;
