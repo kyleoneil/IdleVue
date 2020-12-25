@@ -549,3 +549,30 @@
 {"message":"App exited gracefully","level":"info","timestamp":"2020-12-25T08:06:44.778Z"}
 {"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T08:13:29.812Z"}
 {"message":"App exited gracefully","level":"info","timestamp":"2020-12-25T08:13:32.386Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T08:41:24.815Z"}
+{"message":"GET /api/queues?serviceId=1 401 16.037 ms - 34","level":"info","timestamp":"2020-12-25T08:41:28.469Z"}
+{"message":"GET /api/queues?serviceId=1 401 4.047 ms - 34","level":"info","timestamp":"2020-12-25T08:41:37.719Z"}
+{"message":"POST /api/auth/login 400 23.290 ms - 37","level":"info","timestamp":"2020-12-25T08:41:39.607Z"}
+{"message":"POST /api/users 200 88.495 ms - 40","level":"info","timestamp":"2020-12-25T08:41:42.477Z"}
+{"message":"POST /api/auth/login 200 148.160 ms - 413","level":"info","timestamp":"2020-12-25T08:41:45.029Z"}
+{"message":"GET /api/queues?serviceId=1 200 14.237 ms - 403","level":"info","timestamp":"2020-12-25T08:41:49.978Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T08:42:50.376Z"}
+{"message":"GET /api/queues?serviceId=1 200 29.095 ms - 471","level":"info","timestamp":"2020-12-25T08:42:51.836Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T08:43:08.128Z"}
+{"message":"GET /api/queues?serviceId=1 200 28.343 ms - 317","level":"info","timestamp":"2020-12-25T08:43:09.104Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T08:46:05.013Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-25T08:46:06.714Z"}
+{"message":"{\"message\":\"User is not defined\",\"statusCode\":500}","level":"error","timestamp":"2020-12-25T08:46:06.714Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-25T08:46:06.715Z"}
+{"message":"GET /api/queues?serviceId=1 500 20.096 ms - 33","level":"info","timestamp":"2020-12-25T08:46:06.719Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T08:46:22.488Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-25T08:46:27.773Z"}
+{"message":"{\"message\":\"User is not defined\",\"statusCode\":500}","level":"error","timestamp":"2020-12-25T08:46:27.774Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-25T08:46:27.774Z"}
+{"message":"GET /api/queues?serviceId=1 500 19.835 ms - 33","level":"info","timestamp":"2020-12-25T08:46:27.778Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T08:46:37.733Z"}
+{"message":"GET /api/queues?serviceId=1 200 35.215 ms - 645","level":"info","timestamp":"2020-12-25T08:46:39.215Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T08:47:18.562Z"}
+{"message":"GET /api/queues?serviceId=1 200 25.152 ms - 543","level":"info","timestamp":"2020-12-25T08:47:19.965Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T08:47:39.458Z"}
+{"message":"GET /api/queues?serviceId=1 200 29.299 ms - 509","level":"info","timestamp":"2020-12-25T08:47:41.015Z"}
