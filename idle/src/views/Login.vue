@@ -55,7 +55,7 @@
                                         <v-col cols="12" md="4" style="background-color:#1c88e5;">
                                             <v-card-text class="white--text mt-12">
                                                 <h1 class="text-center display-1">Hello, Friends !</h1>
-                                                <h5 class="text-center">Learn more about Idle and start journey with us</h5>
+                                                <h5 class="text-center">Learn more about Idle and start a journey with us</h5>
                                             </v-card-text>
                                             <div class="text-center">
                                                 <v-btn rounded outlined="" dark v-on:click="step++">ABOUT</v-btn>
@@ -120,8 +120,14 @@ export default {
     methods:{
         login: function(a,b){
             const data ={email:a,password:b};
+            // const headers={'Acess-Control-Allow-Origin':'*',
+            // 'Content-type':'application/json'};
+            
             console.log(data);
-            axios.post('http://proxy101.callcruncher.com/idle/api/auth/login',data).then((data)=>{
+            // const PROTOCOL = "http://proxy101.callcruncher.com/idle/api/auth/login";
+            const PROTOCOL ="http://localhost:3000/api/auth/login";
+            axios.post(PROTOCOL,data).then((data)=>{
+                console.log("xd");
                  this.$store.state.role=data.data.roleName;
                 this.$store.state.token=data.data.token;
                 //  console.log(this.$store.role);
@@ -129,15 +135,15 @@ export default {
                  console.log(data.data);
                 if(this.$store.state.role == "SUPER_ADMIN"){
                     this.$router.push({path:'/business',params:{data}});
-                }else if(this.$store.state.role =="ADMIN"){
+                }else if(this.$store.state.role =="BUSINESS_OWNER"){
                     this.$router.push({path:'/branch',params:{data}});
-                }else if (this.$store.state.role=="TELLER"){
+                }else if (this.$store.state.role=="BUSINESS_TELLER"){
                     this.$router.push({path:'/queueList',params:{data}});
                 }
                              
             }).catch((error)=>{
                 this.message=error.response.data.message; 
-             
+             console.log(this.message=error.response.data.message);
             });
         }
     },

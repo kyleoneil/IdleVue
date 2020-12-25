@@ -20,6 +20,13 @@ module.exports = (sequelize, DataTypes) => {
       const Role = models.Role;
       Role.hasMany(User, {foreignKey: {allowNull: false}});
       User.belongsTo(Role);
+      // Note: business_id bigint should not be null if user role is BUSINESS_OWNER
+      const Business = models.Business;
+      Business.hasMany(User, {foreignKey: {allowNull: true}});
+      User.belongsTo(Business);
+      const Branch = models.Branch;
+      Branch.hasMany(User, {foreignKey: {allowNull: true}});
+      User.belongsTo(Branch);
     }
   }
   User.init({
@@ -42,7 +49,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
     },
     birthdate: DataTypes.DATEONLY,
-    token: DataTypes.STRING,
+    token: DataTypes.TEXT,
     lastLogin: DataTypes.DATE,
   }, {
     sequelize,

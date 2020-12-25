@@ -1,0 +1,583 @@
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T07:36:29.254Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T07:37:09.432Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T07:38:09.527Z"}
+{"message":"App exited gracefully","level":"info","timestamp":"2020-12-22T07:38:17.515Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T07:38:31.615Z"}
+{"message":"POST /api/users 200 102.987 ms - 40","level":"info","timestamp":"2020-12-22T07:38:39.652Z"}
+{"message":"POST /api/auth/login 200 148.434 ms - 322","level":"info","timestamp":"2020-12-22T07:38:42.787Z"}
+{"message":"POST /api/users 200 73.413 ms - 40","level":"info","timestamp":"2020-12-22T07:49:22.055Z"}
+{"message":"POST /api/users 400 4.313 ms - 33","level":"info","timestamp":"2020-12-22T07:49:31.411Z"}
+{"message":"POST /api/users 400 3.524 ms - 33","level":"info","timestamp":"2020-12-22T07:49:35.947Z"}
+{"message":"POST /api/users 200 70.123 ms - 40","level":"info","timestamp":"2020-12-22T07:49:41.430Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T08:17:28.196Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T08:17:41.435Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T08:18:08.042Z"}
+{"message":"PUT /api/users/5 400 28.857 ms - 34","level":"info","timestamp":"2020-12-22T08:18:43.474Z"}
+{"message":"PUT /api/users/5 200 83.072 ms - 40","level":"info","timestamp":"2020-12-22T08:19:03.139Z"}
+{"message":"PUT /api/users/7 200 82.856 ms - 40","level":"info","timestamp":"2020-12-22T08:19:34.744Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T08:20:50.586Z"}
+{"message":"PUT /api/users/7 200 96.958 ms - 40","level":"info","timestamp":"2020-12-22T08:20:53.314Z"}
+{"message":"{\"message\":\"jwt expired\",\"statusCode\":401}","level":"error","timestamp":"2020-12-22T08:20:58.570Z"}
+{"name":"UnauthorizedError","message":"jwt expired","code":"invalid_token","status":401,"inner":{"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2020-11-25T11:45:13.000Z"},"level":"error","timestamp":"2020-12-22T08:20:58.572Z"}
+{"message":"GET /api/users/ 401 7.089 ms - 25","level":"info","timestamp":"2020-12-22T08:20:58.576Z"}
+{"message":"GET /api/users/ 200 14.636 ms - 1944","level":"info","timestamp":"2020-12-22T08:21:11.247Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T08:22:00.600Z"}
+{"message":"GET /api/users/ 200 16.728 ms - 1944","level":"info","timestamp":"2020-12-22T08:22:01.932Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T08:22:18.637Z"}
+{"message":"GET /api/users/ 200 17.528 ms - 1944","level":"info","timestamp":"2020-12-22T08:22:20.025Z"}
+{"message":"POST /api/auth/login 200 162.082 ms - 331","level":"info","timestamp":"2020-12-22T08:22:30.347Z"}
+{"message":"GET /api/users/ 200 8.695 ms - 2204","level":"info","timestamp":"2020-12-22T08:22:36.566Z"}
+{"message":"GET /api/users/ 200 7.714 ms - 2204","level":"info","timestamp":"2020-12-22T08:22:39.176Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T08:22:46.281Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T08:22:57.404Z"}
+{"message":"GET /api/users/ 200 20.809 ms - 2204","level":"info","timestamp":"2020-12-22T08:22:59.431Z"}
+{"message":"PUT /api/users/7 200 94.618 ms - 40","level":"info","timestamp":"2020-12-22T08:23:24.502Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T08:24:30.497Z"}
+{"message":"PUT /api/users/7 200 94.651 ms - 40","level":"info","timestamp":"2020-12-22T08:24:32.379Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T08:24:50.220Z"}
+{"message":"PUT /api/users/7 400 29.344 ms - 53","level":"info","timestamp":"2020-12-22T08:24:54.449Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T08:25:04.297Z"}
+{"message":"PUT /api/users/7 400 28.364 ms - 53","level":"info","timestamp":"2020-12-22T08:25:06.463Z"}
+{"message":"PUT /api/users/7 400 10.347 ms - 53","level":"info","timestamp":"2020-12-22T08:25:09.976Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T08:25:21.474Z"}
+{"message":"PUT /api/users/7 400 25.305 ms - 53","level":"info","timestamp":"2020-12-22T08:25:22.952Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T08:27:54.927Z"}
+{"message":"PUT /api/users/7 400 37.949 ms - 53","level":"info","timestamp":"2020-12-22T08:27:56.788Z"}
+{"message":"PUT /api/users/7 200 85.969 ms - 40","level":"info","timestamp":"2020-12-22T08:28:15.113Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T08:28:40.446Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T08:31:04.185Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T08:31:59.592Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T08:32:56.411Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T08:43:16.509Z"}
+{"message":"PUT /api/users/7 200 97.400 ms - 40","level":"info","timestamp":"2020-12-22T08:43:23.044Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T08:44:16.507Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T08:44:51.728Z"}
+{"message":"PUT /api/businesses/3 400 24.827 ms - 53","level":"info","timestamp":"2020-12-22T08:44:53.834Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T08:45:40.272Z"}
+{"message":"PUT /api/businesses/3 400 26.302 ms - 53","level":"info","timestamp":"2020-12-22T08:45:42.243Z"}
+{"message":"{\"message\":\"jwt expired\",\"statusCode\":401}","level":"error","timestamp":"2020-12-22T08:45:45.263Z"}
+{"name":"UnauthorizedError","message":"jwt expired","code":"invalid_token","status":401,"inner":{"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2020-12-19T19:46:42.000Z"},"level":"error","timestamp":"2020-12-22T08:45:45.264Z"}
+{"message":"PUT /api/branches/3 401 5.240 ms - 25","level":"info","timestamp":"2020-12-22T08:45:45.266Z"}
+{"message":"PUT /api/branches/3 400 5.476 ms - 53","level":"info","timestamp":"2020-12-22T08:45:51.213Z"}
+{"message":"PUT /api/branches/3 400 6.172 ms - 53","level":"info","timestamp":"2020-12-22T08:46:04.657Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T08:46:28.969Z"}
+{"message":"PUT /api/branches/3 400 26.413 ms - 38","level":"info","timestamp":"2020-12-22T08:46:30.242Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-22T08:46:40.426Z"}
+{"message":"{\"message\":\"Cannot set property 'name' of null\",\"statusCode\":500}","level":"error","timestamp":"2020-12-22T08:46:40.427Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-22T08:46:40.427Z"}
+{"message":"PUT /api/branches/3 500 12.548 ms - 48","level":"info","timestamp":"2020-12-22T08:46:40.429Z"}
+{"message":"PUT /api/branches/2 200 19.249 ms - 45","level":"info","timestamp":"2020-12-22T08:46:50.454Z"}
+{"message":"POST /api/auth/login 400 72.288 ms - 36","level":"info","timestamp":"2020-12-22T08:47:14.299Z"}
+{"message":"POST /api/auth/login 200 140.088 ms - 355","level":"info","timestamp":"2020-12-22T08:47:26.264Z"}
+{"message":"PUT /api/businesses/3 400 3.860 ms - 53","level":"info","timestamp":"2020-12-22T08:47:33.290Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T08:47:56.933Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-22T08:47:58.738Z"}
+{"message":"{\"message\":\"Cannot set property 'name' of null\",\"statusCode\":500}","level":"error","timestamp":"2020-12-22T08:47:58.738Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-22T08:47:58.739Z"}
+{"message":"PUT /api/businesses/3 500 29.449 ms - 48","level":"info","timestamp":"2020-12-22T08:47:58.742Z"}
+{"message":"PUT /api/businesses/2 200 20.661 ms - 51","level":"info","timestamp":"2020-12-22T08:48:01.341Z"}
+{"message":"POST /api/auth/login 200 143.915 ms - 322","level":"info","timestamp":"2020-12-22T08:48:20.592Z"}
+{"message":"PUT /api/businesses/2 400 3.733 ms - 53","level":"info","timestamp":"2020-12-22T08:48:26.822Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T08:51:10.143Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T08:51:35.118Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T08:51:53.673Z"}
+{"message":"PUT /api/businesses/2 400 28.810 ms - 53","level":"info","timestamp":"2020-12-22T08:52:15.525Z"}
+{"message":"DELETE /api/services/2 400 21.330 ms - 53","level":"info","timestamp":"2020-12-22T08:52:24.749Z"}
+{"message":"DELETE /api/businesses/2 400 6.246 ms - 53","level":"info","timestamp":"2020-12-22T08:54:00.580Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T08:59:12.959Z"}
+{"message":"POST /api/users 400 15.375 ms - 47","level":"info","timestamp":"2020-12-22T09:00:15.496Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T09:01:31.164Z"}
+{"expose":true,"statusCode":400,"status":400,"body":"{\n    \"firstname\" : \"Not\",\n    \"lastname\" : \"A Dumbbell\",\n    \"birthdate\": \"02/02/2020\",\n    \"email\" : \"imnotdumbbell@idle.com\",\n    \"password\" : \"notddumbbell\",\n    \"roleName\" : \"BUSINESS_OWNER\"\n    \"business_id\" : 2 \n}","type":"entity.parse.failed","level":"error","message":"undefined","timestamp":"2020-12-22T09:01:50.927Z"}
+{"message":"{\"message\":\"Invalid request. Please check the API if data submitted are valid.\",\"statusCode\":400}","level":"error","timestamp":"2020-12-22T09:01:50.927Z"}
+{"expose":true,"statusCode":400,"status":400,"body":"{\n    \"firstname\" : \"Not\",\n    \"lastname\" : \"A Dumbbell\",\n    \"birthdate\": \"02/02/2020\",\n    \"email\" : \"imnotdumbbell@idle.com\",\n    \"password\" : \"notddumbbell\",\n    \"roleName\" : \"BUSINESS_OWNER\"\n    \"business_id\" : 2 \n}","type":"entity.parse.failed","level":"error","message":"undefined","timestamp":"2020-12-22T09:01:50.929Z"}
+{"message":"POST /api/users 400 18.320 ms - 80","level":"info","timestamp":"2020-12-22T09:01:50.932Z"}
+{"message":"POST /api/users - - ms - -","level":"info","timestamp":"2020-12-22T09:02:08.759Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T09:02:13.282Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T09:03:09.360Z"}
+{"message":"POST /api/users - - ms - -","level":"info","timestamp":"2020-12-22T09:03:12.680Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T09:03:44.008Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T09:03:51.350Z"}
+{"message":"POST /api/users - - ms - -","level":"info","timestamp":"2020-12-22T09:03:54.121Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T09:04:56.426Z"}
+{"message":"POST /api/users 400 15.507 ms - 42","level":"info","timestamp":"2020-12-22T09:05:01.408Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T09:05:26.173Z"}
+{"message":"POST /api/users 400 14.792 ms - 42","level":"info","timestamp":"2020-12-22T09:05:28.939Z"}
+{"message":"POST /api/users 200 83.481 ms - 40","level":"info","timestamp":"2020-12-22T09:05:32.627Z"}
+{"message":"POST /api/users 400 4.697 ms - 47","level":"info","timestamp":"2020-12-22T09:05:42.400Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T09:05:56.264Z"}
+{"message":"POST /api/users 400 24.393 ms - 47","level":"info","timestamp":"2020-12-22T09:06:50.612Z"}
+{"message":"POST /api/users 400 6.456 ms - 33","level":"info","timestamp":"2020-12-22T09:06:53.943Z"}
+{"message":"POST /api/users 200 76.342 ms - 40","level":"info","timestamp":"2020-12-22T09:07:04.091Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T09:14:37.239Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T09:16:11.025Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T09:24:14.637Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T09:24:46.387Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T09:25:54.819Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T09:26:22.639Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T09:28:28.500Z"}
+{"message":"App exited gracefully","level":"info","timestamp":"2020-12-22T09:28:31.880Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T09:34:37.722Z"}
+{"message":"POST /api/users 200 95.802 ms - 40","level":"info","timestamp":"2020-12-22T09:34:44.225Z"}
+{"message":"POST /api/users 200 75.688 ms - 40","level":"info","timestamp":"2020-12-22T09:34:53.031Z"}
+{"message":"POST /api/auth/login 200 141.139 ms - 322","level":"info","timestamp":"2020-12-22T09:34:55.942Z"}
+{"message":"POST /api/users 200 72.775 ms - 40","level":"info","timestamp":"2020-12-22T09:35:20.455Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T09:35:55.552Z"}
+{"message":"POST /api/users 200 104.433 ms - 40","level":"info","timestamp":"2020-12-22T09:36:03.344Z"}
+{"message":"POST /api/users 200 77.243 ms - 40","level":"info","timestamp":"2020-12-22T09:36:26.657Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T09:40:27.214Z"}
+{"message":"POST /api/auth/login 200 167.127 ms - 331","level":"info","timestamp":"2020-12-22T09:42:49.236Z"}
+{"message":"PUT /api/users/10 403 8.251 ms - 62","level":"info","timestamp":"2020-12-22T09:43:28.828Z"}
+{"message":"PUT /api/users/10 200 82.198 ms - 40","level":"info","timestamp":"2020-12-22T09:43:32.124Z"}
+{"message":"PUT /api/users/10 200 77.179 ms - 40","level":"info","timestamp":"2020-12-22T09:43:41.946Z"}
+{"name":"SequelizeForeignKeyConstraintError","parent":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"UPDATE `users` SET `business_id`=?,`password`=?,`updated_at`=? WHERE `id` = ?","parameters":[3,"$2b$10$rif3nvg9sNyiT7hIcS9wOuxoolQpB3KgvUb.aFznZv1aB0JJi8tQG","2020-12-22 09:43:48.761",10]},"original":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"UPDATE `users` SET `business_id`=?,`password`=?,`updated_at`=? WHERE `id` = ?","parameters":[3,"$2b$10$rif3nvg9sNyiT7hIcS9wOuxoolQpB3KgvUb.aFznZv1aB0JJi8tQG","2020-12-22 09:43:48.761",10]},"sql":"UPDATE `users` SET `business_id`=?,`password`=?,`updated_at`=? WHERE `id` = ?","parameters":[3,"$2b$10$rif3nvg9sNyiT7hIcS9wOuxoolQpB3KgvUb.aFznZv1aB0JJi8tQG","2020-12-22 09:43:48.761",10],"fields":["business_id"],"table":"businesses","index":"users_ibfk_2","reltype":"child","level":"error","message":"undefined","timestamp":"2020-12-22T09:43:48.770Z"}
+{"message":"{\"message\":\"(conn=632, no: 1452, SQLState: 23000) Cannot add or update a child row: a foreign key constraint fails (`test-api`.`users`, CONSTRAINT `users_ibfk_2` FOREIGN KEY (`business_id`) REFERENCES `businesses` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)\\nsql: UPDATE `users` SET `business_id`=?,`password`=?,`updated_at`=? WHERE `id` = ? - parameters:[3,'$2b$10$rif3nvg9sNyiT7hIcS9wOuxoolQpB3KgvUb.aFznZv1aB0JJi8tQG','2020-12-22 09:43:48.761',10]\",\"statusCode\":500}","level":"error","timestamp":"2020-12-22T09:43:48.771Z"}
+{"name":"SequelizeForeignKeyConstraintError","parent":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"UPDATE `users` SET `business_id`=?,`password`=?,`updated_at`=? WHERE `id` = ?","parameters":[3,"$2b$10$rif3nvg9sNyiT7hIcS9wOuxoolQpB3KgvUb.aFznZv1aB0JJi8tQG","2020-12-22 09:43:48.761",10]},"original":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"UPDATE `users` SET `business_id`=?,`password`=?,`updated_at`=? WHERE `id` = ?","parameters":[3,"$2b$10$rif3nvg9sNyiT7hIcS9wOuxoolQpB3KgvUb.aFznZv1aB0JJi8tQG","2020-12-22 09:43:48.761",10]},"sql":"UPDATE `users` SET `business_id`=?,`password`=?,`updated_at`=? WHERE `id` = ?","parameters":[3,"$2b$10$rif3nvg9sNyiT7hIcS9wOuxoolQpB3KgvUb.aFznZv1aB0JJi8tQG","2020-12-22 09:43:48.761",10],"fields":["business_id"],"table":"businesses","index":"users_ibfk_2","reltype":"child","level":"error","message":"undefined","timestamp":"2020-12-22T09:43:48.772Z"}
+{"message":"PUT /api/users/10 500 80.680 ms - 453","level":"info","timestamp":"2020-12-22T09:43:48.773Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T09:45:05.466Z"}
+{"message":"PUT /api/users/10 400 26.525 ms - 47","level":"info","timestamp":"2020-12-22T09:45:06.888Z"}
+{"name":"SequelizeForeignKeyConstraintError","parent":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"UPDATE `users` SET `business_id`=?,`password`=?,`updated_at`=? WHERE `id` = ?","parameters":[3,"$2b$10$jl3C/paVM4JctX0eeq3g9uEumM6n4lB0FZVzMmVifTB1DPxDFhn1K","2020-12-22 09:45:06.955",10]},"original":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"UPDATE `users` SET `business_id`=?,`password`=?,`updated_at`=? WHERE `id` = ?","parameters":[3,"$2b$10$jl3C/paVM4JctX0eeq3g9uEumM6n4lB0FZVzMmVifTB1DPxDFhn1K","2020-12-22 09:45:06.955",10]},"sql":"UPDATE `users` SET `business_id`=?,`password`=?,`updated_at`=? WHERE `id` = ?","parameters":[3,"$2b$10$jl3C/paVM4JctX0eeq3g9uEumM6n4lB0FZVzMmVifTB1DPxDFhn1K","2020-12-22 09:45:06.955",10],"fields":["business_id"],"table":"businesses","index":"users_ibfk_2","reltype":"child","level":"error","message":"undefined","timestamp":"2020-12-22T09:45:06.966Z"}
+{"message":"{\"message\":\"(conn=658, no: 1452, SQLState: 23000) Cannot add or update a child row: a foreign key constraint fails (`test-api`.`users`, CONSTRAINT `users_ibfk_2` FOREIGN KEY (`business_id`) REFERENCES `businesses` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)\\nsql: UPDATE `users` SET `business_id`=?,`password`=?,`updated_at`=? WHERE `id` = ? - parameters:[3,'$2b$10$jl3C/paVM4JctX0eeq3g9uEumM6n4lB0FZVzMmVifTB1DPxDFhn1K','2020-12-22 09:45:06.955',10]\",\"statusCode\":500}","level":"error","timestamp":"2020-12-22T09:45:06.966Z"}
+{"name":"SequelizeForeignKeyConstraintError","parent":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"UPDATE `users` SET `business_id`=?,`password`=?,`updated_at`=? WHERE `id` = ?","parameters":[3,"$2b$10$jl3C/paVM4JctX0eeq3g9uEumM6n4lB0FZVzMmVifTB1DPxDFhn1K","2020-12-22 09:45:06.955",10]},"original":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"UPDATE `users` SET `business_id`=?,`password`=?,`updated_at`=? WHERE `id` = ?","parameters":[3,"$2b$10$jl3C/paVM4JctX0eeq3g9uEumM6n4lB0FZVzMmVifTB1DPxDFhn1K","2020-12-22 09:45:06.955",10]},"sql":"UPDATE `users` SET `business_id`=?,`password`=?,`updated_at`=? WHERE `id` = ?","parameters":[3,"$2b$10$jl3C/paVM4JctX0eeq3g9uEumM6n4lB0FZVzMmVifTB1DPxDFhn1K","2020-12-22 09:45:06.955",10],"fields":["business_id"],"table":"businesses","index":"users_ibfk_2","reltype":"child","level":"error","message":"undefined","timestamp":"2020-12-22T09:45:06.967Z"}
+{"message":"PUT /api/users/10 200 78.967 ms - 40","level":"info","timestamp":"2020-12-22T09:45:11.998Z"}
+{"message":"PUT /api/users/10 200 78.369 ms - 40","level":"info","timestamp":"2020-12-22T09:45:16.341Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T09:48:24.447Z"}
+{"message":"App exited gracefully","level":"info","timestamp":"2020-12-22T09:48:28.516Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T09:48:39.824Z"}
+{"message":"App exited gracefully","level":"info","timestamp":"2020-12-22T09:48:41.316Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T09:49:50.289Z"}
+{"message":"POST /api/auth/login 200 163.628 ms - 331","level":"info","timestamp":"2020-12-22T09:49:54.724Z"}
+{"message":"POST /api/users 400 1.748 ms - 52","level":"info","timestamp":"2020-12-22T10:09:25.509Z"}
+{"message":"POST /api/users 400 10.819 ms - 47","level":"info","timestamp":"2020-12-22T10:09:57.955Z"}
+{"name":"SequelizeForeignKeyConstraintError","parent":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notdumbbell@idle.com","$2b$10$mLMmA3pbTMWt5iJZ3Okqc.MULUD7ymwep6Bk3pmjvLG0x6qrgmpkG","A Dumbbell, Not","2020-02-01","2020-12-22 10:09:58.022","2020-12-22 10:09:58.022",3,3,2]},"original":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notdumbbell@idle.com","$2b$10$mLMmA3pbTMWt5iJZ3Okqc.MULUD7ymwep6Bk3pmjvLG0x6qrgmpkG","A Dumbbell, Not","2020-02-01","2020-12-22 10:09:58.022","2020-12-22 10:09:58.022",3,3,2]},"sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notdumbbell@idle.com","$2b$10$mLMmA3pbTMWt5iJZ3Okqc.MULUD7ymwep6Bk3pmjvLG0x6qrgmpkG","A Dumbbell, Not","2020-02-01","2020-12-22 10:09:58.022","2020-12-22 10:09:58.022",3,3,2],"fields":["business_id"],"table":"businesses","index":"users_ibfk_2","reltype":"child","level":"error","message":"undefined","timestamp":"2020-12-22T10:09:58.033Z"}
+{"message":"{\"message\":\"(conn=725, no: 1452, SQLState: 23000) Cannot add or update a child row: a foreign key constraint fails (`test-api`.`users`, CONSTRAINT `users_ibfk_2` FOREIGN KEY (`business_id`) REFERENCES `businesses` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)\\nsql: INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?); - parameters:['notdumbbell@idle.com','$2b$10$mLMmA3pbTMWt5iJZ3Okqc.MULUD7ymwep6Bk3pmjvLG...]\",\"statusCode\":500}","level":"error","timestamp":"2020-12-22T10:09:58.035Z"}
+{"name":"SequelizeForeignKeyConstraintError","parent":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notdumbbell@idle.com","$2b$10$mLMmA3pbTMWt5iJZ3Okqc.MULUD7ymwep6Bk3pmjvLG0x6qrgmpkG","A Dumbbell, Not","2020-02-01","2020-12-22 10:09:58.022","2020-12-22 10:09:58.022",3,3,2]},"original":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notdumbbell@idle.com","$2b$10$mLMmA3pbTMWt5iJZ3Okqc.MULUD7ymwep6Bk3pmjvLG0x6qrgmpkG","A Dumbbell, Not","2020-02-01","2020-12-22 10:09:58.022","2020-12-22 10:09:58.022",3,3,2]},"sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notdumbbell@idle.com","$2b$10$mLMmA3pbTMWt5iJZ3Okqc.MULUD7ymwep6Bk3pmjvLG0x6qrgmpkG","A Dumbbell, Not","2020-02-01","2020-12-22 10:09:58.022","2020-12-22 10:09:58.022",3,3,2],"fields":["business_id"],"table":"businesses","index":"users_ibfk_2","reltype":"child","level":"error","message":"undefined","timestamp":"2020-12-22T10:09:58.036Z"}
+{"message":"POST /api/users 200 73.151 ms - 40","level":"info","timestamp":"2020-12-22T10:10:03.968Z"}
+{"message":"POST /api/users 400 5.249 ms - 47","level":"info","timestamp":"2020-12-22T10:10:07.378Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:11:37.086Z"}
+{"message":"POST /api/users 400 19.356 ms - 47","level":"info","timestamp":"2020-12-22T10:11:42.666Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:11:42.668Z"}
+{"message":"{\"message\":\"Cannot set headers after they are sent to the client\",\"statusCode\":500}","level":"error","timestamp":"2020-12-22T10:11:42.669Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:11:42.669Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:13:23.709Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:13:37.590Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:13:44.691Z"}
+{"message":"POST /api/users 400 20.259 ms - 47","level":"info","timestamp":"2020-12-22T10:13:46.337Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:13:46.339Z"}
+{"message":"{\"message\":\"Cannot set headers after they are sent to the client\",\"statusCode\":500}","level":"error","timestamp":"2020-12-22T10:13:46.340Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:13:46.340Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:14:47.657Z"}
+{"message":"POST /api/users 400 53.114 ms - 47","level":"info","timestamp":"2020-12-22T10:14:49.134Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:14:49.137Z"}
+{"message":"{\"message\":\"Cannot set headers after they are sent to the client\",\"statusCode\":500}","level":"error","timestamp":"2020-12-22T10:14:49.138Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:14:49.138Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:15:03.261Z"}
+{"message":"POST /api/users 400 31.017 ms - 47","level":"info","timestamp":"2020-12-22T10:15:04.381Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:15:04.384Z"}
+{"message":"{\"message\":\"Cannot set headers after they are sent to the client\",\"statusCode\":500}","level":"error","timestamp":"2020-12-22T10:15:04.384Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:15:04.385Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:16:13.171Z"}
+{"message":"POST /api/users 400 21.433 ms - 47","level":"info","timestamp":"2020-12-22T10:16:14.440Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:16:14.443Z"}
+{"message":"{\"message\":\"Cannot set headers after they are sent to the client\",\"statusCode\":500}","level":"error","timestamp":"2020-12-22T10:16:14.444Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:16:14.445Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:16:22.002Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:16:30.536Z"}
+{"message":"POST /api/users 400 21.160 ms - 47","level":"info","timestamp":"2020-12-22T10:16:31.699Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:16:31.702Z"}
+{"message":"{\"message\":\"Cannot set headers after they are sent to the client\",\"statusCode\":500}","level":"error","timestamp":"2020-12-22T10:16:31.702Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:16:31.703Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:16:45.362Z"}
+{"message":"POST /api/users 400 23.939 ms - 47","level":"info","timestamp":"2020-12-22T10:16:46.408Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:16:46.411Z"}
+{"message":"{\"message\":\"Cannot set headers after they are sent to the client\",\"statusCode\":500}","level":"error","timestamp":"2020-12-22T10:16:46.412Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:16:46.413Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:19:26.374Z"}
+{"message":"POST /api/users 400 27.099 ms - 47","level":"info","timestamp":"2020-12-22T10:19:28.033Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:19:28.036Z"}
+{"message":"{\"message\":\"Cannot set headers after they are sent to the client\",\"statusCode\":500}","level":"error","timestamp":"2020-12-22T10:19:28.037Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:19:28.037Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:19:52.415Z"}
+{"message":"POST /api/users 400 86.699 ms - 47","level":"info","timestamp":"2020-12-22T10:19:53.994Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:19:53.997Z"}
+{"message":"{\"message\":\"Cannot set headers after they are sent to the client\",\"statusCode\":500}","level":"error","timestamp":"2020-12-22T10:19:53.997Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:19:53.998Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:23:27.748Z"}
+{"message":"POST /api/users 400 34.707 ms - 47","level":"info","timestamp":"2020-12-22T10:23:29.091Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:23:29.093Z"}
+{"message":"{\"message\":\"Cannot set headers after they are sent to the client\",\"statusCode\":500}","level":"error","timestamp":"2020-12-22T10:23:29.093Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:23:29.094Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:24:16.942Z"}
+{"message":"POST /api/users 400 31.087 ms - 47","level":"info","timestamp":"2020-12-22T10:24:18.054Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:24:18.058Z"}
+{"message":"{\"message\":\"Cannot set headers after they are sent to the client\",\"statusCode\":500}","level":"error","timestamp":"2020-12-22T10:24:18.059Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:24:18.060Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:24:34.182Z"}
+{"message":"POST /api/users 400 30.379 ms - 47","level":"info","timestamp":"2020-12-22T10:24:35.333Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:24:35.338Z"}
+{"message":"{\"message\":\"Cannot set headers after they are sent to the client\",\"statusCode\":500}","level":"error","timestamp":"2020-12-22T10:24:35.338Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:24:35.339Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:24:48.997Z"}
+{"message":"POST /api/users 400 28.427 ms - 47","level":"info","timestamp":"2020-12-22T10:24:50.500Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:24:50.503Z"}
+{"message":"{\"message\":\"Cannot set headers after they are sent to the client\",\"statusCode\":500}","level":"error","timestamp":"2020-12-22T10:24:50.504Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:24:50.504Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:25:42.293Z"}
+{"message":"POST /api/users 400 29.091 ms - 47","level":"info","timestamp":"2020-12-22T10:25:43.593Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:25:43.595Z"}
+{"message":"{\"message\":\"Cannot set headers after they are sent to the client\",\"statusCode\":500}","level":"error","timestamp":"2020-12-22T10:25:43.596Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:25:43.596Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:25:54.469Z"}
+{"message":"POST /api/users 400 38.232 ms - 47","level":"info","timestamp":"2020-12-22T10:25:55.675Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:25:55.679Z"}
+{"message":"{\"message\":\"Cannot set headers after they are sent to the client\",\"statusCode\":500}","level":"error","timestamp":"2020-12-22T10:25:55.680Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:25:55.680Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:26:06.494Z"}
+{"message":"POST /api/users 400 29.020 ms - 47","level":"info","timestamp":"2020-12-22T10:26:08.150Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:26:08.154Z"}
+{"message":"{\"message\":\"Cannot set headers after they are sent to the client\",\"statusCode\":500}","level":"error","timestamp":"2020-12-22T10:26:08.154Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:26:08.155Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:26:18.398Z"}
+{"message":"POST /api/users 400 30.373 ms - 47","level":"info","timestamp":"2020-12-22T10:26:19.695Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:26:19.698Z"}
+{"message":"{\"message\":\"Cannot set headers after they are sent to the client\",\"statusCode\":500}","level":"error","timestamp":"2020-12-22T10:26:19.699Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:26:19.700Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:27:06.668Z"}
+{"message":"POST /api/users 400 28.823 ms - 47","level":"info","timestamp":"2020-12-22T10:27:08.368Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:27:08.371Z"}
+{"message":"{\"message\":\"Cannot set headers after they are sent to the client\",\"statusCode\":500}","level":"error","timestamp":"2020-12-22T10:27:08.372Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:27:08.372Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:28:22.634Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:28:47.293Z"}
+{"message":"POST /api/users 400 19.973 ms - 47","level":"info","timestamp":"2020-12-22T10:28:48.712Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:28:59.336Z"}
+{"message":"POST /api/users 400 20.055 ms - 47","level":"info","timestamp":"2020-12-22T10:29:01.171Z"}
+{"message":"POST /api/users 400 6.545 ms - 47","level":"info","timestamp":"2020-12-22T10:29:29.265Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:29:51.006Z"}
+{"message":"POST /api/users 400 21.729 ms - 47","level":"info","timestamp":"2020-12-22T10:29:52.241Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:29:52.245Z"}
+{"message":"{\"message\":\"Cannot set headers after they are sent to the client\",\"statusCode\":500}","level":"error","timestamp":"2020-12-22T10:29:52.247Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-22T10:29:52.249Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:30:05.504Z"}
+{"message":"POST /api/users 400 19.780 ms - 33","level":"info","timestamp":"2020-12-22T10:30:08.661Z"}
+{"message":"POST /api/users 400 6.609 ms - 33","level":"info","timestamp":"2020-12-22T10:30:12.242Z"}
+{"message":"POST /api/users 400 6.127 ms - 33","level":"info","timestamp":"2020-12-22T10:30:15.882Z"}
+{"message":"POST /api/users 400 3.887 ms - 47","level":"info","timestamp":"2020-12-22T10:30:20.152Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:31:57.143Z"}
+{"message":"POST /api/users 400 20.916 ms - 47","level":"info","timestamp":"2020-12-22T10:31:58.523Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:32:56.685Z"}
+{"message":"POST /api/users 400 23.662 ms - 47","level":"info","timestamp":"2020-12-22T10:32:58.071Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:35:34.285Z"}
+{"message":"POST /api/users 400 21.382 ms - 47","level":"info","timestamp":"2020-12-22T10:35:35.979Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:35:51.942Z"}
+{"message":"POST /api/users 400 27.124 ms - 47","level":"info","timestamp":"2020-12-22T10:35:53.139Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:36:34.586Z"}
+{"message":"POST /api/users 400 20.226 ms - 47","level":"info","timestamp":"2020-12-22T10:36:36.486Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:36:55.533Z"}
+{"message":"POST /api/users 400 16.864 ms - 47","level":"info","timestamp":"2020-12-22T10:36:57.270Z"}
+{"message":"POST /api/users 400 6.564 ms - 47","level":"info","timestamp":"2020-12-22T10:39:24.688Z"}
+{"message":"POST /api/users 400 4.965 ms - 47","level":"info","timestamp":"2020-12-22T10:54:38.483Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:54:59.192Z"}
+{"message":"POST /api/users 400 21.881 ms - 33","level":"info","timestamp":"2020-12-22T10:55:01.317Z"}
+{"message":"POST /api/users 400 4.613 ms - 47","level":"info","timestamp":"2020-12-22T10:55:05.833Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:55:15.886Z"}
+{"message":"POST /api/users 400 21.768 ms - 47","level":"info","timestamp":"2020-12-22T10:55:17.337Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:55:26.459Z"}
+{"message":"POST /api/users 400 20.304 ms - 47","level":"info","timestamp":"2020-12-22T10:55:28.258Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:55:34.409Z"}
+{"message":"POST /api/users 400 26.685 ms - 47","level":"info","timestamp":"2020-12-22T10:55:35.917Z"}
+{"message":"POST /api/users 400 9.805 ms - 47","level":"info","timestamp":"2020-12-22T10:55:51.195Z"}
+{"message":"POST /api/users 400 5.276 ms - 33","level":"info","timestamp":"2020-12-22T10:55:54.414Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:56:57.126Z"}
+{"message":"POST /api/users 400 22.346 ms - 33","level":"info","timestamp":"2020-12-22T10:56:58.753Z"}
+{"message":"POST /api/users 400 2.667 ms - 33","level":"info","timestamp":"2020-12-22T10:57:02.118Z"}
+{"message":"POST /api/users 400 3.796 ms - 33","level":"info","timestamp":"2020-12-22T10:57:05.838Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:57:30.069Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:58:09.005Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:58:34.159Z"}
+{"message":"POST /api/users 400 19.800 ms - 47","level":"info","timestamp":"2020-12-22T10:58:35.558Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T10:58:49.138Z"}
+{"message":"POST /api/users 400 19.240 ms - 47","level":"info","timestamp":"2020-12-22T10:58:50.580Z"}
+{"message":"POST /api/users - - ms - -","level":"info","timestamp":"2020-12-22T10:58:56.637Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T11:01:18.089Z"}
+{"message":"POST /api/users 400 19.136 ms - 33","level":"info","timestamp":"2020-12-22T11:01:19.699Z"}
+{"message":"POST /api/users 400 3.515 ms - 33","level":"info","timestamp":"2020-12-22T11:01:24.487Z"}
+{"message":"POST /api/users 400 8.956 ms - 47","level":"info","timestamp":"2020-12-22T11:01:27.993Z"}
+{"name":"SequelizeForeignKeyConstraintError","parent":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notadumbbell@idle.com","$2b$10$CqodDQNFUb30yZHNo0CqD.9dHqxOVWaDkxX/V/aWELnF237rp47a6","A Dumbbell, Not","2020-02-01","2020-12-22 11:01:28.060","2020-12-22 11:01:28.060",3,3,2]},"original":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notadumbbell@idle.com","$2b$10$CqodDQNFUb30yZHNo0CqD.9dHqxOVWaDkxX/V/aWELnF237rp47a6","A Dumbbell, Not","2020-02-01","2020-12-22 11:01:28.060","2020-12-22 11:01:28.060",3,3,2]},"sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notadumbbell@idle.com","$2b$10$CqodDQNFUb30yZHNo0CqD.9dHqxOVWaDkxX/V/aWELnF237rp47a6","A Dumbbell, Not","2020-02-01","2020-12-22 11:01:28.060","2020-12-22 11:01:28.060",3,3,2],"fields":["business_id"],"table":"businesses","index":"users_ibfk_2","reltype":"child","level":"error","message":"undefined","timestamp":"2020-12-22T11:01:28.071Z"}
+{"message":"{\"message\":\"(conn=867, no: 1452, SQLState: 23000) Cannot add or update a child row: a foreign key constraint fails (`test-api`.`users`, CONSTRAINT `users_ibfk_2` FOREIGN KEY (`business_id`) REFERENCES `businesses` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)\\nsql: INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?); - parameters:['notadumbbell@idle.com','$2b$10$CqodDQNFUb30yZHNo0CqD.9dHqxOVWaDkxX/V/aWEL...]\",\"statusCode\":500}","level":"error","timestamp":"2020-12-22T11:01:28.072Z"}
+{"name":"SequelizeForeignKeyConstraintError","parent":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notadumbbell@idle.com","$2b$10$CqodDQNFUb30yZHNo0CqD.9dHqxOVWaDkxX/V/aWELnF237rp47a6","A Dumbbell, Not","2020-02-01","2020-12-22 11:01:28.060","2020-12-22 11:01:28.060",3,3,2]},"original":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notadumbbell@idle.com","$2b$10$CqodDQNFUb30yZHNo0CqD.9dHqxOVWaDkxX/V/aWELnF237rp47a6","A Dumbbell, Not","2020-02-01","2020-12-22 11:01:28.060","2020-12-22 11:01:28.060",3,3,2]},"sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notadumbbell@idle.com","$2b$10$CqodDQNFUb30yZHNo0CqD.9dHqxOVWaDkxX/V/aWELnF237rp47a6","A Dumbbell, Not","2020-02-01","2020-12-22 11:01:28.060","2020-12-22 11:01:28.060",3,3,2],"fields":["business_id"],"table":"businesses","index":"users_ibfk_2","reltype":"child","level":"error","message":"undefined","timestamp":"2020-12-22T11:01:28.073Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T11:01:40.915Z"}
+{"message":"POST /api/users 400 20.771 ms - 47","level":"info","timestamp":"2020-12-22T11:01:42.474Z"}
+{"name":"SequelizeForeignKeyConstraintError","parent":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notadumbbell@idle.com","$2b$10$Bv832JSzijIRA8g3QHB1C.fvfh6NZmgf0PDttvkIF3c8KEEiMnubK","A Dumbbell, Not","2020-02-01","2020-12-22 11:01:42.541","2020-12-22 11:01:42.541",3,3,2]},"original":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notadumbbell@idle.com","$2b$10$Bv832JSzijIRA8g3QHB1C.fvfh6NZmgf0PDttvkIF3c8KEEiMnubK","A Dumbbell, Not","2020-02-01","2020-12-22 11:01:42.541","2020-12-22 11:01:42.541",3,3,2]},"sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notadumbbell@idle.com","$2b$10$Bv832JSzijIRA8g3QHB1C.fvfh6NZmgf0PDttvkIF3c8KEEiMnubK","A Dumbbell, Not","2020-02-01","2020-12-22 11:01:42.541","2020-12-22 11:01:42.541",3,3,2],"fields":["business_id"],"table":"businesses","index":"users_ibfk_2","reltype":"child","level":"error","message":"undefined","timestamp":"2020-12-22T11:01:42.553Z"}
+{"message":"{\"message\":\"(conn=870, no: 1452, SQLState: 23000) Cannot add or update a child row: a foreign key constraint fails (`test-api`.`users`, CONSTRAINT `users_ibfk_2` FOREIGN KEY (`business_id`) REFERENCES `businesses` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)\\nsql: INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?); - parameters:['notadumbbell@idle.com','$2b$10$Bv832JSzijIRA8g3QHB1C.fvfh6NZmgf0PDttvkIF3...]\",\"statusCode\":500}","level":"error","timestamp":"2020-12-22T11:01:42.554Z"}
+{"name":"SequelizeForeignKeyConstraintError","parent":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notadumbbell@idle.com","$2b$10$Bv832JSzijIRA8g3QHB1C.fvfh6NZmgf0PDttvkIF3c8KEEiMnubK","A Dumbbell, Not","2020-02-01","2020-12-22 11:01:42.541","2020-12-22 11:01:42.541",3,3,2]},"original":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notadumbbell@idle.com","$2b$10$Bv832JSzijIRA8g3QHB1C.fvfh6NZmgf0PDttvkIF3c8KEEiMnubK","A Dumbbell, Not","2020-02-01","2020-12-22 11:01:42.541","2020-12-22 11:01:42.541",3,3,2]},"sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notadumbbell@idle.com","$2b$10$Bv832JSzijIRA8g3QHB1C.fvfh6NZmgf0PDttvkIF3c8KEEiMnubK","A Dumbbell, Not","2020-02-01","2020-12-22 11:01:42.541","2020-12-22 11:01:42.541",3,3,2],"fields":["business_id"],"table":"businesses","index":"users_ibfk_2","reltype":"child","level":"error","message":"undefined","timestamp":"2020-12-22T11:01:42.555Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T11:02:16.961Z"}
+{"message":"POST /api/users 400 22.450 ms - 47","level":"info","timestamp":"2020-12-22T11:02:42.635Z"}
+{"name":"SequelizeForeignKeyConstraintError","parent":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notadumbbell@idle.com","$2b$10$rpryDuPB85TsI6TNkX1Seunv.vdm3N1ydxBKtO1FJ5qN/tDTiuHG6","A Dumbbell, Not","2020-02-01","2020-12-22 11:02:42.704","2020-12-22 11:02:42.704",3,3,2]},"original":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notadumbbell@idle.com","$2b$10$rpryDuPB85TsI6TNkX1Seunv.vdm3N1ydxBKtO1FJ5qN/tDTiuHG6","A Dumbbell, Not","2020-02-01","2020-12-22 11:02:42.704","2020-12-22 11:02:42.704",3,3,2]},"sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notadumbbell@idle.com","$2b$10$rpryDuPB85TsI6TNkX1Seunv.vdm3N1ydxBKtO1FJ5qN/tDTiuHG6","A Dumbbell, Not","2020-02-01","2020-12-22 11:02:42.704","2020-12-22 11:02:42.704",3,3,2],"fields":["business_id"],"table":"businesses","index":"users_ibfk_2","reltype":"child","level":"error","message":"undefined","timestamp":"2020-12-22T11:02:42.716Z"}
+{"message":"{\"message\":\"(conn=887, no: 1452, SQLState: 23000) Cannot add or update a child row: a foreign key constraint fails (`test-api`.`users`, CONSTRAINT `users_ibfk_2` FOREIGN KEY (`business_id`) REFERENCES `businesses` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)\\nsql: INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?); - parameters:['notadumbbell@idle.com','$2b$10$rpryDuPB85TsI6TNkX1Seunv.vdm3N1ydxBKtO1FJ5...]\",\"statusCode\":500}","level":"error","timestamp":"2020-12-22T11:02:42.717Z"}
+{"name":"SequelizeForeignKeyConstraintError","parent":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notadumbbell@idle.com","$2b$10$rpryDuPB85TsI6TNkX1Seunv.vdm3N1ydxBKtO1FJ5qN/tDTiuHG6","A Dumbbell, Not","2020-02-01","2020-12-22 11:02:42.704","2020-12-22 11:02:42.704",3,3,2]},"original":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notadumbbell@idle.com","$2b$10$rpryDuPB85TsI6TNkX1Seunv.vdm3N1ydxBKtO1FJ5qN/tDTiuHG6","A Dumbbell, Not","2020-02-01","2020-12-22 11:02:42.704","2020-12-22 11:02:42.704",3,3,2]},"sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notadumbbell@idle.com","$2b$10$rpryDuPB85TsI6TNkX1Seunv.vdm3N1ydxBKtO1FJ5qN/tDTiuHG6","A Dumbbell, Not","2020-02-01","2020-12-22 11:02:42.704","2020-12-22 11:02:42.704",3,3,2],"fields":["business_id"],"table":"businesses","index":"users_ibfk_2","reltype":"child","level":"error","message":"undefined","timestamp":"2020-12-22T11:02:42.718Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T11:07:46.358Z"}
+{"message":"POST /api/users 400 27.554 ms - 47","level":"info","timestamp":"2020-12-22T11:07:51.779Z"}
+{"name":"SequelizeForeignKeyConstraintError","parent":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notadumbbell@idle.com","$2b$10$6bVv7yJh/deDKQc9JRoyGOrJVBgF2eQtyNZc6ngdd6d57vT3TSvFG","A Dumbbell, Not","2020-02-01","2020-12-22 11:07:51.848","2020-12-22 11:07:51.848",3,3,2]},"original":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notadumbbell@idle.com","$2b$10$6bVv7yJh/deDKQc9JRoyGOrJVBgF2eQtyNZc6ngdd6d57vT3TSvFG","A Dumbbell, Not","2020-02-01","2020-12-22 11:07:51.848","2020-12-22 11:07:51.848",3,3,2]},"sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notadumbbell@idle.com","$2b$10$6bVv7yJh/deDKQc9JRoyGOrJVBgF2eQtyNZc6ngdd6d57vT3TSvFG","A Dumbbell, Not","2020-02-01","2020-12-22 11:07:51.848","2020-12-22 11:07:51.848",3,3,2],"fields":["business_id"],"table":"businesses","index":"users_ibfk_2","reltype":"child","level":"error","message":"undefined","timestamp":"2020-12-22T11:07:51.863Z"}
+{"message":"{\"message\":\"(conn=889, no: 1452, SQLState: 23000) Cannot add or update a child row: a foreign key constraint fails (`test-api`.`users`, CONSTRAINT `users_ibfk_2` FOREIGN KEY (`business_id`) REFERENCES `businesses` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)\\nsql: INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?); - parameters:['notadumbbell@idle.com','$2b$10$6bVv7yJh/deDKQc9JRoyGOrJVBgF2eQtyNZc6ngdd6...]\",\"statusCode\":500}","level":"error","timestamp":"2020-12-22T11:07:51.863Z"}
+{"name":"SequelizeForeignKeyConstraintError","parent":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notadumbbell@idle.com","$2b$10$6bVv7yJh/deDKQc9JRoyGOrJVBgF2eQtyNZc6ngdd6d57vT3TSvFG","A Dumbbell, Not","2020-02-01","2020-12-22 11:07:51.848","2020-12-22 11:07:51.848",3,3,2]},"original":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notadumbbell@idle.com","$2b$10$6bVv7yJh/deDKQc9JRoyGOrJVBgF2eQtyNZc6ngdd6d57vT3TSvFG","A Dumbbell, Not","2020-02-01","2020-12-22 11:07:51.848","2020-12-22 11:07:51.848",3,3,2]},"sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notadumbbell@idle.com","$2b$10$6bVv7yJh/deDKQc9JRoyGOrJVBgF2eQtyNZc6ngdd6d57vT3TSvFG","A Dumbbell, Not","2020-02-01","2020-12-22 11:07:51.848","2020-12-22 11:07:51.848",3,3,2],"fields":["business_id"],"table":"businesses","index":"users_ibfk_2","reltype":"child","level":"error","message":"undefined","timestamp":"2020-12-22T11:07:51.865Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T11:08:19.281Z"}
+{"message":"POST /api/users 400 18.872 ms - 47","level":"info","timestamp":"2020-12-22T11:08:23.163Z"}
+{"name":"SequelizeForeignKeyConstraintError","parent":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notadumbbell@idle.com","$2b$10$fW8vMZi86hZGSSBMZRNsuup/DWo1aSaz0USGp8/4KND.Ww2a7KK9O","A Dumbbell, Not","2020-02-01","2020-12-22 11:08:23.229","2020-12-22 11:08:23.229",3,3,2]},"original":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notadumbbell@idle.com","$2b$10$fW8vMZi86hZGSSBMZRNsuup/DWo1aSaz0USGp8/4KND.Ww2a7KK9O","A Dumbbell, Not","2020-02-01","2020-12-22 11:08:23.229","2020-12-22 11:08:23.229",3,3,2]},"sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notadumbbell@idle.com","$2b$10$fW8vMZi86hZGSSBMZRNsuup/DWo1aSaz0USGp8/4KND.Ww2a7KK9O","A Dumbbell, Not","2020-02-01","2020-12-22 11:08:23.229","2020-12-22 11:08:23.229",3,3,2],"fields":["business_id"],"table":"businesses","index":"users_ibfk_2","reltype":"child","level":"error","message":"undefined","timestamp":"2020-12-22T11:08:23.241Z"}
+{"message":"{\"message\":\"(conn=892, no: 1452, SQLState: 23000) Cannot add or update a child row: a foreign key constraint fails (`test-api`.`users`, CONSTRAINT `users_ibfk_2` FOREIGN KEY (`business_id`) REFERENCES `businesses` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)\\nsql: INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?); - parameters:['notadumbbell@idle.com','$2b$10$fW8vMZi86hZGSSBMZRNsuup/DWo1aSaz0USGp8/4KN...]\",\"statusCode\":500}","level":"error","timestamp":"2020-12-22T11:08:23.242Z"}
+{"name":"SequelizeForeignKeyConstraintError","parent":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notadumbbell@idle.com","$2b$10$fW8vMZi86hZGSSBMZRNsuup/DWo1aSaz0USGp8/4KND.Ww2a7KK9O","A Dumbbell, Not","2020-02-01","2020-12-22 11:08:23.229","2020-12-22 11:08:23.229",3,3,2]},"original":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notadumbbell@idle.com","$2b$10$fW8vMZi86hZGSSBMZRNsuup/DWo1aSaz0USGp8/4KND.Ww2a7KK9O","A Dumbbell, Not","2020-02-01","2020-12-22 11:08:23.229","2020-12-22 11:08:23.229",3,3,2]},"sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notadumbbell@idle.com","$2b$10$fW8vMZi86hZGSSBMZRNsuup/DWo1aSaz0USGp8/4KND.Ww2a7KK9O","A Dumbbell, Not","2020-02-01","2020-12-22 11:08:23.229","2020-12-22 11:08:23.229",3,3,2],"fields":["business_id"],"table":"businesses","index":"users_ibfk_2","reltype":"child","level":"error","message":"undefined","timestamp":"2020-12-22T11:08:23.242Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T11:09:11.766Z"}
+{"message":"POST /api/users 400 19.800 ms - 47","level":"info","timestamp":"2020-12-22T11:09:14.673Z"}
+{"name":"SequelizeForeignKeyConstraintError","parent":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notadumbbell@idle.com","$2b$10$eIHu2WNqxSFmayon18Omj.WIQ1a6JxImG3XEFjaeAgg0ajV/rHVAK","A Dumbbell, Not","2020-02-01","2020-12-22 11:09:14.742","2020-12-22 11:09:14.742",3,3,2]},"original":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notadumbbell@idle.com","$2b$10$eIHu2WNqxSFmayon18Omj.WIQ1a6JxImG3XEFjaeAgg0ajV/rHVAK","A Dumbbell, Not","2020-02-01","2020-12-22 11:09:14.742","2020-12-22 11:09:14.742",3,3,2]},"sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notadumbbell@idle.com","$2b$10$eIHu2WNqxSFmayon18Omj.WIQ1a6JxImG3XEFjaeAgg0ajV/rHVAK","A Dumbbell, Not","2020-02-01","2020-12-22 11:09:14.742","2020-12-22 11:09:14.742",3,3,2],"fields":["business_id"],"table":"businesses","index":"users_ibfk_2","reltype":"child","level":"error","message":"undefined","timestamp":"2020-12-22T11:09:14.754Z"}
+{"message":"{\"message\":\"(conn=895, no: 1452, SQLState: 23000) Cannot add or update a child row: a foreign key constraint fails (`test-api`.`users`, CONSTRAINT `users_ibfk_2` FOREIGN KEY (`business_id`) REFERENCES `businesses` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)\\nsql: INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?); - parameters:['notadumbbell@idle.com','$2b$10$eIHu2WNqxSFmayon18Omj.WIQ1a6JxImG3XEFjaeAg...]\",\"statusCode\":500}","level":"error","timestamp":"2020-12-22T11:09:14.755Z"}
+{"name":"SequelizeForeignKeyConstraintError","parent":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notadumbbell@idle.com","$2b$10$eIHu2WNqxSFmayon18Omj.WIQ1a6JxImG3XEFjaeAgg0ajV/rHVAK","A Dumbbell, Not","2020-02-01","2020-12-22 11:09:14.742","2020-12-22 11:09:14.742",3,3,2]},"original":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notadumbbell@idle.com","$2b$10$eIHu2WNqxSFmayon18Omj.WIQ1a6JxImG3XEFjaeAgg0ajV/rHVAK","A Dumbbell, Not","2020-02-01","2020-12-22 11:09:14.742","2020-12-22 11:09:14.742",3,3,2]},"sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["notadumbbell@idle.com","$2b$10$eIHu2WNqxSFmayon18Omj.WIQ1a6JxImG3XEFjaeAgg0ajV/rHVAK","A Dumbbell, Not","2020-02-01","2020-12-22 11:09:14.742","2020-12-22 11:09:14.742",3,3,2],"fields":["business_id"],"table":"businesses","index":"users_ibfk_2","reltype":"child","level":"error","message":"undefined","timestamp":"2020-12-22T11:09:14.756Z"}
+{"message":"POST /api/users 200 73.318 ms - 40","level":"info","timestamp":"2020-12-22T11:12:03.815Z"}
+{"message":"POST /api/users 400 4.623 ms - 33","level":"info","timestamp":"2020-12-22T11:12:07.412Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T11:14:49.323Z"}
+{"message":"POST /api/users 400 22.226 ms - 33","level":"info","timestamp":"2020-12-22T11:14:51.637Z"}
+{"message":"POST /api/users 400 5.109 ms - 47","level":"info","timestamp":"2020-12-22T11:14:54.468Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T11:17:16.358Z"}
+{"message":"POST /api/users 400 18.595 ms - 47","level":"info","timestamp":"2020-12-22T11:17:18.169Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-22T11:17:23.931Z"}
+{"message":"App exited gracefully","level":"info","timestamp":"2020-12-22T12:22:24.849Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-24T08:30:06.263Z"}
+{"message":"POST /api/auth/login 400 27.620 ms - 37","level":"info","timestamp":"2020-12-24T08:30:27.542Z"}
+{"name":"SequelizeForeignKeyConstraintError","parent":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["iamnhem@idle.com","$2b$10$kZamng75G8Dv9.bLwXDvcu6Z6LepSzKotrpKYLpxiomwZmZcN5qzy","Rob, Nhem","2000-01-16","2020-12-24 08:31:12.189","2020-12-24 08:31:12.189",1,3,2]},"original":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["iamnhem@idle.com","$2b$10$kZamng75G8Dv9.bLwXDvcu6Z6LepSzKotrpKYLpxiomwZmZcN5qzy","Rob, Nhem","2000-01-16","2020-12-24 08:31:12.189","2020-12-24 08:31:12.189",1,3,2]},"sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["iamnhem@idle.com","$2b$10$kZamng75G8Dv9.bLwXDvcu6Z6LepSzKotrpKYLpxiomwZmZcN5qzy","Rob, Nhem","2000-01-16","2020-12-24 08:31:12.189","2020-12-24 08:31:12.189",1,3,2],"fields":["business_id"],"table":"businesses","index":"users_ibfk_2","reltype":"child","level":"error","message":"undefined","timestamp":"2020-12-24T08:31:12.201Z"}
+{"message":"{\"message\":\"(conn=37, no: 1452, SQLState: 23000) Cannot add or update a child row: a foreign key constraint fails (`test-api`.`users`, CONSTRAINT `users_ibfk_2` FOREIGN KEY (`business_id`) REFERENCES `businesses` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)\\nsql: INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?); - parameters:['iamnhem@idle.com','$2b$10$kZamng75G8Dv9.bLwXDvcu6Z6LepSzKotrpKYLpxiomwZmZ...]\",\"statusCode\":500}","level":"error","timestamp":"2020-12-24T08:31:12.202Z"}
+{"name":"SequelizeForeignKeyConstraintError","parent":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["iamnhem@idle.com","$2b$10$kZamng75G8Dv9.bLwXDvcu6Z6LepSzKotrpKYLpxiomwZmZcN5qzy","Rob, Nhem","2000-01-16","2020-12-24 08:31:12.189","2020-12-24 08:31:12.189",1,3,2]},"original":{"fatal":false,"errno":1452,"sqlState":"23000","code":"ER_NO_REFERENCED_ROW_2","sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["iamnhem@idle.com","$2b$10$kZamng75G8Dv9.bLwXDvcu6Z6LepSzKotrpKYLpxiomwZmZcN5qzy","Rob, Nhem","2000-01-16","2020-12-24 08:31:12.189","2020-12-24 08:31:12.189",1,3,2]},"sql":"INSERT INTO `users` (`id`,`email`,`password`,`name`,`birthdate`,`created_at`,`updated_at`,`role_id`,`business_id`,`branch_id`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);","parameters":["iamnhem@idle.com","$2b$10$kZamng75G8Dv9.bLwXDvcu6Z6LepSzKotrpKYLpxiomwZmZcN5qzy","Rob, Nhem","2000-01-16","2020-12-24 08:31:12.189","2020-12-24 08:31:12.189",1,3,2],"fields":["business_id"],"table":"businesses","index":"users_ibfk_2","reltype":"child","level":"error","message":"undefined","timestamp":"2020-12-24T08:31:12.202Z"}
+{"message":"POST /api/users 500 83.766 ms - 521","level":"info","timestamp":"2020-12-24T08:31:12.204Z"}
+{"message":"POST /api/users - - ms - -","level":"info","timestamp":"2020-12-24T08:31:38.282Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-24T08:31:39.124Z"}
+{"message":"POST /api/users 400 18.570 ms - 33","level":"info","timestamp":"2020-12-24T08:31:42.613Z"}
+{"message":"POST /api/auth/login 200 145.149 ms - 331","level":"info","timestamp":"2020-12-24T08:31:56.651Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-24T08:32:20.278Z"}
+{"message":"POST /api/auth/login 200 159.101 ms - 331","level":"info","timestamp":"2020-12-24T08:32:23.307Z"}
+{"message":"GET /api/businesses/ 200 11.413 ms - 296","level":"info","timestamp":"2020-12-24T08:32:29.324Z"}
+{"message":"GET /api/branches/ 200 5.268 ms - 299","level":"info","timestamp":"2020-12-24T08:32:32.579Z"}
+{"message":"GET /api/queues/1/currentqueue 200 5.311 ms - 11","level":"info","timestamp":"2020-12-24T08:32:36.141Z"}
+{"message":"GET /api/queues 200 10.528 ms - 1086","level":"info","timestamp":"2020-12-24T08:32:39.640Z"}
+{"message":"GET /api/queues/1/currentqueue 200 7.866 ms - 182","level":"info","timestamp":"2020-12-24T08:33:58.204Z"}
+{"message":"GET /api/queues 200 40.556 ms - 1089","level":"info","timestamp":"2020-12-24T08:34:05.649Z"}
+{"message":"GET /api/services 200 5.482 ms - 729","level":"info","timestamp":"2020-12-24T08:34:11.265Z"}
+{"message":"GET /api/services/2 200 9.678 ms - 134","level":"info","timestamp":"2020-12-24T08:34:14.713Z"}
+{"message":"GET /api/services/1/queues 200 11.752 ms - 627","level":"info","timestamp":"2020-12-24T08:34:18.356Z"}
+{"message":"POST /api/users 400 6.502 ms - 47","level":"info","timestamp":"2020-12-24T08:36:37.522Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-24T08:48:01.199Z"}
+{"message":"OPTIONS /api/auth/login 204 1.659 ms - 0","level":"info","timestamp":"2020-12-24T09:03:43.297Z"}
+{"message":"POST /api/auth/login 200 163.023 ms - 331","level":"info","timestamp":"2020-12-24T09:03:43.462Z"}
+{"message":"OPTIONS /api/auth/login 204 0.208 ms - 0","level":"info","timestamp":"2020-12-24T09:04:33.500Z"}
+{"message":"POST /api/auth/login 200 146.936 ms - 331","level":"info","timestamp":"2020-12-24T09:04:33.649Z"}
+{"message":"OPTIONS /api/auth/login 204 0.107 ms - 0","level":"info","timestamp":"2020-12-24T09:05:54.110Z"}
+{"message":"POST /api/auth/login 200 136.334 ms - 331","level":"info","timestamp":"2020-12-24T09:05:54.248Z"}
+{"message":"OPTIONS /api/auth/login 204 0.142 ms - 0","level":"info","timestamp":"2020-12-24T09:10:51.709Z"}
+{"message":"POST /api/auth/login 200 135.533 ms - 362","level":"info","timestamp":"2020-12-24T09:10:51.846Z"}
+{"message":"OPTIONS /api/auth/login 204 0.160 ms - 0","level":"info","timestamp":"2020-12-24T09:12:05.265Z"}
+{"message":"POST /api/auth/login 200 133.907 ms - 362","level":"info","timestamp":"2020-12-24T09:12:05.401Z"}
+{"message":"OPTIONS /api/auth/login 204 0.126 ms - 0","level":"info","timestamp":"2020-12-24T09:12:36.251Z"}
+{"message":"POST /api/auth/login 200 134.955 ms - 362","level":"info","timestamp":"2020-12-24T09:12:36.388Z"}
+{"message":"OPTIONS /api/auth/login 204 0.209 ms - 0","level":"info","timestamp":"2020-12-24T09:13:56.434Z"}
+{"message":"POST /api/auth/login 200 135.050 ms - 362","level":"info","timestamp":"2020-12-24T09:13:56.571Z"}
+{"message":"OPTIONS /api/auth/login 204 0.176 ms - 0","level":"info","timestamp":"2020-12-24T09:14:07.500Z"}
+{"message":"POST /api/auth/login 200 135.927 ms - 331","level":"info","timestamp":"2020-12-24T09:14:07.638Z"}
+{"message":"OPTIONS /api/auth/login 204 0.113 ms - 0","level":"info","timestamp":"2020-12-24T09:15:23.980Z"}
+{"message":"POST /api/auth/login 200 135.630 ms - 331","level":"info","timestamp":"2020-12-24T09:15:24.117Z"}
+{"message":"OPTIONS /api/auth/login 204 0.120 ms - 0","level":"info","timestamp":"2020-12-24T09:17:07.781Z"}
+{"message":"POST /api/auth/login 200 137.823 ms - 362","level":"info","timestamp":"2020-12-24T09:17:07.921Z"}
+{"message":"OPTIONS /api/services?branchid=2 204 0.147 ms - 0","level":"info","timestamp":"2020-12-24T09:17:32.942Z"}
+{"message":"GET /api/services?branchid=2 403 8.158 ms - 62","level":"info","timestamp":"2020-12-24T09:17:32.952Z"}
+{"message":"OPTIONS /api/auth/login 204 0.107 ms - 0","level":"info","timestamp":"2020-12-24T09:17:42.531Z"}
+{"message":"POST /api/auth/login 200 134.863 ms - 362","level":"info","timestamp":"2020-12-24T09:17:42.667Z"}
+{"message":"OPTIONS /api/services?branchid=2 204 0.118 ms - 0","level":"info","timestamp":"2020-12-24T09:17:42.695Z"}
+{"message":"GET /api/services?branchid=2 403 2.386 ms - 62","level":"info","timestamp":"2020-12-24T09:17:42.700Z"}
+{"message":"OPTIONS /api/auth/login 204 0.165 ms - 0","level":"info","timestamp":"2020-12-24T09:23:23.200Z"}
+{"message":"POST /api/auth/login 200 136.780 ms - 362","level":"info","timestamp":"2020-12-24T09:23:23.340Z"}
+{"message":"OPTIONS /api/auth/login 204 0.174 ms - 0","level":"info","timestamp":"2020-12-24T09:24:05.950Z"}
+{"message":"POST /api/auth/login 200 139.607 ms - 331","level":"info","timestamp":"2020-12-24T09:24:06.091Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-24T09:35:49.893Z"}
+{"message":"POST /api/auth/login 200 184.235 ms - 331","level":"info","timestamp":"2020-12-24T09:38:22.767Z"}
+{"message":"GET /api/businesses/ 200 12.077 ms - 296","level":"info","timestamp":"2020-12-24T09:38:31.072Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-24T09:39:05.174Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-24T09:39:06.528Z"}
+{"message":"{\"message\":\"user is not defined\",\"statusCode\":500}","level":"error","timestamp":"2020-12-24T09:39:06.529Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-24T09:39:06.529Z"}
+{"message":"GET /api/businesses/ 500 17.616 ms - 33","level":"info","timestamp":"2020-12-24T09:39:06.534Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-24T09:39:36.668Z"}
+{"message":"GET /api/businesses/ 200 26.109 ms - 296","level":"info","timestamp":"2020-12-24T09:39:38.624Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-24T09:39:51.237Z"}
+{"message":"GET /api/businesses/ 200 25.189 ms - 296","level":"info","timestamp":"2020-12-24T09:39:52.270Z"}
+{"message":"GET /api/businesses/ 200 6163.412 ms - 296","level":"info","timestamp":"2020-12-24T09:43:26.061Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-24T09:43:27.058Z"}
+{"message":"GET /api/services?branchId=1 403 22.780 ms - 62","level":"info","timestamp":"2020-12-24T09:44:02.658Z"}
+{"message":"GET /api/services?branchId=1 200 14.722 ms - 378","level":"info","timestamp":"2020-12-24T09:44:04.651Z"}
+{"message":"OPTIONS /api/auth/login 204 0.697 ms - 0","level":"info","timestamp":"2020-12-24T09:44:39.376Z"}
+{"message":"POST /api/auth/login 200 160.623 ms - 331","level":"info","timestamp":"2020-12-24T09:44:39.539Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-24T09:47:28.301Z"}
+{"message":"POST /api/auth/login 200 163.777 ms - 369","level":"info","timestamp":"2020-12-24T09:47:31.382Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-24T09:47:46.301Z"}
+{"message":"POST /api/auth/login 200 184.693 ms - 401","level":"info","timestamp":"2020-12-24T09:48:53.554Z"}
+{"message":"POST /api/auth/login 200 141.033 ms - 401","level":"info","timestamp":"2020-12-24T09:49:59.018Z"}
+{"message":"OPTIONS /api/auth/login 204 0.591 ms - 0","level":"info","timestamp":"2020-12-24T09:50:29.770Z"}
+{"message":"POST /api/auth/login 200 139.131 ms - 415","level":"info","timestamp":"2020-12-24T09:50:29.910Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-24T09:53:09.556Z"}
+{"message":"App exited gracefully","level":"info","timestamp":"2020-12-24T10:04:40.274Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T06:30:42.767Z"}
+{"message":"POST /api/auth/login 200 195.571 ms - 401","level":"info","timestamp":"2020-12-25T06:30:45.626Z"}
+{"message":"GET /api/services?branchId=1 200 30.723 ms - 378","level":"info","timestamp":"2020-12-25T06:30:53.715Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T06:31:12.835Z"}
+{"message":"GET /api/services?branchId=1 200 18.545 ms - 292","level":"info","timestamp":"2020-12-25T06:31:14.123Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T06:32:23.992Z"}
+{"message":"GET /api/services?branchId=1 200 19.546 ms - 292","level":"info","timestamp":"2020-12-25T06:32:25.172Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-25T06:32:25.177Z"}
+{"message":"{\"message\":\"Cannot set headers after they are sent to the client\",\"statusCode\":500}","level":"error","timestamp":"2020-12-25T06:32:25.177Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"undefined","timestamp":"2020-12-25T06:32:25.178Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T06:32:36.670Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T06:32:42.266Z"}
+{"message":"GET /api/queues 200 20.626 ms - 292","level":"info","timestamp":"2020-12-25T06:33:14.554Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T06:33:30.914Z"}
+{"message":"GET /api/queues 200 29.928 ms - 1089","level":"info","timestamp":"2020-12-25T06:33:32.051Z"}
+{"message":"GET /api/services?branchId=1 200 17.511 ms - 378","level":"info","timestamp":"2020-12-25T06:33:40.237Z"}
+{"message":"GET /api/businesses/ 200 13.062 ms - 296","level":"info","timestamp":"2020-12-25T06:33:44.296Z"}
+{"message":"GET /api/queues?serviceId=1 200 13.004 ms - 409","level":"info","timestamp":"2020-12-25T06:33:49.646Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T06:38:21.307Z"}
+{"message":"GET /api/queues?serviceId=1 200 25.701 ms - 409","level":"info","timestamp":"2020-12-25T06:38:22.774Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T06:38:48.612Z"}
+{"message":"GET /api/queues?serviceId=1 200 33.916 ms - 409","level":"info","timestamp":"2020-12-25T06:38:49.682Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T06:39:06.571Z"}
+{"message":"GET /api/queues?serviceId=1 200 23.644 ms - 409","level":"info","timestamp":"2020-12-25T06:39:07.665Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T06:40:19.532Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T06:40:27.321Z"}
+{"message":"GET /api/queues?serviceId=1 200 28.655 ms - 409","level":"info","timestamp":"2020-12-25T06:40:28.771Z"}
+{"message":"GET /api/services?branchId=1 200 35.645 ms - 378","level":"info","timestamp":"2020-12-25T06:51:04.846Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T06:51:11.686Z"}
+{"message":"GET /api/services?branchId=1 200 35.057 ms - 378","level":"info","timestamp":"2020-12-25T06:51:14.700Z"}
+{"message":"GET /api/services?branchId=2 200 14.679 ms - 378","level":"info","timestamp":"2020-12-25T06:51:16.847Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T06:55:06.209Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T06:56:15.160Z"}
+{"message":"GET /api/services?branchId=2 200 25.250 ms - 378","level":"info","timestamp":"2020-12-25T06:56:16.435Z"}
+{"message":"GET /api/services?branchId=2 200 2534.981 ms - 378","level":"info","timestamp":"2020-12-25T06:57:00.091Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T06:57:01.238Z"}
+{"message":"GET /api/services?branchId=2 200 27.624 ms - 378","level":"info","timestamp":"2020-12-25T06:57:02.213Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T06:58:30.980Z"}
+{"message":"GET /api/services?branchId=2 200 23.142 ms - 378","level":"info","timestamp":"2020-12-25T06:58:32.264Z"}
+{"message":"GET /api/services?branchId=2 200 14.517 ms - 378","level":"info","timestamp":"2020-12-25T07:06:33.980Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T07:06:38.918Z"}
+{"message":"GET /api/services?branchId=2 200 30.331 ms - 378","level":"info","timestamp":"2020-12-25T07:06:40.468Z"}
+{"message":"GET /api/services?branchId=2 200 11.175 ms - 378","level":"info","timestamp":"2020-12-25T07:06:41.046Z"}
+{"message":"GET /api/services?branchId=2 200 17.011 ms - 378","level":"info","timestamp":"2020-12-25T07:06:41.928Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T07:09:19.058Z"}
+{"message":"GET /api/queues?serviceId=1 200 23.165 ms - 409","level":"info","timestamp":"2020-12-25T07:19:15.175Z"}
+{"message":"{\"message\":\"No authorization token was found\",\"statusCode\":401}","level":"error","timestamp":"2020-12-25T07:23:26.772Z"}
+{"name":"UnauthorizedError","message":"No authorization token was found","code":"credentials_required","status":401,"inner":{"message":"No authorization token was found"},"level":"error","timestamp":"2020-12-25T07:23:26.772Z"}
+{"message":"POST /api/queues/ 401 13.478 ms - 46","level":"info","timestamp":"2020-12-25T07:23:26.773Z"}
+{"message":"POST /api/queues/ 200 20.582 ms - 48","level":"info","timestamp":"2020-12-25T07:23:32.323Z"}
+{"message":"POST /api/queues/ 200 15.661 ms - 48","level":"info","timestamp":"2020-12-25T07:28:10.842Z"}
+{"message":"GET /api/services/1/queues 200 14.862 ms - 931","level":"info","timestamp":"2020-12-25T07:28:30.963Z"}
+{"message":"GET /api/queues?serviceId=1 200 7.522 ms - 575","level":"info","timestamp":"2020-12-25T07:28:58.200Z"}
+{"message":"GET /api/services?branchId=2 200 9.252 ms - 378","level":"info","timestamp":"2020-12-25T07:29:39.101Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T07:30:59.038Z"}
+{"name":"SequelizeDatabaseError","parent":{"fatal":false,"errno":1054,"sqlState":"42S22","code":"ER_BAD_FIELD_ERROR","sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `teller_id` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '7');"},"original":{"fatal":false,"errno":1054,"sqlState":"42S22","code":"ER_BAD_FIELD_ERROR","sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `teller_id` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '7');"},"sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `teller_id` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '7');","level":"error","message":"undefined","timestamp":"2020-12-25T07:36:02.250Z"}
+{"message":"{\"message\":\"(conn=119, no: 1054, SQLState: 42S22) Unknown column 'teller_id' in 'field list'\\nsql: SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `teller_id` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '7'); - parameters:[]\",\"statusCode\":500}","level":"error","timestamp":"2020-12-25T07:36:02.250Z"}
+{"name":"SequelizeDatabaseError","parent":{"fatal":false,"errno":1054,"sqlState":"42S22","code":"ER_BAD_FIELD_ERROR","sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `teller_id` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '7');"},"original":{"fatal":false,"errno":1054,"sqlState":"42S22","code":"ER_BAD_FIELD_ERROR","sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `teller_id` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '7');"},"sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `teller_id` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '7');","level":"error","message":"undefined","timestamp":"2020-12-25T07:36:02.251Z"}
+{"message":"PATCH /api/queues/7?status=NO_SHOW 500 36.123 ms - 392","level":"info","timestamp":"2020-12-25T07:36:02.254Z"}
+{"name":"SequelizeValidationError","errors":[{"message":"Service.current_queue cannot be null","type":"notNull Violation","path":"current_queue","value":null,"origin":"CORE","instance":{"last_in_queue":0,"id":null,"current_queue":null,"updatedAt":"2020-12-25T07:36:31.937Z"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}],"level":"error","message":"undefined","timestamp":"2020-12-25T07:36:31.938Z"}
+{"message":"{\"message\":\"notNull Violation: Service.current_queue cannot be null\",\"statusCode\":500}","level":"error","timestamp":"2020-12-25T07:36:31.939Z"}
+{"name":"SequelizeValidationError","errors":[{"message":"Service.current_queue cannot be null","type":"notNull Violation","path":"current_queue","value":null,"origin":"CORE","instance":{"last_in_queue":0,"id":null,"current_queue":null,"updatedAt":"2020-12-25T07:36:31.937Z"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}],"level":"error","message":"undefined","timestamp":"2020-12-25T07:36:31.940Z"}
+{"message":"PATCH /api/services/1/nextqueue 500 18.068 ms - 69","level":"info","timestamp":"2020-12-25T07:36:31.941Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T07:37:18.334Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T07:37:52.301Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T07:38:32.321Z"}
+{"message":"App exited gracefully","level":"info","timestamp":"2020-12-25T07:38:37.511Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T07:39:28.389Z"}
+{"message":"App exited gracefully","level":"info","timestamp":"2020-12-25T07:39:32.287Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T07:42:00.624Z"}
+{"message":"POST /api/users 200 98.924 ms - 40","level":"info","timestamp":"2020-12-25T07:42:02.411Z"}
+{"message":"POST /api/auth/login 200 152.781 ms - 413","level":"info","timestamp":"2020-12-25T07:42:05.805Z"}
+{"message":"GET /api/services/1/queues 403 7.489 ms - 62","level":"info","timestamp":"2020-12-25T07:42:16.090Z"}
+{"message":"GET /api/businesses/ 403 3.700 ms - 62","level":"info","timestamp":"2020-12-25T07:42:24.725Z"}
+{"message":"{\"message\":\"invalid signature\",\"statusCode\":401}","level":"error","timestamp":"2020-12-25T07:43:18.970Z"}
+{"name":"UnauthorizedError","message":"invalid signature","code":"invalid_token","status":401,"inner":{"name":"JsonWebTokenError","message":"invalid signature"},"level":"error","timestamp":"2020-12-25T07:43:18.974Z"}
+{"message":"GET /api/businesses/ 401 9.170 ms - 31","level":"info","timestamp":"2020-12-25T07:43:18.976Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T07:44:09.955Z"}
+{"message":"App exited gracefully","level":"info","timestamp":"2020-12-25T07:44:25.455Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T07:44:28.616Z"}
+{"message":"App exited gracefully","level":"info","timestamp":"2020-12-25T07:44:39.677Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T07:44:53.586Z"}
+{"message":"POST /api/users 200 101.613 ms - 40","level":"info","timestamp":"2020-12-25T07:44:55.129Z"}
+{"message":"POST /api/auth/login 200 150.406 ms - 413","level":"info","timestamp":"2020-12-25T07:44:57.725Z"}
+{"message":"GET /api/businesses/ 200 16.928 ms - 296","level":"info","timestamp":"2020-12-25T07:45:03.016Z"}
+{"message":"GET /api/branches/ 200 9.489 ms - 299","level":"info","timestamp":"2020-12-25T07:45:12.935Z"}
+{"message":"GET /api/queues?serviceId=1 200 11.022 ms - 403","level":"info","timestamp":"2020-12-25T07:45:17.566Z"}
+{"message":"POST /api/queues/ 200 22.793 ms - 48","level":"info","timestamp":"2020-12-25T07:45:54.274Z"}
+{"message":"GET /api/businesses/ 200 13.140 ms - 296","level":"info","timestamp":"2020-12-25T07:47:41.096Z"}
+{"message":"GET /api/branches/ 200 6.161 ms - 299","level":"info","timestamp":"2020-12-25T07:47:43.578Z"}
+{"message":"GET /api/queues/1/currentqueue 200 9.968 ms - 179","level":"info","timestamp":"2020-12-25T07:47:47.486Z"}
+{"message":"GET /api/queues?serviceId=1 200 6.802 ms - 569","level":"info","timestamp":"2020-12-25T07:47:53.428Z"}
+{"message":"GET /api/services?branchId=2 200 7.652 ms - 378","level":"info","timestamp":"2020-12-25T07:47:59.065Z"}
+{"message":"GET /api/services/2 200 11.270 ms - 302","level":"info","timestamp":"2020-12-25T07:48:03.260Z"}
+{"message":"GET /api/services/1/queues 200 14.955 ms - 925","level":"info","timestamp":"2020-12-25T07:48:07.896Z"}
+{"message":"GET /api/me/queues 200 13.095 ms - 28","level":"info","timestamp":"2020-12-25T07:48:12.165Z"}
+{"name":"SequelizeDatabaseError","parent":{"fatal":false,"errno":1054,"sqlState":"42S22","code":"ER_BAD_FIELD_ERROR","sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `teller_id` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '1');"},"original":{"fatal":false,"errno":1054,"sqlState":"42S22","code":"ER_BAD_FIELD_ERROR","sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `teller_id` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '1');"},"sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `teller_id` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '1');","level":"error","message":"undefined","timestamp":"2020-12-25T07:48:31.163Z"}
+{"message":"{\"message\":\"(conn=335, no: 1054, SQLState: 42S22) Unknown column 'teller_id' in 'field list'\\nsql: SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `teller_id` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '1'); - parameters:[]\",\"statusCode\":500}","level":"error","timestamp":"2020-12-25T07:48:31.164Z"}
+{"name":"SequelizeDatabaseError","parent":{"fatal":false,"errno":1054,"sqlState":"42S22","code":"ER_BAD_FIELD_ERROR","sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `teller_id` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '1');"},"original":{"fatal":false,"errno":1054,"sqlState":"42S22","code":"ER_BAD_FIELD_ERROR","sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `teller_id` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '1');"},"sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `teller_id` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '1');","level":"error","message":"undefined","timestamp":"2020-12-25T07:48:31.164Z"}
+{"message":"PATCH /api/queues/1?status=NO_SHOW 500 12.643 ms - 392","level":"info","timestamp":"2020-12-25T07:48:31.168Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T07:49:35.025Z"}
+{"message":"PATCH /api/queues/1?status=NO_SHOW 200 41.807 ms - 217","level":"info","timestamp":"2020-12-25T07:49:37.666Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T07:50:04.211Z"}
+{"message":"PATCH /api/queues/1?status=NO_SHOW 200 41.072 ms - 206","level":"info","timestamp":"2020-12-25T07:50:05.089Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T07:50:23.884Z"}
+{"message":"PATCH /api/queues/1?status=NO_SHOW 200 35.158 ms - 206","level":"info","timestamp":"2020-12-25T07:50:25.150Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T07:52:00.740Z"}
+{"message":"PATCH /api/queues/1?status=NO_SHOW 200 35.729 ms - 213","level":"info","timestamp":"2020-12-25T07:52:02.073Z"}
+{"message":"PATCH /api/queues/1?status=COMPLETED 200 24.023 ms - 215","level":"info","timestamp":"2020-12-25T07:52:14.426Z"}
+{"message":"PUT /api/businesses/1 200 16.599 ms - 51","level":"info","timestamp":"2020-12-25T07:52:50.046Z"}
+{"message":"PUT /api/businesses/1 200 15.674 ms - 51","level":"info","timestamp":"2020-12-25T07:52:57.672Z"}
+{"message":"PATCH /api/services/1/nextqueue 200 26.773 ms - 49","level":"info","timestamp":"2020-12-25T07:53:11.568Z"}
+{"message":"PUT /api/services/2 200 20.292 ms - 46","level":"info","timestamp":"2020-12-25T07:53:58.611Z"}
+{"message":"PUT /api/services/2 200 17.743 ms - 46","level":"info","timestamp":"2020-12-25T07:54:03.913Z"}
+{"message":"PATCH /api/queues/1?status=NO_SHOW 200 10.782 ms - 213","level":"info","timestamp":"2020-12-25T07:54:23.775Z"}
+{"message":"{\"message\":\"Queue is not in progress\",\"statusCode\":500}","level":"error","timestamp":"2020-12-25T07:54:28.758Z"}
+{"name":"ServiceError","status":500,"level":"error","message":"undefined","timestamp":"2020-12-25T07:54:28.760Z"}
+{"message":"POST /api/queues/1/completed 500 11.809 ms - 38","level":"info","timestamp":"2020-12-25T07:54:28.765Z"}
+{"message":"PATCH /api/queues/1?status=IN_PROGRESS 200 12.986 ms - 217","level":"info","timestamp":"2020-12-25T07:54:53.098Z"}
+{"message":"POST /api/queues/1/completed 200 10.858 ms - 215","level":"info","timestamp":"2020-12-25T07:54:57.126Z"}
+{"message":"GET /api/businesses/ 200 7.725 ms - 296","level":"info","timestamp":"2020-12-25T07:55:18.545Z"}
+{"message":"GET /api/branches/ 200 7.743 ms - 299","level":"info","timestamp":"2020-12-25T07:55:22.824Z"}
+{"message":"GET /api/queues/1/currentqueue 200 4.908 ms - 179","level":"info","timestamp":"2020-12-25T07:55:25.395Z"}
+{"message":"GET /api/queues?serviceId=1 200 7.024 ms - 570","level":"info","timestamp":"2020-12-25T07:56:17.172Z"}
+{"message":"GET /api/services?branchId=2 200 69.049 ms - 551","level":"info","timestamp":"2020-12-25T07:56:35.042Z"}
+{"message":"GET /api/services/2 200 10.398 ms - 302","level":"info","timestamp":"2020-12-25T07:56:52.654Z"}
+{"message":"GET /api/services/1/queues 200 16.165 ms - 926","level":"info","timestamp":"2020-12-25T07:56:55.754Z"}
+{"message":"App exited gracefully","level":"info","timestamp":"2020-12-25T08:06:44.778Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T08:13:29.812Z"}
+{"message":"App exited gracefully","level":"info","timestamp":"2020-12-25T08:13:32.386Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T08:41:24.815Z"}
+{"message":"GET /api/queues?serviceId=1 401 16.037 ms - 34","level":"info","timestamp":"2020-12-25T08:41:28.469Z"}
+{"message":"GET /api/queues?serviceId=1 401 4.047 ms - 34","level":"info","timestamp":"2020-12-25T08:41:37.719Z"}
+{"message":"POST /api/auth/login 400 23.290 ms - 37","level":"info","timestamp":"2020-12-25T08:41:39.607Z"}
+{"message":"POST /api/users 200 88.495 ms - 40","level":"info","timestamp":"2020-12-25T08:41:42.477Z"}
+{"message":"POST /api/auth/login 200 148.160 ms - 413","level":"info","timestamp":"2020-12-25T08:41:45.029Z"}
+{"message":"GET /api/queues?serviceId=1 200 14.237 ms - 403","level":"info","timestamp":"2020-12-25T08:41:49.978Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T08:42:50.376Z"}
+{"message":"GET /api/queues?serviceId=1 200 29.095 ms - 471","level":"info","timestamp":"2020-12-25T08:42:51.836Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T08:43:08.128Z"}
+{"message":"GET /api/queues?serviceId=1 200 28.343 ms - 317","level":"info","timestamp":"2020-12-25T08:43:09.104Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T08:46:05.013Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-25T08:46:06.714Z"}
+{"message":"{\"message\":\"User is not defined\",\"statusCode\":500}","level":"error","timestamp":"2020-12-25T08:46:06.714Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-25T08:46:06.715Z"}
+{"message":"GET /api/queues?serviceId=1 500 20.096 ms - 33","level":"info","timestamp":"2020-12-25T08:46:06.719Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T08:46:22.488Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-25T08:46:27.773Z"}
+{"message":"{\"message\":\"User is not defined\",\"statusCode\":500}","level":"error","timestamp":"2020-12-25T08:46:27.774Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-25T08:46:27.774Z"}
+{"message":"GET /api/queues?serviceId=1 500 19.835 ms - 33","level":"info","timestamp":"2020-12-25T08:46:27.778Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T08:46:37.733Z"}
+{"message":"GET /api/queues?serviceId=1 200 35.215 ms - 645","level":"info","timestamp":"2020-12-25T08:46:39.215Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T08:47:18.562Z"}
+{"message":"GET /api/queues?serviceId=1 200 25.152 ms - 543","level":"info","timestamp":"2020-12-25T08:47:19.965Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T08:47:39.458Z"}
+{"message":"GET /api/queues?serviceId=1 200 29.299 ms - 509","level":"info","timestamp":"2020-12-25T08:47:41.015Z"}
+{"message":"GET /api/queues?serviceId=2 200 14.238 ms - 513","level":"info","timestamp":"2020-12-25T08:50:57.111Z"}
+{"message":"GET /api/queues?serviceId=1 200 16.386 ms - 509","level":"info","timestamp":"2020-12-25T08:55:43.244Z"}
+{"message":"GET /api/queues?serviceId=2 200 12.304 ms - 513","level":"info","timestamp":"2020-12-25T08:55:48.546Z"}
+{"message":"GET /api/queues?serviceId=2 200 19.267 ms - 513","level":"info","timestamp":"2020-12-25T09:16:23.572Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T09:16:38.546Z"}

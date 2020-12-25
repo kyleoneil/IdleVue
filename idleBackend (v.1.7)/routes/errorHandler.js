@@ -2,6 +2,7 @@ const ServiceError = require('./../services/errors/serviceError');
 const logger = require('./../utils/logger');
 
 const logAndParseError = (err) => {
+  console.log({error: err.code});
   let statusCode = 500;
   let message = 'Internal server error. Please contact administrator.';
   if (typeof err === 'string') {

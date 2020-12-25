@@ -1,4 +1,4 @@
-const {Business, Branch, Queue, Service} = require('./../models');
+const {Business, Branch, Queue, Service, User} = require('./../models');
 const Services = require('./service.service');
 const userServices = require('./user.service');
 const {static} = require('express');
@@ -19,7 +19,7 @@ module.exports = {
     const data = {UserId: customer.id, ServiceId: service.id};
     data.customer_id = body.user_id;
     data.service_id = body.service_id;
-    data.queue_number = service.last_in_queue + 1;
+    data.queue_number = parseInt(service.last_in_queue) + 1;
     data.status = 1;
     service.last_in_queue++;
     service.save();
@@ -42,7 +42,33 @@ module.exports = {
     const queuePaginate = await Queue.findAll({
       offset: pageOffset,
       limit: resultsPerPage,
-      where
+      where,
+      attributes: {
+        exclude: ['updatedAt', 'deletedAt', 'UserId', 'ServiceId']
+      },
+      include: [
+        {
+          model: Service,
+          attributes: {
+            include: [['name', 'service_name']],
+            exclude: ['name', 'last_in_queue', 'current_queue', 'createdAt', 'updatedAt', 'deletedAt', 'BranchId']
+          }
+        },
+        {
+          model: User,
+          attributes: {
+            include: [
+              ['name', 'user_name'], 
+              ['email', 'user_email'], 
+              ['birthdate', 'user_birthdate']
+            ],
+            exclude: [
+              'id', 'name', 'email', 'password', 
+              'birthdate', 'token', 'lastLogin', 'createdAt', 'deletedAt', 
+              'updatedAt', 'RoleId', 'BranchId', 'BusinessId']
+          }
+        }
+      ]
     });
 
     return {
@@ -102,25 +128,13 @@ module.exports = {
   },
 
   //UPDATE Operations
-  update: async (id, teller, status) => {
+  update: async (id, status) => {
     const queue = await Queue.findOne({
-      where: {id},
-      attributes: {
-        include: ['teller_id']
-      }
-      
+      where: {id}
     });
     
-    if (status) { //WIP: Teller_ID Update Nonfunctional atm
-      const queueupdate = await Queue.update(
-        {
-          status,
-          teller_id: teller
-        }, 
-        {where: {id: queue.id}},
-      )
-    }
-    console.log(queue.teller_id);
+    queue.status = status;
+
     return await queue.save();
   },
 

@@ -16,6 +16,8 @@ module.exports = {
       name: user.name,
       roleName: user.Role.name,
       email,
+      business_id: user.BusinessId,
+      branch_id: user.BranchId
     }
     o.token = "Bearer " + jwt.sign(o, secretKey, {expiresIn: '4h'}); // TODO: expiry?
     // Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6ImFsbGFuLCBhbGxhbiIsInJvbGVOYW1lIjoiQ1VTVE9NRVIiLCJlbWFpbCI6ImFsbGFuQGlkbGUuY29tIiwiaWF0IjoxNjA2NjUwOTg1LCJleHAiOjE2MDY2NjUzODV9.1QYu7vKTbfoSnOGbxeAxjKfXu_CPF9z6kGnom5FLjpw
@@ -33,5 +35,9 @@ module.exports = {
   checkPwd: async (email, rawPass) => {
     const user = await userService.findByEmail(email, true);
     return bcrypt.compareSync(rawPass, user.password);
+  },
+
+  isAuthorized: async (userRole, authRole) => {
+    return (userRole === 'SUPER_ADMIN' || userRole === authRole);
   }
 }
