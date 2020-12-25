@@ -562,3 +562,72 @@
 {"message":"GET /api/services?branchId=2 - - ms - -","level":"info","timestamp":"2020-12-25T07:11:07.988Z"}
 {"message":"OPTIONS /api/services?branchId=1 204 0.111 ms - 0","level":"info","timestamp":"2020-12-25T07:11:13.690Z"}
 {"message":"App exited gracefully","level":"info","timestamp":"2020-12-25T07:11:37.459Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T07:15:40.466Z"}
+{"message":"OPTIONS /api/auth/login 204 1.223 ms - 0","level":"info","timestamp":"2020-12-25T07:15:54.992Z"}
+{"message":"POST /api/auth/login 200 168.817 ms - 432","level":"info","timestamp":"2020-12-25T07:15:55.163Z"}
+{"message":"OPTIONS /api/services?branchId=1 204 0.232 ms - 0","level":"info","timestamp":"2020-12-25T07:15:55.195Z"}
+{"message":"GET /api/services?branchId=1 403 8.767 ms - 62","level":"info","timestamp":"2020-12-25T07:15:55.206Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T07:16:11.628Z"}
+{"message":"OPTIONS /api/services?branchId=1 204 1.334 ms - 0","level":"info","timestamp":"2020-12-25T07:16:56.486Z"}
+{"message":"GET /api/services?branchId=1 - - ms - -","level":"info","timestamp":"2020-12-25T07:16:58.182Z"}
+{"message":"OPTIONS /api/auth/login 204 0.205 ms - 0","level":"info","timestamp":"2020-12-25T07:17:08.576Z"}
+{"message":"POST /api/auth/login 200 162.042 ms - 432","level":"info","timestamp":"2020-12-25T07:17:08.742Z"}
+{"message":"OPTIONS /api/services?branchId=1 204 0.193 ms - 0","level":"info","timestamp":"2020-12-25T07:17:08.780Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T07:17:16.604Z"}
+{"message":"GET /api/services?branchId=1 200 24.719 ms - 378","level":"info","timestamp":"2020-12-25T07:17:16.652Z"}
+{"message":"OPTIONS /api/auth/login 204 0.635 ms - 0","level":"info","timestamp":"2020-12-25T07:17:30.850Z"}
+{"message":"POST /api/auth/login 200 159.713 ms - 432","level":"info","timestamp":"2020-12-25T07:17:31.011Z"}
+{"message":"OPTIONS /api/services?branchId=1 204 0.215 ms - 0","level":"info","timestamp":"2020-12-25T07:17:31.043Z"}
+{"message":"GET /api/services?branchId=1 304 12.315 ms - -","level":"info","timestamp":"2020-12-25T07:17:31.058Z"}
+{"message":"OPTIONS /api/queues?serviceId=1 204 0.105 ms - 0","level":"info","timestamp":"2020-12-25T07:18:32.816Z"}
+{"message":"GET /api/queues?serviceId=1 200 7.718 ms - 406","level":"info","timestamp":"2020-12-25T07:18:32.826Z"}
+{"message":"OPTIONS /api/auth/login 204 0.225 ms - 0","level":"info","timestamp":"2020-12-25T07:30:46.941Z"}
+{"message":"POST /api/auth/login 200 158.053 ms - 432","level":"info","timestamp":"2020-12-25T07:30:47.101Z"}
+{"message":"OPTIONS /api/services?branchId=1 204 0.166 ms - 0","level":"info","timestamp":"2020-12-25T07:30:47.164Z"}
+{"message":"GET /api/services?branchId=1 304 8.458 ms - -","level":"info","timestamp":"2020-12-25T07:30:47.174Z"}
+{"message":"OPTIONS /api/queues?serviceId=2 204 0.213 ms - 0","level":"info","timestamp":"2020-12-25T07:31:00.376Z"}
+{"message":"GET /api/queues?serviceId=2 200 19.535 ms - 406","level":"info","timestamp":"2020-12-25T07:31:00.399Z"}
+{"message":"OPTIONS /api/services?branchId=1 204 0.156 ms - 0","level":"info","timestamp":"2020-12-25T07:31:16.275Z"}
+{"message":"GET /api/services?branchId=1 304 8.417 ms - -","level":"info","timestamp":"2020-12-25T07:31:16.285Z"}
+{"message":"OPTIONS /api/queues?serviceId=2 204 0.360 ms - 0","level":"info","timestamp":"2020-12-25T07:31:17.228Z"}
+{"message":"GET /api/queues?serviceId=2 304 6.650 ms - -","level":"info","timestamp":"2020-12-25T07:31:17.237Z"}
+{"message":"OPTIONS /api/services?branchId=1 204 0.139 ms - 0","level":"info","timestamp":"2020-12-25T07:40:01.237Z"}
+{"message":"GET /api/services?branchId=1 304 19.702 ms - -","level":"info","timestamp":"2020-12-25T07:40:01.260Z"}
+{"message":"OPTIONS /api/services?branchId=1 204 0.154 ms - 0","level":"info","timestamp":"2020-12-25T07:41:24.089Z"}
+{"message":"GET /api/services?branchId=1 304 18.916 ms - -","level":"info","timestamp":"2020-12-25T07:41:24.112Z"}
+{"message":"GET /api/services?branchId=1 304 10.711 ms - -","level":"info","timestamp":"2020-12-25T07:41:25.745Z"}
+{"message":"OPTIONS /api/queues?serviceId=2 204 0.273 ms - 0","level":"info","timestamp":"2020-12-25T07:41:32.627Z"}
+{"message":"GET /api/queues?serviceId=2 304 12.108 ms - -","level":"info","timestamp":"2020-12-25T07:41:32.643Z"}
+{"message":"OPTIONS /api/services/2/nextqueue 204 0.246 ms - 0","level":"info","timestamp":"2020-12-25T07:41:34.731Z"}
+{"message":"OPTIONS /api/queues/2status=COMPLETED 204 0.112 ms - 0","level":"info","timestamp":"2020-12-25T07:41:34.734Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-25T07:41:34.783Z"}
+{"message":"{\"message\":\"Cannot read property 'id' of null\",\"statusCode\":500}","level":"error","timestamp":"2020-12-25T07:41:34.784Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-25T07:41:34.784Z"}
+{"message":"PATCH /api/services/2/nextqueue 500 50.794 ms - 47","level":"info","timestamp":"2020-12-25T07:41:34.787Z"}
+{"name":"SequelizeDatabaseError","parent":{"fatal":false,"errno":1054,"sqlState":"42S22","code":"ER_BAD_FIELD_ERROR","sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `teller_id` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '2status=COMPLETED');"},"original":{"fatal":false,"errno":1054,"sqlState":"42S22","code":"ER_BAD_FIELD_ERROR","sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `teller_id` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '2status=COMPLETED');"},"sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `teller_id` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '2status=COMPLETED');","level":"error","message":"undefined","timestamp":"2020-12-25T07:41:34.795Z"}
+{"message":"{\"message\":\"(conn=136, no: 1054, SQLState: 42S22) Unknown column 'teller_id' in 'field list'\\nsql: SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `teller_id` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '2status=COMPLETED'); - parameters:[]\",\"statusCode\":500}","level":"error","timestamp":"2020-12-25T07:41:34.796Z"}
+{"name":"SequelizeDatabaseError","parent":{"fatal":false,"errno":1054,"sqlState":"42S22","code":"ER_BAD_FIELD_ERROR","sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `teller_id` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '2status=COMPLETED');"},"original":{"fatal":false,"errno":1054,"sqlState":"42S22","code":"ER_BAD_FIELD_ERROR","sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `teller_id` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '2status=COMPLETED');"},"sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `teller_id` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '2status=COMPLETED');","level":"error","message":"undefined","timestamp":"2020-12-25T07:41:34.797Z"}
+{"message":"PATCH /api/queues/2status=COMPLETED 500 61.854 ms - 408","level":"info","timestamp":"2020-12-25T07:41:34.801Z"}
+{"message":"GET /api/queues?serviceId=2 304 71.337 ms - -","level":"info","timestamp":"2020-12-25T07:41:34.810Z"}
+{"message":"OPTIONS /api/services/2/nextqueue 204 0.169 ms - 0","level":"info","timestamp":"2020-12-25T07:42:14.674Z"}
+{"message":"OPTIONS /api/queues/2status=COMPLETED 204 0.237 ms - 0","level":"info","timestamp":"2020-12-25T07:42:14.677Z"}
+{"message":"OPTIONS /api/queues?serviceId=2 204 0.177 ms - 0","level":"info","timestamp":"2020-12-25T07:42:14.678Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-25T07:42:14.707Z"}
+{"message":"{\"message\":\"Cannot read property 'id' of null\",\"statusCode\":500}","level":"error","timestamp":"2020-12-25T07:42:14.707Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-25T07:42:14.708Z"}
+{"message":"PATCH /api/services/2/nextqueue 500 28.938 ms - 47","level":"info","timestamp":"2020-12-25T07:42:14.708Z"}
+{"name":"SequelizeDatabaseError","parent":{"fatal":false,"errno":1054,"sqlState":"42S22","code":"ER_BAD_FIELD_ERROR","sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `teller_id` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '2status=COMPLETED');"},"original":{"fatal":false,"errno":1054,"sqlState":"42S22","code":"ER_BAD_FIELD_ERROR","sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `teller_id` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '2status=COMPLETED');"},"sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `teller_id` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '2status=COMPLETED');","level":"error","message":"undefined","timestamp":"2020-12-25T07:42:14.714Z"}
+{"message":"{\"message\":\"(conn=142, no: 1054, SQLState: 42S22) Unknown column 'teller_id' in 'field list'\\nsql: SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `teller_id` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '2status=COMPLETED'); - parameters:[]\",\"statusCode\":500}","level":"error","timestamp":"2020-12-25T07:42:14.715Z"}
+{"name":"SequelizeDatabaseError","parent":{"fatal":false,"errno":1054,"sqlState":"42S22","code":"ER_BAD_FIELD_ERROR","sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `teller_id` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '2status=COMPLETED');"},"original":{"fatal":false,"errno":1054,"sqlState":"42S22","code":"ER_BAD_FIELD_ERROR","sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `teller_id` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '2status=COMPLETED');"},"sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `teller_id` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '2status=COMPLETED');","level":"error","message":"undefined","timestamp":"2020-12-25T07:42:14.715Z"}
+{"message":"PATCH /api/queues/2status=COMPLETED 500 34.529 ms - 408","level":"info","timestamp":"2020-12-25T07:42:14.717Z"}
+{"message":"GET /api/queues?serviceId=2 304 40.942 ms - -","level":"info","timestamp":"2020-12-25T07:42:14.725Z"}
+{"message":"POST /api/auth/login?data=%7B%22email%22:%22customer@idle.com%22,%22password%22:%22customer%22%7D 200 159.795 ms - 420","level":"info","timestamp":"2020-12-25T07:58:47.619Z"}
+{"message":"GET /api//me/queues?id=4 200 22.016 ms - 229","level":"info","timestamp":"2020-12-25T07:58:48.199Z"}
+{"message":"GET /api//businesses?data=%22Bearer%20eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwibmFtZSI6ImN1c3RvbWVyLCB0ZXN0Iiwicm9sZU5hbWUiOiJDVVNUT01FUiIsImVtYWlsIjoiY3VzdG9tZXJAaWRsZS5jb20iLCJidXNpbmVzc19pZCI6bnVsbCwiYnJhbmNoX2lkIjpudWxsLCJpYXQiOjE2MDg4ODMxMjcsImV4cCI6MTYwODg5NzUyN30.doqmRm0pQtjYQH_2bA9ElbruJahKkinJzqJurQ_KkP4%22 200 10.174 ms - 296","level":"info","timestamp":"2020-12-25T07:59:13.259Z"}
+{"message":"GET /api//branches?businessId=1 200 10.198 ms - 164","level":"info","timestamp":"2020-12-25T07:59:15.249Z"}
+{"message":"GET /api//services?branchId=1 200 28.566 ms - 378","level":"info","timestamp":"2020-12-25T07:59:16.277Z"}
+{"message":"POST /api/services/1/queue 200 27.230 ms - 31","level":"info","timestamp":"2020-12-25T07:59:18.628Z"}
+{"message":"GET /api//me/queues?status=COMPLETED 200 14.733 ms - 28","level":"info","timestamp":"2020-12-25T08:00:12.473Z"}
+{"message":"GET /api//businesses?data=%22Bearer%20eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwibmFtZSI6ImN1c3RvbWVyLCB0ZXN0Iiwicm9sZU5hbWUiOiJDVVNUT01FUiIsImVtYWlsIjoiY3VzdG9tZXJAaWRsZS5jb20iLCJidXNpbmVzc19pZCI6bnVsbCwiYnJhbmNoX2lkIjpudWxsLCJpYXQiOjE2MDg4ODMxMjcsImV4cCI6MTYwODg5NzUyN30.doqmRm0pQtjYQH_2bA9ElbruJahKkinJzqJurQ_KkP4%22 200 9.391 ms - 296","level":"info","timestamp":"2020-12-25T08:00:29.463Z"}
+{"message":"GET /api//me/queues?status=COMPLETED 200 10.941 ms - 228","level":"info","timestamp":"2020-12-25T08:00:30.750Z"}
+{"message":"App exited gracefully","level":"info","timestamp":"2020-12-25T08:05:06.555Z"}

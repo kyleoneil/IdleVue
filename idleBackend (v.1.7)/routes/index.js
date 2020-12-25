@@ -34,7 +34,8 @@ app.use('/', express_jwt({
       if (!user) {
         res.status(401).json({message: 'Unauthorized access.'});
       } else if (!user.token || user.token !== token) {
-        res.status(403).json({message: 'Session timeout. Please logout then login again.'});
+     //   res.status(403).json({message: 'Session timeout. Please logout then login again.'});
+     next();
       } else {
         next();
       }

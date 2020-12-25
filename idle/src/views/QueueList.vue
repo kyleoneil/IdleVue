@@ -163,18 +163,51 @@ export default {
             authorization: data,
             }
         };
-        let send =
-        {
-         "status":"COMPLETED"
-        }
+        let send={};
         console.log(this.currentid);
-         axios.patch('http://proxy101.callcruncher.com/idle/api/queues/'+this.currentid,send,head).then((data)=>{
+         const PROTOCOL="http://localhost:3000/api/services/";
+         //const PROTOCOL="http://proxy101.callcruncher.com/idle/api/services/1/nextqueue";
+         axios.patch(PROTOCOL+this.currentid+"/nextqueue",send,head).then((data)=>{
+                console.log(data.data);
+         }).catch((error)=>{
+            console.log(error.response.data.message)
+        });
+         const PROTOCOL2="http://localhost:3000/api/queues/";
+         //const PROTOCOL2="http://proxy101.callcruncher.com/idle/api/queues/";
+        axios.patch(PROTOCOL2+this.currentid+'status=COMPLETED',send,head).then((data)=>{
                 console.log(data.data);
          }).catch((error)=>{
             console.log(error.response.data.message)
         });
       
          
+
+         //get queue
+       
+        const PROTOCOL3 ="http://localhost:3000/api/queues?serviceId=";
+        //const PROTOCOL3="http://proxy101.callcruncher.com/idle/api/queues?serviceId=";
+        axios.get(PROTOCOL3+this.currentid,head).then((data)=>{
+            var catcher = data.data.data;
+            // this.queuedata = data.data.data.data;
+            this.queuedata=[];
+            var adddata;
+            console.log(data.data.data.data);
+            this.name = catcher.data[0].ServiceId;//name dapat
+            this.number = catcher.data[0].queue_number;
+            this.service = "XD";//serviec name dapat
+            this.currentid= catcher.data[0].id;
+            for(var a=0; a<catcher.totalRecords;a++){
+                adddata = {name:"",queuenum:"",email:"",birthdate:""};
+                adddata.name = catcher.data[a].ServiceId;//namedapat
+                adddata.queuenum = catcher.data[a].queue_number
+                adddata.email=catcher.data[a].UserId //email dapat
+                adddata.birthdate=catcher.data[a].status; //bday dapat
+                this.queuedata.push(adddata);
+            }
+        }).catch((error)=>{
+            console.log(error.response.data.message)
+        });
+    
      },
      noShow: function(){
         this.next();
