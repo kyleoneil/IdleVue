@@ -546,3 +546,6 @@
 {"message":"GET /api/services?branchId=2 200 69.049 ms - 551","level":"info","timestamp":"2020-12-25T07:56:35.042Z"}
 {"message":"GET /api/services/2 200 10.398 ms - 302","level":"info","timestamp":"2020-12-25T07:56:52.654Z"}
 {"message":"GET /api/services/1/queues 200 16.165 ms - 926","level":"info","timestamp":"2020-12-25T07:56:55.754Z"}
+{"message":"App exited gracefully","level":"info","timestamp":"2020-12-25T08:06:44.778Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T08:13:29.812Z"}
+{"message":"App exited gracefully","level":"info","timestamp":"2020-12-25T08:13:32.386Z"}
