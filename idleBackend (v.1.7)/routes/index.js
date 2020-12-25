@@ -24,13 +24,14 @@ app.use('/', express_jwt({
   }
 ), function (req, res, next) {
   token = req.headers.authorization;
-  console.log(token);
+  // console.log(token);
   const jwtUser = req.user;
   if (jwtUser && req.path !== '/auth/logout') {
     // req.user is the object signed in jwt.sign. See auth.service.js#login
     console.log({rolename: req.user.roleName});
     userService.findById(jwtUser.id).then(async (user) => {
-      await console.log({token: user.token});
+      // await console.log(user.dataValues); 
+      //res.status(200).json({data:req.data});
       if (!user) {
         res.status(401).json({message: 'Unauthorized access.'});
       } else if (!user.token || user.token !== token) {

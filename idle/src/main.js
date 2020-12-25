@@ -20,6 +20,7 @@ const store = new Vuex.Store({
     count:0,
     role:0,
     token:"",
+    id:"",
   },
   mutations: {
     increment (state){

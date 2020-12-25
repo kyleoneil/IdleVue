@@ -127,9 +127,9 @@ export default {
             // const PROTOCOL = "http://proxy101.callcruncher.com/idle/api/auth/login";
             const PROTOCOL ="http://localhost:3000/api/auth/login";
             axios.post(PROTOCOL,data).then((data)=>{
-                console.log("xd");
                  this.$store.state.role=data.data.roleName;
-                this.$store.state.token=data.data.token;
+                 this.$store.state.token=data.data.token;
+                this.$store.state.id=data.data.branch_id;
                 //  console.log(this.$store.role);
                  this.$store.commit('increment');
                  console.log(data.data);

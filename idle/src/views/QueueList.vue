@@ -187,8 +187,9 @@ export default {
                Authorization:data
            }
        }
-//   const PROTOCOL ="localhost:3000/api/queues?serviceId=";
-        axios.get('http://proxy101.callcruncher.com/idle/api/queues?serviceId='+this.currentserviceid,head).then((data)=>{
+        const PROTOCOL ="http://localhost:3000/api/queues?serviceId=";
+        //const PROTOCOL="http://proxy101.callcruncher.com/idle/api/queues?serviceId=";
+        axios.get(PROTOCOL+this.currentserviceid,head).then((data)=>{
             var catcher = data.data.data;
             // this.queuedata = data.data.data.data;
             this.queuedata=[];
@@ -219,7 +220,12 @@ export default {
                Authorization:data
            }
        }
-        axios.get('http://proxy101.callcruncher.com/idle/api/services?branchid='+2,head).then((data)=>{
+    //    const PROTOCOL="http://proxy101.callcruncher.com/idle/api/services?branchid=";
+       const PROTOCOL="http://localhost:3000/api/services?branchId=";
+       const id =  this.$store.state.id;
+        axios.get(PROTOCOL+id,head).then((data)=>{
+            console.log("xsssd");
+            console.log(data);
         this.datalist = data;
         this.check=!this.check;
         }).catch((error)=>{
