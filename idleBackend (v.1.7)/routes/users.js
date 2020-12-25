@@ -93,7 +93,7 @@ router.put('/:id', (req, res) => {
    */
   
   const roleName = req.user.roleName;
-  return authService.isAuthorized(roleName, 'SUPER_ADMIN').then((result) => {
+  return authService.isAuthorized(roleName, 'BUSINESS_OWNER').then((result) => {
     if(result) {
       const body = req.body;
       if (!body.firstname || !body.lastname || !body.email || !body.password) {
@@ -129,9 +129,14 @@ router.put('/:id', (req, res) => {
         if (!exists) {
           res.status(400).json({message: "User does not exist."});
         } else {
-          userService.update(req.params.id, body)
-            .then((user) => res.json({id: user.id, message: "User successfully updated."}))
-            .catch(errorHandler.handleError(res));
+          if (roleName === 'BUSINESS_OWNER' && req.user.business_id !== exists.dataValues.BusinessId) {
+            res.status(400).json({message: "Teller is not in same business as owner."})
+          } else {
+            userService.update(req.params.id, body)
+              .then((user) => res.json({id: user.id, message: "User successfully updated."}))
+              .catch(errorHandler.handleError(res));
+          }
+          
         }
       })
     } else {
