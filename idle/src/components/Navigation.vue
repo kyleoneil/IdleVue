@@ -71,7 +71,7 @@
     </v-list>
     <template v-slot:append>
       <div class="pa-2 ma-2 d-flex flex-row-reverse">
-        <v-btn depressed small rounded color="primary">
+        <v-btn depressed small rounded color="primary" v-on:click="logout">
           Logout
           <v-icon right small> mdi-logout </v-icon>
         </v-btn>
@@ -88,6 +88,7 @@ a {
 }
 </style>
 <script>
+import axios from 'axios';
 export default {
   name: "AdminNavBar",
   data() {
@@ -97,7 +98,28 @@ export default {
     };
   },
   methods: {
-
+    logout(){
+      const data =  this.$store.state.token;
+       let head = {
+           headers:{
+               Authorization:data
+           }
+       }
+       
+       const PROTOCOL ="http://localhost:3000/api/auth/logout";
+            axios.post(PROTOCOL,data,head).then((data)=>{
+               this.$store.state.count=0;
+               this.$router.push({path:'/login',params:{data}});
+                 this.$store.state.role=0;
+                 this.$store.state.token="";
+                 this.$store.state.id="";
+                 this.$store.state.businessid=0;
+                //  console.log(this.$store.role);
+                
+            }).catch((error)=>{
+             console.log(error.response.data.message);
+            });
+    }
   },
    beforeMount(){
       if(this.$store.state.role == "SUPER_ADMIN"){

@@ -18384,3 +18384,27 @@
 {"message":"POST /api/services/3/queue 200 27.946 ms - 31","level":"info","timestamp":"2020-12-25T17:05:56.695Z"}
 {"message":"GET /api//me/queues?id=9 200 12.485 ms - 424","level":"info","timestamp":"2020-12-25T17:05:57.440Z"}
 {"message":"App exited gracefully","level":"info","timestamp":"2020-12-25T17:06:57.012Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T17:28:26.013Z"}
+{"message":"OPTIONS /api/auth/login 204 2.023 ms - 0","level":"info","timestamp":"2020-12-25T17:28:31.140Z"}
+{"message":"POST /api/auth/login 200 290.542 ms - 415","level":"info","timestamp":"2020-12-25T17:28:31.442Z"}
+{"message":"OPTIONS /api/businesses 204 0.410 ms - 0","level":"info","timestamp":"2020-12-25T17:28:31.739Z"}
+{"message":"GET /api/businesses 200 35.426 ms - 296","level":"info","timestamp":"2020-12-25T17:28:31.782Z"}
+{"message":"OPTIONS /api/businesses 204 0.283 ms - 0","level":"info","timestamp":"2020-12-25T17:33:39.459Z"}
+{"message":"GET /api/businesses 304 27.434 ms - -","level":"info","timestamp":"2020-12-25T17:33:39.495Z"}
+{"message":"OPTIONS /api/auth/login 204 0.255 ms - 0","level":"info","timestamp":"2020-12-25T17:33:54.655Z"}
+{"message":"POST /api/auth/login 200 211.922 ms - 432","level":"info","timestamp":"2020-12-25T17:33:54.869Z"}
+{"message":"OPTIONS /api/services?branchId=1 204 0.370 ms - 0","level":"info","timestamp":"2020-12-25T17:33:54.975Z"}
+{"message":"GET /api/services?branchId=1 200 43.073 ms - 378","level":"info","timestamp":"2020-12-25T17:33:55.025Z"}
+{"message":"OPTIONS /api/auth/logout 204 0.299 ms - 0","level":"info","timestamp":"2020-12-25T17:33:57.867Z"}
+{"message":"POST /api/auth/logout 200 15.564 ms - 32","level":"info","timestamp":"2020-12-25T17:33:57.884Z"}
+{"message":"OPTIONS /api/auth/login 204 0.221 ms - 0","level":"info","timestamp":"2020-12-25T17:34:02.727Z"}
+{"message":"POST /api/auth/login 200 218.933 ms - 415","level":"info","timestamp":"2020-12-25T17:34:02.956Z"}
+{"message":"OPTIONS /api/businesses 204 0.287 ms - 0","level":"info","timestamp":"2020-12-25T17:34:03.120Z"}
+{"message":"GET /api/businesses 304 17.023 ms - -","level":"info","timestamp":"2020-12-25T17:34:03.141Z"}
+{"message":"OPTIONS /api/auth/logout 204 0.268 ms - 0","level":"info","timestamp":"2020-12-25T17:34:05.526Z"}
+{"message":"POST /api/auth/logout 200 24.837 ms - 32","level":"info","timestamp":"2020-12-25T17:34:05.563Z"}
+{"message":"OPTIONS /api/auth/login 204 0.260 ms - 0","level":"info","timestamp":"2020-12-25T17:34:11.775Z"}
+{"message":"POST /api/auth/login 200 202.630 ms - 432","level":"info","timestamp":"2020-12-25T17:34:11.986Z"}
+{"message":"OPTIONS /api/auth/logout 204 0.251 ms - 0","level":"info","timestamp":"2020-12-25T17:34:13.386Z"}
+{"message":"POST /api/auth/logout 200 18.290 ms - 32","level":"info","timestamp":"2020-12-25T17:34:13.409Z"}
+{"message":"App exited gracefully","level":"info","timestamp":"2020-12-25T17:34:21.616Z"}
