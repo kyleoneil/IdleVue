@@ -50,7 +50,13 @@ router.get('/', (req, res) => {
     let pgNum = pageNo ? parseInt(pageNo) : 1;
     let pgRes = resultsPerPage ? parseInt(resultsPerPage) : 10;
     return Services.getServices(pgNum, pgRes, branchId)
-        .then((results) => res.json(results))
+        .then(async (results) => {
+            for(var x = 0; x < results.totalRecords; x++){
+                await console.log(results.data[x].dataValues);
+            }
+            
+            res.json(results);
+        })
         .catch(errorHandler.handleError(res))
 })
 
