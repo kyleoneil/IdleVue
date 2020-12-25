@@ -342,7 +342,7 @@ export default {
       var date = input.month + "/" + input.day + "/" + input.year;
       input.birthdate = date;
       axios
-        .post("http://proxy101.callcruncher.com/idle/api/users", input) //asa kuhaon ang data
+        .post("http://localhost:3000/idle/api/users", input) //asa kuhaon ang data
         .then((data) => {
           //response if successful
           console.log(data.data);
@@ -403,7 +403,7 @@ export default {
       },
     };
     axios
-      .get("http://proxy101.callcruncher.com/idle/api/users", head)
+      .get("http://localhost:3000/api/user", head)
       .then((res) => {
         var name, bday;
         var catcher = res.data.data;

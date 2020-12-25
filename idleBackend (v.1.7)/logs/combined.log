@@ -581,3 +581,4 @@
 {"message":"GET /api/queues?serviceId=2 200 12.304 ms - 513","level":"info","timestamp":"2020-12-25T08:55:48.546Z"}
 {"message":"GET /api/queues?serviceId=2 200 19.267 ms - 513","level":"info","timestamp":"2020-12-25T09:16:23.572Z"}
 {"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T09:16:38.546Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T11:27:08.075Z"}
