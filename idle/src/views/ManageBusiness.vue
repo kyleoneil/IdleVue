@@ -90,6 +90,8 @@
 </style>
 <script>
 import MgmtTable from "../components/MgmtTable.vue";
+import axios from "axios";
+
 export default {
   components: { MgmtTable },
   name: "ManageBusiness",
@@ -100,18 +102,7 @@ export default {
       input: "",
       data: [
         {
-          business: [
-            {
-              id: "0001",
-              name: "Sample",
-              createdAt: "12/15/2020",
-            },
-            {
-              id: "0002",
-              name: "Sample2",
-              createdAt: "12/15/2020",
-            },
-          ],
+          business: [],
           headers: [
             {
               text: "ID",
@@ -144,5 +135,40 @@ export default {
       this.input = '';
     }
   },
+  beforeMount(){
+    const data = this.$store.state.token;
+    let head = {
+      headers: {
+        Authorization: data,
+      },
+    };
+    axios
+      .get("http://localhost:3000/api/businesses", head)
+      .then((res) => {
+        var name;
+        var catcher = res.data.data;
+        for (var i = 0; i < catcher.length; i++) {
+          const addData = {
+            id: "",
+            name: "",
+            createdAt: "",
+          };
+          addData.id = catcher[i].id;
+          name = catcher[i].name;
+          addData.name = name;
+          var createdDate = catcher[i].createdAt.split("-")[2];
+          addData.createdAt =
+            catcher[i].createdAt.split("-")[1] +
+            "/" +
+            createdDate.split("T")[0] + 
+            "/" +
+            catcher[i].createdAt.split("-")[0];
+          this.data[0].business.push(addData);
+        }
+      })
+      .catch((error) => {
+        console.log(error.response.data.message);
+      });
+  }
 };
 </script>

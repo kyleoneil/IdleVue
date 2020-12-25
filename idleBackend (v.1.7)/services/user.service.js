@@ -72,6 +72,24 @@ module.exports = {
     }
   },
 
+  findTellers: async (pageNo, resultsPerPage, businessId) => {
+    const pageOffset = resultsPerPage * (pageNo - 1);
+    const total_queue_records = await User.count({where: {business_id: businessId}});
+    const userPaginated = await User.findAll({
+      where: {
+        business_id: businessId,
+        role_id: 3
+      }, 
+      offset: pageOffset, 
+      limit: resultsPerPage,
+      attributes: { exclude: ['password'] }
+    })
+    return {
+      totalRecords: total_queue_records,
+      data: userPaginated
+    }
+  },
+
   //UPDATE Operations
   update: async (uID, data) => {
     /**
