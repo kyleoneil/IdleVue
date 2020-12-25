@@ -7,7 +7,8 @@
     >
       <v-row justify="center">
         <v-col sm="9">
-          <slot name="headerTitle"></slot><span class="white--text text-h5"> Management</span>
+          <slot name="headerTitle"></slot
+          ><span class="white--text text-h5"> Management</span>
         </v-col>
         <v-col sm="3">
           <slot name="addBtn"></slot>
@@ -26,7 +27,7 @@
         hide-details
       ></v-text-field>
     </div>
-    
+
     <template>
       <div>
         <v-data-table
@@ -55,7 +56,16 @@
             >
               DELETE <v-icon small>mdi-delete-outline</v-icon>
             </v-btn>
-            <slot name="serviceBtn"></slot>
+            <v-btn
+              v-if="role==1"
+              color="primary"
+              small
+              class="white--text ml-3 mr-7"
+              v-on:click="serviceBtn(props.item)"
+            >
+              Service
+            </v-btn>
+            <slot name="serviceDialog"></slot>
           </template>
         </v-data-table>
       </div>
@@ -68,6 +78,7 @@ export default {
   data() {
     return {
       search: "",
+      role: null,
       dialog: false,
     };
   },
@@ -88,12 +99,24 @@ export default {
           .indexOf(search.toLocaleUpperCase()) !== -1
       );
     },
-    deleteBtn: function(data){
-      this.$emit('deleteBtn', data)
+    deleteBtn: function (data) {
+      this.$emit("deleteBtn", data);
     },
-    editBtn: function(data){
-      this.$emit('editBtn', data)
+    editBtn: function (data) {
+      this.$emit("editBtn", data);
+    },
+    serviceBtn: function (data) {
+      this.$emit("serviceBtn", data);
     },
   },
+  beforeMount(){
+    if(this.$store.state.role == "SUPER_ADMIN"){
+      this.role = 1;
+    }else if(this.$store.state.role =="ADMIN"){
+      this.role = 2;
+    }else if (this.$store.state.role=="TELLER"){
+      this.role = 3;
+    }
+  }
 };
 </script>
