@@ -576,3 +576,8 @@
 {"message":"GET /api/queues?serviceId=1 200 25.152 ms - 543","level":"info","timestamp":"2020-12-25T08:47:19.965Z"}
 {"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T08:47:39.458Z"}
 {"message":"GET /api/queues?serviceId=1 200 29.299 ms - 509","level":"info","timestamp":"2020-12-25T08:47:41.015Z"}
+{"message":"GET /api/queues?serviceId=2 200 14.238 ms - 513","level":"info","timestamp":"2020-12-25T08:50:57.111Z"}
+{"message":"GET /api/queues?serviceId=1 200 16.386 ms - 509","level":"info","timestamp":"2020-12-25T08:55:43.244Z"}
+{"message":"GET /api/queues?serviceId=2 200 12.304 ms - 513","level":"info","timestamp":"2020-12-25T08:55:48.546Z"}
+{"message":"GET /api/queues?serviceId=2 200 19.267 ms - 513","level":"info","timestamp":"2020-12-25T09:16:23.572Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T09:16:38.546Z"}

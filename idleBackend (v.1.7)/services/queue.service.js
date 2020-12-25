@@ -44,14 +44,14 @@ module.exports = {
       limit: resultsPerPage,
       where,
       attributes: {
-        exclude: ['id','updatedAt', 'deletedAt', 'UserId', 'ServiceId']
+        exclude: ['updatedAt', 'deletedAt', 'UserId', 'ServiceId']
       },
       include: [
         {
           model: Service,
           attributes: {
             include: [['name', 'service_name']],
-            exclude: ['id', 'name', 'last_in_queue', 'current_queue', 'createdAt', 'updatedAt', 'deletedAt', 'BranchId']
+            exclude: ['name', 'last_in_queue', 'current_queue', 'createdAt', 'updatedAt', 'deletedAt', 'BranchId']
           }
         },
         {
