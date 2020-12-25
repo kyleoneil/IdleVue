@@ -3,5 +3,6 @@
 node_modules
 .idea
 *.iml
+logs
 tmp
 sequelize-data-*.json
