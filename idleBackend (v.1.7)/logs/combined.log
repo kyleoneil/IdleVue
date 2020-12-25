@@ -18358,3 +18358,4 @@
 {"message":"OPTIONS /api/auth/login 204 0.215 ms - 0","level":"info","timestamp":"2020-12-25T14:40:32.260Z"}
 {"message":"POST /api/auth/login 200 145.396 ms - 432","level":"info","timestamp":"2020-12-25T14:40:32.409Z"}
 {"message":"App exited gracefully","level":"info","timestamp":"2020-12-25T14:41:10.601Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T11:27:08.075Z"}
