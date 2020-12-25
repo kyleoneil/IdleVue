@@ -34,7 +34,7 @@ module.exports = {
   //READ Operations
   userExists: async (email) => {
     const user = await findByEmail(email);
-    return !!user; // or user != null
+    return user; // or user != null
   },
   
   findById: async (id) => {
