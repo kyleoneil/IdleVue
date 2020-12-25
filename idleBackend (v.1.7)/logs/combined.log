@@ -18359,3 +18359,28 @@
 {"message":"POST /api/auth/login 200 145.396 ms - 432","level":"info","timestamp":"2020-12-25T14:40:32.409Z"}
 {"message":"App exited gracefully","level":"info","timestamp":"2020-12-25T14:41:10.601Z"}
 {"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T11:27:08.075Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T15:52:38.046Z"}
+{"message":"OPTIONS /api/auth/login 204 2.319 ms - 0","level":"info","timestamp":"2020-12-25T15:58:11.059Z"}
+{"message":"POST /api/auth/login 200 269.906 ms - 415","level":"info","timestamp":"2020-12-25T15:58:11.335Z"}
+{"message":"App exited gracefully","level":"info","timestamp":"2020-12-25T16:00:14.042Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T16:05:59.843Z"}
+{"message":"OPTIONS /api/auth/login 204 2.091 ms - 0","level":"info","timestamp":"2020-12-25T16:09:17.480Z"}
+{"message":"POST /api/auth/login 400 103.140 ms - 36","level":"info","timestamp":"2020-12-25T16:09:17.586Z"}
+{"message":"POST /api/auth/login 200 171.138 ms - 432","level":"info","timestamp":"2020-12-25T16:09:21.908Z"}
+{"message":"OPTIONS /api/users 204 0.105 ms - 0","level":"info","timestamp":"2020-12-25T16:09:23.903Z"}
+{"message":"GET /api/users 200 25.149 ms - 1172","level":"info","timestamp":"2020-12-25T16:09:23.931Z"}
+{"message":"GET /api/users 304 9.652 ms - -","level":"info","timestamp":"2020-12-25T16:09:27.179Z"}
+{"message":"OPTIONS /api/users 204 0.236 ms - 0","level":"info","timestamp":"2020-12-25T16:09:29.318Z"}
+{"message":"GET /api/users 304 13.078 ms - -","level":"info","timestamp":"2020-12-25T16:09:29.334Z"}
+{"message":"OPTIONS /api/users 204 0.241 ms - 0","level":"info","timestamp":"2020-12-25T16:09:47.006Z"}
+{"message":"GET /api/users 304 13.146 ms - -","level":"info","timestamp":"2020-12-25T16:09:47.022Z"}
+{"message":"App exited gracefully","level":"info","timestamp":"2020-12-25T16:10:05.705Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T17:05:16.680Z"}
+{"message":"POST /api/auth/login?data=%7B%22email%22:%22customer3@idle.com%22,%22password%22:%22customer3%22%7D 200 185.978 ms - 425","level":"info","timestamp":"2020-12-25T17:05:48.843Z"}
+{"message":"GET /api//me/queues?id=9 200 20.711 ms - 222","level":"info","timestamp":"2020-12-25T17:05:49.394Z"}
+{"message":"GET /api//businesses?data=%22Bearer%20eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwibmFtZSI6Ik5oZW11ZWwsIFJvYmxlcyIsInJvbGVOYW1lIjoiQ1VTVE9NRVIiLCJlbWFpbCI6ImN1c3RvbWVyM0BpZGxlLmNvbSIsImJ1c2luZXNzX2lkIjpudWxsLCJicmFuY2hfaWQiOm51bGwsImlhdCI6MTYwODkxNTk0OCwiZXhwIjoxNjA4OTMwMzQ4fQ.8IYpMYIDupbkXASAopjGg1xvlmej2JoJ6rnGaDyK_xg%22 200 9.921 ms - 296","level":"info","timestamp":"2020-12-25T17:05:50.929Z"}
+{"message":"GET /api//branches?businessId=2 200 7.719 ms - 162","level":"info","timestamp":"2020-12-25T17:05:52.874Z"}
+{"message":"GET /api//services?branchId=2 200 12.099 ms - 378","level":"info","timestamp":"2020-12-25T17:05:53.853Z"}
+{"message":"POST /api/services/3/queue 200 27.946 ms - 31","level":"info","timestamp":"2020-12-25T17:05:56.695Z"}
+{"message":"GET /api//me/queues?id=9 200 12.485 ms - 424","level":"info","timestamp":"2020-12-25T17:05:57.440Z"}
+{"message":"App exited gracefully","level":"info","timestamp":"2020-12-25T17:06:57.012Z"}

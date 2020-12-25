@@ -396,6 +396,7 @@ export default {
 
   beforeMount() {
     const data = this.$store.state.token;
+   
     let head = {
       headers: {
         Authorization: data,
