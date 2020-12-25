@@ -123,19 +123,20 @@ export default {
             // const headers={'Acess-Control-Allow-Origin':'*',
             // 'Content-type':'application/json'};
             
-            console.log(data);
+          
             // const PROTOCOL = "http://proxy101.callcruncher.com/idle/api/auth/login";
             const PROTOCOL ="http://localhost:3000/api/auth/login";
             axios.post(PROTOCOL,data).then((data)=>{
                  this.$store.state.role=data.data.roleName;
                  this.$store.state.token=data.data.token;
-                this.$store.state.id=data.data.branch_id;
+                 this.$store.state.id=data.data.branch_id;
+                 this.$store.state.businessid=data.data.business_id;
                 //  console.log(this.$store.role);
                  this.$store.commit('increment');
                  console.log(data.data);
                 if(this.$store.state.role == "SUPER_ADMIN"){
                     this.$router.push({path:'/business',params:{data}});
-                }else if(this.$store.state.role =="BUSINESS_OWNER"){
+                }else if(this.$store.state.role =="BUSINESS_OWNER"){           
                     this.$router.push({path:'/branch',params:{data}});
                 }else if (this.$store.state.role=="BUSINESS_TELLER"){
                     this.$router.push({path:'/queueList',params:{data}});

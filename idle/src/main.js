@@ -21,6 +21,7 @@ const store = new Vuex.Store({
     role:0,
     token:"",
     id:"",
+    businessid:0,
   },
   mutations: {
     increment (state){

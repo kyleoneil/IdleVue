@@ -102,7 +102,7 @@ export default {
    beforeMount(){
       if(this.$store.state.role == "SUPER_ADMIN"){
         this.role = 1;
-      }else if(this.$store.state.role =="BUSINESS_ADMIN"){
+      }else if(this.$store.state.role =="BUSINESS_OWNER"){
         this.role = 2;
       }else if (this.$store.state.role=="BUSINESS_TELLER"){
         this.role = 3;
