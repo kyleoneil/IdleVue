@@ -59,7 +59,7 @@
                          <v-btn
                          color="success"
                         style="font-size: .6vw;font-family:Arial;margin-right:2%"
-                        v-on:click="next"
+                        v-on:click="next('COMPLETED')"
                         >
                         NEXT
                         </v-btn>
@@ -103,7 +103,7 @@
                             </v-card-title>
 
                             <v-card-subtitle style="margin-top:1%">
-                            {{item.last_in_queue}} waiting
+                            {{item.last_in_queue - item.current_queue}} waiting
                             </v-card-subtitle>
 
                             <v-card-actions>
@@ -149,14 +149,16 @@ export default {
       check: true,
       currentid:"",
       currentserviceid:"",
+      count:0,
     }),
     props:{
         source: String
     },
     methods:{
-     next: function(){
+        
+     next: function(status){
         const data = this.$store.state.token;
-       console.log(data);
+     
         let head = 
             {
            headers:{
@@ -165,27 +167,73 @@ export default {
         };
         let send={};
         console.log(this.currentid);
-         const PROTOCOL="http://localhost:3000/api/services/";
-         //const PROTOCOL="http://proxy101.callcruncher.com/idle/api/services/1/nextqueue";
-         axios.patch(PROTOCOL+this.currentid+"/nextqueue",send,head).then((data)=>{
-                console.log(data.data);
-         }).catch((error)=>{
-            console.log(error.response.data.message)
-        });
-         const PROTOCOL2="http://localhost:3000/api/queues/";
+        const PROTOCOL2="http://localhost:3000/api/queues/";
          //const PROTOCOL2="http://proxy101.callcruncher.com/idle/api/queues/";
-        axios.patch(PROTOCOL2+this.currentid+'status=COMPLETED',send,head).then((data)=>{
-                console.log(data.data);
+         console.log("currentid:"+this.currentid);
+        axios.patch(PROTOCOL2+this.currentid+'?status='+status,send,head).then((data)=>{
+               console.log("PROTOCOL2"+data.data);
          }).catch((error)=>{
-            console.log(error.response.data.message)
+            console.log("PROTOCOL2"+error.response.data.message)
         });
-      
-         
-
+        
+         const PROTOCOL="http://localhost:3000/api/services/";
+         console.log("current service id:"+this.currentserviceid);
+         //const PROTOCOL="http://proxy101.callcruncher.com/idle/api/services/1/nextqueue";
+         axios.patch(PROTOCOL+this.currentserviceid+"/nextqueue",send,head).then((data)=>{
+                console.log("PROTOCOL1"+data.data);
+         }).catch((error)=>{
+           console.log("PROTOCOL1"+error.response.data.message)
+             this.name ="";
+                this.number = "";
+                this.service = "";
+                this.currentid="";
+                this.currentserviceid="";
+        });
          //get queue
+        
+        const PROTOCOL3 ="http://localhost:3000/api/queues?serviceId=";
+        //const PROTOCOL="http://proxy101.callcruncher.com/idle/api/queues?serviceId=";
+        axios.get(PROTOCOL3+this.currentserviceid,head).then((data)=>{
+             var catcher = data.data.data;
+            // this.queuedata = data.data.data.data;
+            this.queuedata=[];
+            var adddata;
+            console.log(data.data.data.data);
+            for(var a=0; a<catcher.totalRecords;a++){
+                if(catcher.data[a].status=="IN_PROGRESS"){
+                    console.log(catcher.data[a].status);
+                    this.name = catcher.data[a].User.user_name;
+                    this.number = catcher.data[a].queue_number;
+                    this.service = catcher.data[a].Service.service_name;
+                    this.currentid= catcher.data[a].id;
+                    this.currentserviceid=catcher.data[a].Service.id;
+                }
+                if(catcher.data[a].status=="IN_PROGRESS" || catcher.data[a].status=="IN_QUEUE"){
+                    adddata = {name:"",queuenum:"",email:"",birthdate:""};
+                    adddata.name = catcher.data[a].User.user_name;
+                    adddata.queuenum = catcher.data[a].queue_number
+                    adddata.email=catcher.data[a].User.user_email
+                    adddata.birthdate=catcher.data[a].User.user_birthdate; //bday dapat
+                    this.queuedata.push(adddata);
+                
+                }
+            }
+            if(catcher.totalRecords==0){
+                this.name ="";
+                this.number = "";
+                this.service = "";
+                this.currentid="";
+                this.currentserviceid="";
+            }
+        }).catch((error)=>{
+         
+            console.log(error.response.data.message)
+            
+        });
+         
      },
      noShow: function(){
-        this.next();
+        this.next("NO_SHOW");
      },
      getqueue: function(event){
          this.currentserviceid=    event.currentTarget.id;
@@ -195,6 +243,13 @@ export default {
                Authorization:data
            }
        }
+        const PROTOCOL2="http://localhost:3000/api/services/";
+         //const PROTOCOL="http://proxy101.callcruncher.com/idle/api/services/1/nextqueue";
+         axios.patch(PROTOCOL2+this.currentserviceid+"/nextqueue",{},head).then((data)=>{
+                console.log("PROTOCOL1"+data.data);
+         }).catch((error)=>{
+            console.log("PROTOCOL1"+error.response.data.message)
+        });
         const PROTOCOL ="http://localhost:3000/api/queues?serviceId=";
         //const PROTOCOL="http://proxy101.callcruncher.com/idle/api/queues?serviceId=";
         axios.get(PROTOCOL+this.currentserviceid,head).then((data)=>{
@@ -203,24 +258,33 @@ export default {
             this.queuedata=[];
             var adddata;
             console.log(data.data.data.data);
-            this.name = catcher.data[0].User.user_name;
-            this.number = catcher.data[0].queue_number;
-            this.service = catcher.data[0].Service.service_name;
-            this.currentid= catcher.data[0].id;
             for(var a=0; a<catcher.totalRecords;a++){
-                adddata = {name:"",queuenum:"",email:"",birthdate:""};
-                adddata.name = catcher.data[a].User.user_name;
-                adddata.queuenum = catcher.data[a].queue_number
-                adddata.email=catcher.data[a].User.user_email
-                adddata.birthdate=catcher.data[a].User.user_birthdate; //bday dapat
-                this.queuedata.push(adddata);
+                if(catcher.data[a].status=="IN_PROGRESS"){
+                    console.log(catcher.data[a].status);
+                    this.name = catcher.data[a].User.user_name;
+                    this.number = catcher.data[a].queue_number;
+                    this.service = catcher.data[a].Service.service_name;
+                    this.currentid= catcher.data[a].id;
+                    this.currentserviceid=catcher.data[a].Service.id;
+                }
+                if(catcher.data[a].status=="IN_PROGRESS" || catcher.data[a].status=="IN_QUEUE"){
+                    adddata = {name:"",queuenum:"",email:"",birthdate:""};
+                    adddata.name = catcher.data[a].User.user_name;
+                    adddata.queuenum = catcher.data[a].queue_number
+                    adddata.email=catcher.data[a].User.user_email
+                    adddata.birthdate=catcher.data[a].User.user_birthdate; //bday dapat
+                    this.queuedata.push(adddata);
+                
+                }
             }
         }).catch((error)=>{
             console.log(error.response.data.message)
         });
     
       },
+
     },
+ 
     beforeMount(){
        const data =  this.$store.state.token;
        let head = {
@@ -232,8 +296,6 @@ export default {
        const PROTOCOL="http://localhost:3000/api/services?branchId=";
        const id =  this.$store.state.id;
         axios.get(PROTOCOL+id,head).then((data)=>{
-            console.log("xsssd");
-            console.log(data);
         this.datalist = data;
         this.check=!this.check;
         }).catch((error)=>{
