@@ -546,10 +546,6 @@
 {"message":"GET /api/services?branchId=2 200 69.049 ms - 551","level":"info","timestamp":"2020-12-25T07:56:35.042Z"}
 {"message":"GET /api/services/2 200 10.398 ms - 302","level":"info","timestamp":"2020-12-25T07:56:52.654Z"}
 {"message":"GET /api/services/1/queues 200 16.165 ms - 926","level":"info","timestamp":"2020-12-25T07:56:55.754Z"}
-{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T08:05:42.558Z"}
-{"message":"OPTIONS /api/auth/login 204 1.455 ms - 0","level":"info","timestamp":"2020-12-25T08:05:56.164Z"}
-{"message":"POST /api/auth/login 200 184.137 ms - 415","level":"info","timestamp":"2020-12-25T08:05:56.351Z"}
-{"message":"App exited gracefully","level":"info","timestamp":"2020-12-25T08:06:02.114Z"}
-{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T08:10:19.432Z"}
-{"message":"App exited gracefully","level":"info","timestamp":"2020-12-25T08:10:21.658Z"}
-{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T08:13:28.815Z"}
+{"message":"App exited gracefully","level":"info","timestamp":"2020-12-25T08:06:44.778Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-25T08:13:29.812Z"}
+{"message":"App exited gracefully","level":"info","timestamp":"2020-12-25T08:13:32.386Z"}
