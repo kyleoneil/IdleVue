@@ -44,7 +44,7 @@
                     </v-list-item-avatar>
 
                     <v-list-item-content>
-                    <v-list-item-title>Evan You</v-list-item-title>
+                    <v-list-item-title>{{name}}</v-list-item-title>
                     </v-list-item-content>
 
                     <v-row align="center" justify="end">
@@ -183,31 +183,6 @@ export default {
          
 
          //get queue
-       
-        const PROTOCOL3 ="http://localhost:3000/api/queues?serviceId=";
-        //const PROTOCOL3="http://proxy101.callcruncher.com/idle/api/queues?serviceId=";
-        axios.get(PROTOCOL3+this.currentid,head).then((data)=>{
-            var catcher = data.data.data;
-            // this.queuedata = data.data.data.data;
-            this.queuedata=[];
-            var adddata;
-            console.log(data.data.data.data);
-            this.name = catcher.data[0].ServiceId;//name dapat
-            this.number = catcher.data[0].queue_number;
-            this.service = "XD";//serviec name dapat
-            this.currentid= catcher.data[0].id;
-            for(var a=0; a<catcher.totalRecords;a++){
-                adddata = {name:"",queuenum:"",email:"",birthdate:""};
-                adddata.name = catcher.data[a].ServiceId;//namedapat
-                adddata.queuenum = catcher.data[a].queue_number
-                adddata.email=catcher.data[a].UserId //email dapat
-                adddata.birthdate=catcher.data[a].status; //bday dapat
-                this.queuedata.push(adddata);
-            }
-        }).catch((error)=>{
-            console.log(error.response.data.message)
-        });
-    
      },
      noShow: function(){
         this.next();
@@ -227,17 +202,17 @@ export default {
             // this.queuedata = data.data.data.data;
             this.queuedata=[];
             var adddata;
-            console.log(data.data);
-            this.name = catcher.data[0].ServiceId;//name dapat
+            console.log(data.data.data.data);
+            this.name = catcher.data[0].User.user_name;
             this.number = catcher.data[0].queue_number;
-            this.service = "XD";//serviec name dapat
+            this.service = catcher.data[0].Service.service_name;
             this.currentid= catcher.data[0].id;
             for(var a=0; a<catcher.totalRecords;a++){
                 adddata = {name:"",queuenum:"",email:"",birthdate:""};
-                adddata.name = catcher.data[a].ServiceId;//namedapat
+                adddata.name = catcher.data[a].User.user_name;
                 adddata.queuenum = catcher.data[a].queue_number
-                adddata.email=catcher.data[a].UserId //email dapat
-                adddata.birthdate=catcher.data[a].status; //bday dapat
+                adddata.email=catcher.data[a].User.user_email
+                adddata.birthdate=catcher.data[a].User.user_birthdate; //bday dapat
                 this.queuedata.push(adddata);
             }
         }).catch((error)=>{
