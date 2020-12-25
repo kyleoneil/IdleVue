@@ -49,7 +49,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
     },
     birthdate: DataTypes.DATEONLY,
-    token: DataTypes.STRING,
+    token: DataTypes.TEXT,
     lastLogin: DataTypes.DATE,
   }, {
     sequelize,

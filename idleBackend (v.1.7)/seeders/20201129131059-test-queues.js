@@ -8,12 +8,12 @@ module.exports = {
       const now = new Date();
       const inQueue = 'IN_QUEUE';
       await queryInterface.bulkInsert('queues', [
-        {user_id: 1, service_id: 1, status: inQueue, created_at: now, updated_at: now},
-        {user_id: 2, service_id: 2, status: 'COMPLETED', created_at: now, updated_at: now},
-        {user_id: 3, service_id: 3, status: 'IN_PROGRESS', created_at: now, updated_at: now},
-        {user_id: 4, service_id: 4, status: 'NO_SHOW', created_at: now, updated_at: now},
-        {user_id: 1, service_id: 1, status: inQueue, created_at: now, updated_at: now},
-        {user_id: 2, service_id: 2, status: 'COMPLETED', created_at: now, updated_at: now},
+        {user_id: 1, service_id: 1, queue_number: 1, status: 'IN_PROGRESS', created_at: now, updated_at: now},
+        {user_id: 2, service_id: 2, queue_number: 1, status: 'IN_PROGRESS', created_at: now, updated_at: now},
+        {user_id: 3, service_id: 3, queue_number: 1, status: 'IN_PROGRESS', created_at: now, updated_at: now},
+        {user_id: 4, service_id: 4, queue_number: 1, status: 'NO_SHOW', created_at: now, updated_at: now},
+        {user_id: 1, service_id: 1, queue_number: 2, status: inQueue, created_at: now, updated_at: now},
+        {user_id: 2, service_id: 2, queue_number: 2, status: inQueue, created_at: now, updated_at: now},
       ])
     }
   },

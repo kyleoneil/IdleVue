@@ -16,10 +16,10 @@ module.exports = {
         {id: 2, name: 'Fuente', business_id: 2, created_at: now, updated_at: now},
       ]);
       await queryInterface.bulkInsert('services', [
-        {id: 1, name: 'Savings Deposit', branch_id: 1, created_at: now, updated_at: now},
-        {id: 2, name: 'Debit Loan', branch_id: 1, created_at: now, updated_at: now},
-        {id: 3, name: 'ICU/ER Booking', branch_id: 2, created_at: now, updated_at: now},
-        {id: 4, name: 'DNA Testing', branch_id: 2, created_at: now, updated_at: now},
+        {id: 1, name: 'Savings Deposit', branch_id: 1, last_in_queue: 2, current_queue: 1, created_at: now, updated_at: now},
+        {id: 2, name: 'Debit Loan', branch_id: 1, last_in_queue: 2, current_queue: 1, created_at: now, updated_at: now},
+        {id: 3, name: 'ICU/ER Booking', branch_id: 2, last_in_queue: 1, current_queue: 1, created_at: now, updated_at: now},
+        {id: 4, name: 'DNA Testing', branch_id: 2, last_in_queue: 1, current_queue: 1, created_at: now, updated_at: now},
       ])
     }
   },

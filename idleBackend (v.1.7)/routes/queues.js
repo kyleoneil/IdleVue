@@ -44,9 +44,9 @@ router.get('/:id/currentqueue', (req, res) => {
 
 router.patch('/:id', (req, res) => {
   let {status} = req.query;
+  console.log(status);
   const uID = req.params.id;
-  const tellerID = parseInt(req.user.id)
-  return queueService.update(uID, tellerID, status)
+  return queueService.update(uID, status)
     .then((results) => res.json({data: results, message: "Queue Updated Successfully."}))
     .catch(errorHandler.handleError(res));
 });
