@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <MgmtTable v-bind:data="data" v-on:deleteBtn="deleteBranchBtn($event)" v-on:editBtn="editBranchBtn($event)">
+    <MgmtTable v-bind:data="data" v-on:deleteBtn="deleteBranchBtn($event)" v-on:editBtn="editBranchBtn($event)" v-on:serviceBtn="serviceBranchBtn($event)">
       <span class="white--text text-h5" slot="headerTitle">Branch</span>
       <v-dialog v-model="addBranch" persistent max-width="600px" slot="addBtn">
         <template v-slot:activator="{ on, attrs }">
@@ -90,19 +90,9 @@
         persistent
         transition="dialog-bottom-transition"
         scrollable
-        slot="serviceBtn"
+        :retain-focus="false"
+        slot="serviceDialog"
       >
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn
-            color="primary"
-            small
-            v-bind="attrs"
-            v-on="on"
-            class="white--text ml-3 mr-7"
-          >
-            Service
-          </v-btn>
-        </template>
         <v-card>
           <v-toolbar flat dark color="primary" max-height="68px">
             <v-toolbar-title>Services</v-toolbar-title>
@@ -118,6 +108,7 @@
                   v-model="addService"
                   persistent
                   max-width="600px"
+                  :retain-focus="false"
                 >
                   <template v-slot:activator="{ on, attrs }">
                     <v-btn
@@ -128,6 +119,7 @@
                       class="mb-5"
                       rounded
                       color="primary"
+                      v-on:click="resetValues()"
                     >
                       Add Service
                     </v-btn>
@@ -140,6 +132,7 @@
                       <v-container>
                         <v-text-field
                           label="Name*"
+                          v-model="inputService"
                           hide-details
                           outlined
                           dense
@@ -161,7 +154,7 @@
                         color="primary"
                         class="px-10"
                         rounded
-                        v-on:click="addService = false"
+                        v-on:click="addServiceBtn(inputService)"
                       >
                         Add
                       </v-btn>
@@ -188,6 +181,7 @@
                           v-bind="attrs"
                           v-on="on"
                           class="white--text"
+                          v-on:click="editServiceBtn(props.item)"
                         >
                           EDIT <v-icon small>mdi-pencil</v-icon>
                         </v-btn>
@@ -200,6 +194,7 @@
                           <v-container>
                             <v-text-field
                               label="Name*"
+                              v-model="inputService"
                               hide-details
                               outlined
                               dense
@@ -232,11 +227,10 @@
                       color="red"
                       small
                       class="ml-3 white--text"
-                      v-on:click="onButtonClick(props.item)"
+                      v-on:click="deleteServiceBtn(props.item)"
                     >
                       DELETE <v-icon small>mdi-delete-outline</v-icon>
                     </v-btn>
-                    <slot name="serviceBtn"></slot>
                   </template>
                 </v-data-table>
               </div>
@@ -264,6 +258,7 @@ export default {
       editService: false,
       addService: false,
       service: false,
+      inputService: '',
       data: [
         {
           business: [
@@ -292,10 +287,12 @@ export default {
       ],
       services: [
         {
+          id: "0001",
           name: "hi",
         },
       ],
       serviceHeaders: [
+        { text: "Id", value: "id" },
         { text: "Service", value: "name" },
         { text: "", value: "controls", sortable: false, align: "end" },
       ],
@@ -305,7 +302,7 @@ export default {
     addBranchBtn: function (input) {
       var name = input;
       console.log(name);
-      this.add = false;
+      this.addBranch = false;
     },
     editBranchBtn: function (data) {
       this.editBranch = true;
@@ -315,8 +312,26 @@ export default {
     deleteBranchBtn: function(data){
       console.log(data);
     },
+    serviceBranchBtn: function(data){
+      this.service = true;
+      console.log(data);
+    },
+    addServiceBtn: function(inputService){
+      var name = inputService;
+      console.log(name);
+      this.addService = false;
+    },
+    editServiceBtn: function (data) {
+      this.editService = true;
+      this.inputService = data.name;
+      console.log(data);
+    },
+    deleteServiceBtn: function(data){
+      console.log(data);
+    },
     resetValues: function(){
       this.input = '';
+      this.inputService = '';
     }
   }
 };
