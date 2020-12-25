@@ -64,10 +64,11 @@ router.get('/:id', (req, res) => {
 });
 
 router.get('/', (req, res) => {
+  const businessId = req.user.business_id;
   let {pageNo, resultsPerPage} = req.query;
   let pgNum = pageNo ? parseInt(pageNo) : 1;
   let pgRes = resultsPerPage ? parseInt(resultsPerPage) : 10;
-  return userService.findPaginated(pgNum, pgRes)
+  return userService.findPaginated(pgNum, pgRes, businessId)
     .then((results) => res.json(results))
     .catch(errorHandler.handleError(res));
 });
