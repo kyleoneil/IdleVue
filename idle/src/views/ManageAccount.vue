@@ -183,6 +183,8 @@
                   v-model="input.branch"
                   v-on:click="showBranches()"
                   label="Branch*"
+                  item-text="text"
+                  item-value="value"
                   outlined
                   hide-details
                   class="mb-2"
@@ -254,7 +256,7 @@
               color="primary"
               class="px-10"
               rounded
-              v-on:click="edit = false"
+              v-on:click="saveAccount(input)"
             >
               Save
             </v-btn>
@@ -280,9 +282,12 @@ export default {
       edit: false,
       businessId: '',
       input: {
+        id: "",
         firstname: "",
         lastname: "",
         branch: "",
+        branch_id: "",
+        business_id: "",
         month: "",
         day: "",
         year: "",
@@ -332,6 +337,8 @@ export default {
       console.log(input);
       var date = input.month + "/" + input.day + "/" + input.year;
       input.birthdate = date;
+      input.branch_id = input.branch;
+      input.business_id = this.businessId;
       axios
         .post("http://localhost:3000/api/users", input)
         .then((data) => {
@@ -352,7 +359,16 @@ export default {
       axios
         .get("http://localhost:3000/api/branches?businessId="+this.businessId, head)
         .then((res) => {
-          this.branches = res.data.data;
+          var catcher = res.data.data;
+          for(var i = 0; i < catcher.length; i++){
+            var addBranchData = {
+              text: "",
+              value: ""
+            };
+            addBranchData.text = catcher[i].name;
+            addBranchData.value = catcher[i].id;
+            this.branches.push(addBranchData);
+          }
         })
         .catch((error) => {
           console.log(error.response.data.message);
@@ -363,6 +379,7 @@ export default {
     },
     editAccount: function (data) {
       this.edit = true;
+      this.input.id = data.id;
       this.input.firstname = data.name.split(" ")[0];
       this.input.lastname = data.name.split(" ")[1];
       this.input.branch = data.branch;
@@ -372,7 +389,27 @@ export default {
       this.input.email = data.email;
       console.log(this.input);
     },
+    saveAccount: function(input){
+      const data = this.$store.state.token;
+      let head = {
+        headers: {
+          Authorization: data,
+        },
+      };
+      var date = input.month + "/" + input.day + "/" + input.year;
+      input.birthdate = date;
+      axios
+        .put("http://localhost:3000/api/users/"+input.id, input, head)
+        .then((data) => {
+          console.log(data.data);
+        })
+        .catch((error) => {
+          console.log(error.response.data.message);
+        });
+      this.edit = false;
+    },
     resetValues: function(){
+      this.input.id = '';
       this.input.firstname = '';
       this.input.lastname = '';
       this.input.branch = '';
@@ -385,19 +422,21 @@ export default {
   },
 
   beforeMount() {
+    this.$store.state.showService = false;
     const data = this.$store.state.token;
-    this.businessId = this.$store.state.businessId;
+    this.businessId = this.$store.state.businessid;
     let head = {
       headers: {
         Authorization: data,
       },
     };
     axios
-      .get("http://localhost:3000/api/users", head)
+      .get("http://localhost:3000/api/businesses/"+this.businessId+"/tellers", head)
       .then((res) => {
         var name, bday;
         var catcher = res.data.data;
         for (var i = 0; i < catcher.length; i++) {
+          console.log(catcher);
           const addData = {
             id: "",
             name: "",

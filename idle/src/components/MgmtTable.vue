@@ -57,7 +57,7 @@
               DELETE <v-icon small>mdi-delete-outline</v-icon>
             </v-btn>
             <v-btn
-              v-if="role==1"
+              v-if="showService==true"
               color="primary"
               small
               class="white--text ml-3 mr-7"
@@ -78,6 +78,7 @@ export default {
   data() {
     return {
       search: "",
+      showService: false,
       role: null,
       dialog: false,
     };
@@ -110,13 +111,14 @@ export default {
     },
   },
   beforeMount(){
+    this.showService = this.$store.state.showService;
     if(this.$store.state.role == "SUPER_ADMIN"){
       this.role = 1;
-    }else if(this.$store.state.role =="ADMIN"){
+    }else if(this.$store.state.role =="BUSINESS_OWNER"){
       this.role = 2;
-    }else if (this.$store.state.role=="TELLER"){
+    }else if (this.$store.state.role=="BUSINESS_TELLER"){
       this.role = 3;
-    }
+    } 
   }
 };
 </script>

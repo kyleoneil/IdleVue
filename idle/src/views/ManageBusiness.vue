@@ -136,6 +136,7 @@ export default {
     }
   },
   beforeMount(){
+    this.$store.state.showService = true;
     const data = this.$store.state.token;
     let head = {
       headers: {

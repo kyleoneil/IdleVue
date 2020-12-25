@@ -247,6 +247,8 @@
 </style>
 <script>
 import MgmtTable from "../components/MgmtTable.vue";
+import axios from "axios";
+
 export default {
   components: { MgmtTable },
   name: "ManageBranch",
@@ -259,20 +261,10 @@ export default {
       addService: false,
       service: false,
       inputService: '',
+      businessId: '',
       data: [
         {
-          business: [
-            {
-              id: "0001",
-              name: "Sample",
-              createdAt: "12/15/2020",
-            },
-            {
-              id: "0002",
-              name: "Sample2",
-              createdAt: "12/15/2020",
-            },
-          ],
+          business: [],
           headers: [
             {
               text: "ID",
@@ -333,6 +325,42 @@ export default {
       this.input = '';
       this.inputService = '';
     }
+  },
+  beforeMount(){
+    this.$store.state.showService = true;
+    this.businessId = this.$store.state.businessid;
+    const data = this.$store.state.token;
+      let head = {
+        headers: {
+          Authorization: data,
+        },
+      };
+      axios
+        .get("http://localhost:3000/api/branches?businessId="+this.businessId, head)
+        .then((res) => {
+          var catcher = res.data.data;
+          for(var i = 0; i < catcher.length; i++){
+            var addBranchData = {
+              id: '',
+              name: '',
+              createdAt: '',
+            };
+            addBranchData.id = catcher[i].id;
+            addBranchData.name = catcher[i].name;
+            var createdDate = catcher[i].createdAt.split("-")[2];
+            addBranchData.createdAt =
+              catcher[i].createdAt.split("-")[1] +
+              "/" +
+              createdDate.split("T")[0] + 
+              "/" +
+              catcher[i].createdAt.split("-")[0];
+            this.data[0].business.push(addBranchData);
+          }
+          console.log(res);
+        })
+        .catch((error) => {
+          console.log(error.response.data.message);
+        });
   }
 };
 </script>
