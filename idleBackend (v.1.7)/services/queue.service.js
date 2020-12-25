@@ -1,4 +1,4 @@
-const {Business, Branch, Queue, Service} = require('./../models');
+const {Business, Branch, Queue, Service, User} = require('./../models');
 const Services = require('./service.service');
 const userServices = require('./user.service');
 const {static} = require('express');
@@ -42,7 +42,33 @@ module.exports = {
     const queuePaginate = await Queue.findAll({
       offset: pageOffset,
       limit: resultsPerPage,
-      where
+      where,
+      attributes: {
+        exclude: ['id','updatedAt', 'deletedAt', 'UserId', 'ServiceId']
+      },
+      include: [
+        {
+          model: Service,
+          attributes: {
+            include: [['name', 'service_name']],
+            exclude: ['id', 'name', 'last_in_queue', 'current_queue', 'createdAt', 'updatedAt', 'deletedAt', 'BranchId']
+          }
+        },
+        {
+          model: User,
+          attributes: {
+            include: [
+              ['name', 'user_name'], 
+              ['email', 'user_email'], 
+              ['birthdate', 'user_birthdate']
+            ],
+            exclude: [
+              'id', 'name', 'email', 'password', 
+              'birthdate', 'token', 'lastLogin', 'createdAt', 'deletedAt', 
+              'updatedAt', 'RoleId', 'BranchId', 'BusinessId']
+          }
+        }
+      ]
     });
 
     return {

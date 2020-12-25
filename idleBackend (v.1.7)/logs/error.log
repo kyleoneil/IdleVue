@@ -119,3 +119,9 @@
 {"name":"SequelizeDatabaseError","parent":{"fatal":false,"errno":1054,"sqlState":"42S22","code":"ER_BAD_FIELD_ERROR","sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `teller_id` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '1');"},"original":{"fatal":false,"errno":1054,"sqlState":"42S22","code":"ER_BAD_FIELD_ERROR","sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `teller_id` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '1');"},"sql":"SELECT `id`, `queue_number`, `status`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt`, `user_id` AS `UserId`, `service_id` AS `ServiceId`, `teller_id` FROM `queues` AS `Queue` WHERE (`Queue`.`deleted_at` IS NULL AND `Queue`.`id` = '1');","level":"error","message":"undefined","timestamp":"2020-12-25T07:48:31.164Z"}
 {"message":"{\"message\":\"Queue is not in progress\",\"statusCode\":500}","level":"error","timestamp":"2020-12-25T07:54:28.758Z"}
 {"name":"ServiceError","status":500,"level":"error","message":"undefined","timestamp":"2020-12-25T07:54:28.759Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-25T08:46:06.714Z"}
+{"message":"{\"message\":\"User is not defined\",\"statusCode\":500}","level":"error","timestamp":"2020-12-25T08:46:06.714Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-25T08:46:06.715Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-25T08:46:27.773Z"}
+{"message":"{\"message\":\"User is not defined\",\"statusCode\":500}","level":"error","timestamp":"2020-12-25T08:46:27.774Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-25T08:46:27.774Z"}
