@@ -227,7 +227,7 @@ export default {
             // this.queuedata = data.data.data.data;
             this.queuedata=[];
             var adddata;
-            console.log(data.data.data.data);
+            console.log(data.data);
             this.name = catcher.data[0].ServiceId;//name dapat
             this.number = catcher.data[0].queue_number;
             this.service = "XD";//serviec name dapat
