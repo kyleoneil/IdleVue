@@ -342,13 +342,12 @@ export default {
       var date = input.month + "/" + input.day + "/" + input.year;
       input.birthdate = date;
       axios
-        .post("http://localhost:3000/idle/api/users", input) //asa kuhaon ang data
+        .post("http://localhost:3000/api/users", input)
         .then((data) => {
-          //response if successful
           console.log(data.data);
         })
         .catch((error) => {
-          console.log(error.response.data.message); //catches error
+          console.log(error.response.data.message);
         });
       this.add = false;
     },
@@ -403,10 +402,11 @@ export default {
       },
     };
     axios
-      .get("http://localhost:3000/api/user", head)
+      .get("http://localhost:3000/api/users", head)
       .then((res) => {
         var name, bday;
         var catcher = res.data.data;
+        console.log(catcher);
         for (var i = 0; i < catcher.length; i++) {
           const addData = {
             id: "",
@@ -432,6 +432,13 @@ export default {
           addData.email = catcher[i].email;
           addData.birthdate = bday;
           addData.email = catcher[i].email;
+          var createdDate = catcher[i].createdAt.split("-")[2];
+          addData.createdAt =
+            catcher[i].createdAt.split("-")[1] +
+            "/" +
+            createdDate.split("T")[0] + 
+            "/" +
+            catcher[i].createdAt.split("-")[0];
           this.data[0].business.push(addData);
         }
       })
