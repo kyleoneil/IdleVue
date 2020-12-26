@@ -57,7 +57,7 @@
             <v-container>
               <v-text-field
                 label="Name*"
-                v-model="input"
+                v-model="input.name"
                 hide-details
                 outlined
                 dense
@@ -75,7 +75,7 @@
               color="primary"
               class="px-10"
               rounded
-              v-on:click="edit = false"
+              v-on:click="saveBusiness(input)"
             >
               Save
             </v-btn>
@@ -142,8 +142,34 @@ export default {
     },
     editBusiness: function (data) {
       this.edit = true;
-      this.input = data.name;
+      this.input = {
+        id: '',
+        name: '',
+      }
+      this.input.id = data.id;
+      this.input.name = data.name;
       console.log(data);
+    },
+    saveBusiness: function(input){
+      const data = this.$store.state.token;
+      let head = {
+        headers: {
+          Authorization: data,
+        },
+      };
+      var addData = {
+        businessname: '',
+      }
+      addData.businessname = input.name;
+      axios
+        .put("http://localhost:3000/api/businesses/"+input.id, addData, head)
+        .then((response) => {
+          console.log(response.data);
+        })
+        .catch((error) => {
+          console.log(error.response.data.message);
+        })
+      this.edit = false;
     },
     deleteBusiness: function(input){
       const data = this.$store.state.token;
