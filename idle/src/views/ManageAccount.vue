@@ -44,7 +44,7 @@
                     ></v-text-field>
                   </v-col>
                 </v-row>
-
+                <template v-if="role==2">
                 <v-select
                   :items="branches"
                   v-model="input.branch"
@@ -56,6 +56,19 @@
                   prepend-icon="mdi-source-branch"
                   dense
                 ></v-select>
+                </template>
+                <template v-else-if="role==1">
+                  <v-select
+                  :items="userType"
+                  v-model="input.roleId"
+                  label="User Type*"
+                  outlined
+                  hide-details
+                  class="mb-2"
+                  prepend-icon="mdi-account-settings"
+                  dense
+                ></v-select>
+                </template>
                 <v-row>
                   <v-col sm="5">
                     <v-select
@@ -281,6 +294,12 @@ export default {
       add: false,
       edit: false,
       businessId: '',
+      role: '',
+      userType: [
+        { text: "Business Owner", value: '2'},
+        { text: "Business Teller", value: '3'},
+        { text: "Customer", value: '4'},
+      ],
       input: {
         id: "",
         firstname: "",
@@ -288,6 +307,8 @@ export default {
         branch: "",
         branch_id: "",
         business_id: "",
+        roleName: "",
+        roleId: "",
         month: "",
         day: "",
         year: "",
@@ -298,19 +319,7 @@ export default {
       data: [
         {
           business: [],
-          headers: [
-            {
-              text: "ID",
-              align: "start",
-              value: "id",
-            },
-            { text: "Name", value: "name" },
-            { text: "Branch", value: "branch" },
-            { text: "Birthday", value: "birthdate" },
-            { text: "Email", value: "email" },
-            { text: "Date Created", value: "createdAt" },
-            { text: "", value: "controls", sortable: false, align: "end" },
-          ],
+          headers: [],
         },
       ],
       branches: [],
@@ -334,13 +343,69 @@ export default {
   },
   methods: {
     addAccount: function (input) {
-      console.log(input);
       var date = input.month + "/" + input.day + "/" + input.year;
-      input.birthdate = date;
-      input.branch_id = input.branch;
-      input.business_id = this.businessId;
+      if(this.role == 2){
+        input.branch_id = input.branch;
+        input.roleId == 3;
+      }
+      if(input.roleId == 1){
+        input.roleName = "SUPER_ADMIN";
+      } else if(input.roleId == 2){
+        input.roleName = "BUSINESS_OWNER";
+      } else if(input.roleId == 3){
+        input.roleName = "BUSINESS_TELLER";
+      } else {
+        input.roleName = "CUSTOMER";
+      }
+      var addData = {
+        firstname: input.firstname,
+        lastname: input.lastname,
+        email: input.email,
+        password: input.password,
+        birthdate: date,
+        roleName: input.roleName,
+      };
+      if(input.roleId == 3){
+        addData = {}
+        if(this.role == 2){
+          addData = {
+            firstname: input.firstname,
+            lastname: input.lastname,
+            email: input.email,
+            password: input.password,
+            birthdate: date,
+            roleName: input.roleName,
+            branch_id: input.branch,
+            business_id: this.businessId
+          }
+          console.log(addData);
+        } else {
+          addData = {
+            firstname: input.firstname,
+            lastname: input.lastname,
+            email: input.email,
+            password: input.password,
+            birthdate: date,
+            roleName: input.roleName,
+            business_id: input.roleId,
+          }
+        }
+      } else if (input.roleId == 2){
+        addData = {}
+        addData = {
+          firstname: input.firstname,
+          lastname: input.lastname,
+          email: input.email,
+          password: input.password,
+          birthdate: date,
+          roleName: input.roleName,
+          business_id: input.roleId,
+        }
+      }
+      // input.business_id = this.businessId;
+      console.log(input);
       axios
-        .post("http://localhost:3000/api/users", input)
+        .post("http://localhost:3000/api/users", addData)
         .then((data) => {
           console.log(data.data);
         })
@@ -413,6 +478,7 @@ export default {
       this.input.firstname = '';
       this.input.lastname = '';
       this.input.branch = '';
+      this.input.roleId = '';
       this.input.month = '';
       this.input.day = '';
       this.input.year = '';
@@ -430,7 +496,16 @@ export default {
         Authorization: data,
       },
     };
-    axios
+
+    if(this.$store.state.role == "SUPER_ADMIN"){
+      this.role = 1;
+    }else if(this.$store.state.role =="BUSINESS_OWNER"){
+      this.role = 2;
+    }else if (this.$store.state.role=="BUSINESS_TELLER"){
+      this.role = 3;
+    }
+    if(this.role == 2){
+      axios
       .get("http://localhost:3000/api/businesses/"+this.businessId+"/tellers", head)
       .then((res) => {
         var name, bday;
@@ -473,6 +548,60 @@ export default {
       .catch((error) => {
         console.log(error.response.data.message);
       });
+    } else if (this.role == 1) {
+      axios
+      .get("http://localhost:3000/api/users", head)
+      .then((res) => {
+        var name, bday;
+        var catcher = res.data.data;
+        for (var i = 0; i < catcher.length; i++) {
+          const addData = {
+            id: "",
+            name: "",
+            role: "",
+            birthdate: "",
+            email: "",
+            createdAt: "",
+          };
+          addData.id = catcher[i].id;
+          name =
+            catcher[i].name.split(", ")[1] +
+            " " +
+            catcher[i].name.split(", ")[0];
+          bday =
+            catcher[i].birthdate.split("-")[1] +
+            "/" +
+            catcher[i].birthdate.split("-")[2] +
+            "/" +
+            catcher[i].birthdate.split("-")[0];
+          addData.name = name;
+          addData.email = catcher[i].email;
+          addData.birthdate = bday;
+          addData.email = catcher[i].email;
+          var createdDate = catcher[i].createdAt.split("-")[2];
+          addData.createdAt =
+            catcher[i].createdAt.split("-")[1] +
+            "/" +
+            createdDate.split("T")[0] + 
+            "/" +
+            catcher[i].createdAt.split("-")[0];
+          if(catcher[i].RoleId == 1){
+            addData.role = "Super Admin"
+          } else if(catcher[i].RoleId == 2){
+            addData.role = "Business Owner"
+          } else if(catcher[i].RoleId == 3){
+            addData.role = "Business Teller"
+          } else {
+            addData.role = "Customer"
+          }
+
+          this.data[0].business.push(addData);
+        }
+      })
+      .catch((error) => {
+        console.log(error.response.data.message);
+      });
+    }
 
     for (var yr = 2020; yr > 1960; yr--) {
       var year = {text: '', value: ''};
@@ -485,6 +614,28 @@ export default {
       day.text = d.toString();
       day.value = d.toString();
       this.days.push(day);
+    }
+
+    if(this.role == 2){
+      this.data[0].headers = [
+        { text: "ID", value: "id", align: "start" },
+        { text: "Name", value: "name" },
+        { text: "Branch", value: "branch" },
+        { text: "Birthday", value: "birthdate" },
+        { text: "Email", value: "email" },
+        { text: "Date Created", value: "createdAt" },
+        { text: "", value: "controls", sortable: false, align: "end" },
+      ]
+    } else if (this.role == 1){
+      this.data[0].headers = [
+        { text: "ID", value: "id", align: "start" },
+        { text: "Name", value: "name" },
+        { text: "User Type", value: "role"},
+        { text: "Birthday", value: "birthdate" },
+        { text: "Email", value: "email" },
+        { text: "Date Created", value: "createdAt" },
+        { text: "", value: "controls", sortable: false, align: "end" },
+      ]
     }
   },
 };
