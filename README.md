@@ -32,7 +32,9 @@ LIST OF USERS:
 
 created by:
 - Albarando, Kyle Oneil @kyleoneil
+- Doblas, Lester John
 - Robles, Nhemuel @KiroMochizuki
 - Sagarino, Vin Myca @mikamikkz
+- Yu, Simone Raphael
 
 **Video Demo:** https://drive.google.com/drive/folders/1ygR3IjbNOJ2t-CMtRacPPovuQNJXWY27?usp=sharing
