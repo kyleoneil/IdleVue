@@ -57,7 +57,7 @@
             <v-container>
               <v-text-field
                 label="Name*"
-                v-model="input"
+                v-model="input.name"
                 hide-details
                 outlined
                 dense
@@ -75,7 +75,7 @@
               color="primary"
               class="px-10"
               rounded
-              v-on:click="editBranch = false"
+              v-on:click="saveBranch(input)"
             >
               Save
             </v-btn>
@@ -324,8 +324,46 @@ export default {
     },
     editBranchBtn: function (data) {
       this.editBranch = true;
-      this.input = data.name;
-      console.log(data);
+      this.input = {
+        id: '',
+        name: '',
+      };
+      this.input.id = data.id;
+      this.input.name = data.name;
+    },
+    saveBranch: function (input) {
+      this.$store.state.showService = true;
+      const data = this.$store.state.token;
+        let head = {
+          headers: {
+            Authorization: data,
+          },
+        };
+      axios
+        .get("http://localhost:3000/api/businesses/"+this.businessId, head)
+        .then((res) => {
+          var addData = {
+            branchname: '',
+            businessname: '',
+            businessId: '',
+          }
+          addData.branchname = input.name;
+          addData.businessname = res.data.name;
+          addData.businessId = this.businessId;
+
+          axios
+            .put("http://localhost:3000/api/branches/"+input.id, addData, head)
+            .then((response) => {
+              console.log(response.data);
+            })
+            .catch((error) => {
+              console.log(error.response.data.message);
+            });
+        })
+        .catch((err) => {
+          console.log(err.response.data.message);
+        });
+      this.editBranch = false;
     },
     deleteBranchBtn: function(data){
       console.log(data);
