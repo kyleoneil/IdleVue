@@ -194,7 +194,7 @@
                           <v-container>
                             <v-text-field
                               label="Name*"
-                              v-model="inputService"
+                              v-model="inputService.name"
                               hide-details
                               outlined
                               dense
@@ -216,7 +216,7 @@
                             color="primary"
                             class="px-10"
                             rounded
-                            v-on:click="editService = false"
+                            v-on:click="saveService(inputService)"
                           >
                             Save
                           </v-btn>
@@ -260,7 +260,7 @@ export default {
       editService: false,
       addService: false,
       service: false,
-      inputService: '',
+      inputService: [],
       serviceBranchName: '',
       serviceBranchId: '',
       businessId: '',
@@ -422,8 +422,39 @@ export default {
     },
     editServiceBtn: function (data) {
       this.editService = true;
-      this.inputService = data.name;
-      console.log(data);
+      this.inputService = {
+        id: '',
+        name: ''
+      }
+      this.inputService.id = data.id;
+      this.inputService.name = data.name;
+    },
+    saveService: function (input) {
+      this.$store.state.showService = true;
+      const data = this.$store.state.token;
+        let head = {
+          headers: {
+            Authorization: data,
+          },
+        };
+      var addData = {
+        servicename: '',
+        branchname: '',
+        branchId: '',
+      }
+      addData.servicename = input.name;
+      addData.branchname = this.serviceBranchName;
+      addData.branchId = this.serviceBranchId;
+      console.log(addData);
+      axios
+        .put("http://localhost:3000/api/services/"+input.id, addData, head)
+        .then((response) => {
+          console.log(response.data);
+        })
+        .catch((error) => {
+          console.log(error.response.data.message);
+        })
+      this.editService = false;
     },
     deleteServiceBtn: function(input){
       this.$store.state.showService = true;
