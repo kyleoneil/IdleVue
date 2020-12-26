@@ -292,8 +292,34 @@ export default {
   },
   methods: {
     addBranchBtn: function (input) {
-      var name = input;
-      console.log(name);
+      this.$store.state.showService = true;
+      const data = this.$store.state.token;
+        let head = {
+          headers: {
+            Authorization: data,
+          },
+        };
+      axios
+        .get("http://localhost:3000/api/businesses/"+this.businessId, head)
+        .then((res) => {
+          var addData = {
+            branchname: '',
+            businessname: ''
+          }
+          addData.branchname = input;
+          addData.businessname = res.data.name;
+          axios
+            .post("http://localhost:3000/api/branches", addData, head)
+            .then((response) => {
+              console.log(response.data);
+            })
+            .catch((error) => {
+              console.log(error.response.data.message);
+            });
+        })
+        .catch((error) => {
+          console.log(error.response.data.message);
+        });
       this.addBranch = false;
     },
     editBranchBtn: function (data) {
@@ -356,7 +382,6 @@ export default {
               catcher[i].createdAt.split("-")[0];
             this.data[0].business.push(addBranchData);
           }
-          console.log(res);
         })
         .catch((error) => {
           console.log(error.response.data.message);
