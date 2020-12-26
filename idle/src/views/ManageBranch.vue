@@ -425,8 +425,22 @@ export default {
       this.inputService = data.name;
       console.log(data);
     },
-    deleteServiceBtn: function(data){
-      console.log(data);
+    deleteServiceBtn: function(input){
+      this.$store.state.showService = true;
+      const data = this.$store.state.token;
+        let head = {
+          headers: {
+            Authorization: data,
+          },
+        };
+      axios
+        .delete("http://localhost:3000/api/services/"+input.id, head)
+        .then((response) => {
+          console.log(response.data);
+        })
+        .catch((error) => {
+          console.log(error.response.data.message);
+        });
     },
     resetValues: function(){
       this.input = '';
