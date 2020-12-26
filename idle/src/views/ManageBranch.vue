@@ -311,6 +311,32 @@ export default {
           console.log(error.response.data.message);
         });
       this.addBranch = false;
+      this.data[0].business = []
+      axios
+        .get("http://localhost:3000/api/branches?businessId="+this.businessId, head)
+        .then((res) => {
+          var catcher = res.data.data;
+          for(var i = 0; i < catcher.length; i++){
+            var addBranchData = {
+              id: '',
+              name: '',
+              createdAt: '',
+            };
+            addBranchData.id = catcher[i].id;
+            addBranchData.name = catcher[i].name;
+            var createdDate = catcher[i].createdAt.split("-")[2];
+            addBranchData.createdAt =
+              catcher[i].createdAt.split("-")[1] +
+              "/" +
+              createdDate.split("T")[0] + 
+              "/" +
+              catcher[i].createdAt.split("-")[0];
+            this.data[0].business.push(addBranchData);
+          }
+        })
+        .catch((error) => {
+          console.log(error.response.data.message);
+        });
     },
     editBranchBtn: function (data) {
       this.editBranch = true;
@@ -346,6 +372,32 @@ export default {
           console.log(error.response.data.message);
         })
       this.editBranch = false;
+      this.data[0].business = []
+      axios
+        .get("http://localhost:3000/api/branches?businessId="+this.businessId, head)
+        .then((res) => {
+          var catcher = res.data.data;
+          for(var i = 0; i < catcher.length; i++){
+            var addBranchData = {
+              id: '',
+              name: '',
+              createdAt: '',
+            };
+            addBranchData.id = catcher[i].id;
+            addBranchData.name = catcher[i].name;
+            var createdDate = catcher[i].createdAt.split("-")[2];
+            addBranchData.createdAt =
+              catcher[i].createdAt.split("-")[1] +
+              "/" +
+              createdDate.split("T")[0] + 
+              "/" +
+              catcher[i].createdAt.split("-")[0];
+            this.data[0].business.push(addBranchData);
+          }
+        })
+        .catch((error) => {
+          console.log(error.response.data.message);
+        });
     },
     deleteBranchBtn: function(input){
       const data = this.$store.state.token;
@@ -358,6 +410,32 @@ export default {
         .delete("http://localhost:3000/api/branches/"+input.id, head)
         .then((response) => {
           console.log(response.data);
+        })
+        .catch((error) => {
+          console.log(error.response.data.message);
+        });
+        this.data[0].business = []
+      axios
+        .get("http://localhost:3000/api/branches?businessId="+this.businessId, head)
+        .then((res) => {
+          var catcher = res.data.data;
+          for(var i = 0; i < catcher.length; i++){
+            var addBranchData = {
+              id: '',
+              name: '',
+              createdAt: '',
+            };
+            addBranchData.id = catcher[i].id;
+            addBranchData.name = catcher[i].name;
+            var createdDate = catcher[i].createdAt.split("-")[2];
+            addBranchData.createdAt =
+              catcher[i].createdAt.split("-")[1] +
+              "/" +
+              createdDate.split("T")[0] + 
+              "/" +
+              catcher[i].createdAt.split("-")[0];
+            this.data[0].business.push(addBranchData);
+          }
         })
         .catch((error) => {
           console.log(error.response.data.message);
