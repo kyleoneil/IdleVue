@@ -692,3 +692,5 @@
 {"name":"UnauthorizedError","message":"No authorization token was found","code":"credentials_required","status":401,"inner":{"message":"No authorization token was found"},"level":"error","timestamp":"2020-12-26T05:29:31.708Z"}
 {"message":"{\"message\":\"No authorization token was found\",\"statusCode\":401}","level":"error","timestamp":"2020-12-26T05:46:12.516Z"}
 {"name":"UnauthorizedError","message":"No authorization token was found","code":"credentials_required","status":401,"inner":{"message":"No authorization token was found"},"level":"error","timestamp":"2020-12-26T05:46:12.516Z"}
+{"message":"{\"message\":\"No authorization token was found\",\"statusCode\":401}","level":"error","timestamp":"2020-12-26T06:44:21.616Z"}
+{"name":"UnauthorizedError","message":"No authorization token was found","code":"credentials_required","status":401,"inner":{"message":"No authorization token was found"},"level":"error","timestamp":"2020-12-26T06:44:21.618Z"}

@@ -97,7 +97,7 @@
           <v-toolbar flat dark color="primary" max-height="68px">
             <v-toolbar-title>Services</v-toolbar-title>
             <v-spacer></v-spacer>
-            <v-btn icon dark v-on:click="service = false">
+            <v-btn icon dark v-on:click="resetService()">
               <v-icon>mdi-close</v-icon>
             </v-btn>
           </v-toolbar>
@@ -277,12 +277,7 @@ export default {
           ],
         },
       ],
-      services: [
-        {
-          id: "0001",
-          name: "hi",
-        },
-      ],
+      services: [ ],
       serviceHeaders: [
         { text: "Id", value: "id" },
         { text: "Service", value: "name" },
@@ -382,13 +377,35 @@ export default {
           console.log(error.response.data.message);
         });
     },
-    serviceBranchBtn: function(data){
+    serviceBranchBtn: function(branch){
       this.service = true;
-      console.log(data);
+      this.$store.state.showService = true;
+      const data = this.$store.state.token;
+        let head = {
+          headers: {
+            Authorization: data,
+          },
+        };
+      axios
+        .get("http://localhost:3000/api/services?branchId="+branch.id, head)
+        .then((res) => {
+          var catcher = res.data.data;
+          for(var i = 0; i < catcher.length; i++){
+            var addServiceData = {
+              id: '',
+              name: '',
+            };
+            addServiceData.id = catcher[i].id;
+            addServiceData.name = catcher[i].name;
+            this.services.push(addServiceData);
+          }
+        })  
+        .catch((err) => {
+          console.log(err.response.data.message);
+        });
     },
     addServiceBtn: function(inputService){
-      var name = inputService;
-      console.log(name);
+      console.log(inputService);
       this.addService = false;
     },
     editServiceBtn: function (data) {
@@ -402,6 +419,10 @@ export default {
     resetValues: function(){
       this.input = '';
       this.inputService = '';
+    },
+    resetService: function(){
+      this.services = [];
+      this.service = false;
     }
   },
   beforeMount(){
