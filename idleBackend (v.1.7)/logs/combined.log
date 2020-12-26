@@ -20071,3 +20071,4 @@
 {"message":"PUT /api/businesses/3 200 48.963 ms - 51","level":"info","timestamp":"2020-12-26T12:37:28.396Z"}
 {"message":"OPTIONS /api/businesses 204 0.112 ms - 0","level":"info","timestamp":"2020-12-26T12:37:31.339Z"}
 {"message":"GET /api/businesses 200 12.802 ms - 434","level":"info","timestamp":"2020-12-26T12:37:31.353Z"}
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-26T15:19:31.948Z"}
