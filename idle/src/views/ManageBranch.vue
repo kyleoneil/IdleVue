@@ -261,7 +261,10 @@ export default {
       addService: false,
       service: false,
       inputService: '',
+      serviceBranchName: '',
+      serviceBranchId: '',
       businessId: '',
+      businessname: '',
       data: [
         {
           business: [],
@@ -294,23 +297,16 @@ export default {
             Authorization: data,
           },
         };
+      var addData = {
+        branchname: '',
+        businessname: ''
+      }
+      addData.branchname = input;
+      addData.businessname = this.businessname;
       axios
-        .get("http://localhost:3000/api/businesses/"+this.businessId, head)
-        .then((res) => {
-          var addData = {
-            branchname: '',
-            businessname: ''
-          }
-          addData.branchname = input;
-          addData.businessname = res.data.name;
-          axios
-            .post("http://localhost:3000/api/branches", addData, head)
-            .then((response) => {
-              console.log(response.data);
-            })
-            .catch((error) => {
-              console.log(error.response.data.message);
-            });
+        .post("http://localhost:3000/api/branches", addData, head)
+        .then((response) => {
+          console.log(response.data);
         })
         .catch((error) => {
           console.log(error.response.data.message);
@@ -334,30 +330,23 @@ export default {
             Authorization: data,
           },
         };
-      axios
-        .get("http://localhost:3000/api/businesses/"+this.businessId, head)
-        .then((res) => {
-          var addData = {
-            branchname: '',
-            businessname: '',
-            businessId: '',
-          }
-          addData.branchname = input.name;
-          addData.businessname = res.data.name;
-          addData.businessId = this.businessId;
+      var addData = {
+        branchname: '',
+        businessname: '',
+        businessId: '',
+      }
+      addData.branchname = input.name;
+      addData.businessname = this.businessname;
+      addData.businessId = this.businessId;
 
-          axios
-            .put("http://localhost:3000/api/branches/"+input.id, addData, head)
-            .then((response) => {
-              console.log(response.data);
-            })
-            .catch((error) => {
-              console.log(error.response.data.message);
-            });
+      axios
+        .put("http://localhost:3000/api/branches/"+input.id, addData, head)
+        .then((response) => {
+          console.log(response.data);
         })
-        .catch((err) => {
-          console.log(err.response.data.message);
-        });
+        .catch((error) => {
+          console.log(error.response.data.message);
+        })
       this.editBranch = false;
     },
     deleteBranchBtn: function(input){
@@ -399,13 +388,36 @@ export default {
             addServiceData.name = catcher[i].name;
             this.services.push(addServiceData);
           }
+          this.serviceBranchName = branch.name;
+          this.serviceBranchId = branch.id;
         })  
         .catch((err) => {
           console.log(err.response.data.message);
         });
     },
     addServiceBtn: function(inputService){
-      console.log(inputService);
+      this.$store.state.showService = true;
+      const data = this.$store.state.token;
+        let head = {
+          headers: {
+            Authorization: data,
+          },
+        };
+      var addData = {
+        servicename: '',
+        branchname: '',
+      }
+      addData.servicename = inputService;
+      addData.branchname = this.serviceBranchName;
+      console.log(addData);
+      axios
+        .post("http://localhost:3000/api/services", addData, head)
+        .then((response) => {
+          console.log(response.data);
+        })
+        .catch((error) => {
+          console.log(error.response.data.message);
+        });
       this.addService = false;
     },
     editServiceBtn: function (data) {
@@ -423,6 +435,8 @@ export default {
     resetService: function(){
       this.services = [];
       this.service = false;
+      this.serviceBranchName = '';
+      this.serviceBranchId = '';
     }
   },
   beforeMount(){
@@ -459,6 +473,14 @@ export default {
         .catch((error) => {
           console.log(error.response.data.message);
         });
+    axios
+      .get("http://localhost:3000/api/businesses/"+this.businessId, head)
+      .then((res) => {
+        this.businessname = res.data.name;
+      })
+      .catch((error) => {
+        console.log(error.response.data.message);
+      });
   }
 };
 </script>
