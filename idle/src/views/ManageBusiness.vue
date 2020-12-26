@@ -119,8 +119,25 @@ export default {
   },
   methods: {
     addBusiness: function (input) {
-      var name = input;
-      console.log(name);
+      console.log(input);
+      const data = this.$store.state.token;
+        let head = {
+          headers: {
+            Authorization: data,
+          },
+        };
+      var addData = {
+        businessname: ''
+      }
+      addData.businessname = input;
+      axios
+        .post("http://localhost:3000/api/businesses", addData, head)
+        .then((response) => {
+          console.log(response.data);
+        })
+        .catch((error) => {
+          console.log(error.response.data.message);
+        });
       this.add = false;
     },
     editBusiness: function (data) {
@@ -128,15 +145,28 @@ export default {
       this.input = data.name;
       console.log(data);
     },
-    deleteBusiness: function(data){
-      console.log(data);
+    deleteBusiness: function(input){
+      const data = this.$store.state.token;
+      let head = {
+        headers: {
+          Authorization: data,
+        },
+      };
+      axios
+        .delete("http://localhost:3000/api/businesses/"+input.id, head)
+        .then((response) => {
+          console.log(response.data);
+        })
+        .catch((error) => {
+          console.log(error.response.data.message);
+        });
     },
     resetValues: function(){
       this.input = '';
     }
   },
   beforeMount(){
-    this.$store.state.showService = true;
+    this.$store.state.showService = false;
     const data = this.$store.state.token;
     let head = {
       headers: {
