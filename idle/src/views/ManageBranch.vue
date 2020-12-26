@@ -290,7 +290,6 @@ export default {
   },
   methods: {
     addBranchBtn: function (input) {
-      this.$store.state.showService = true;
       const data = this.$store.state.token;
         let head = {
           headers: {
@@ -323,7 +322,6 @@ export default {
       this.input.name = data.name;
     },
     saveBranch: function (input) {
-      this.$store.state.showService = true;
       const data = this.$store.state.token;
         let head = {
           headers: {
@@ -350,7 +348,6 @@ export default {
       this.editBranch = false;
     },
     deleteBranchBtn: function(input){
-      this.$store.state.showService = true;
       const data = this.$store.state.token;
         let head = {
           headers: {
@@ -396,7 +393,6 @@ export default {
         });
     },
     addServiceBtn: function(inputService){
-      this.$store.state.showService = true;
       const data = this.$store.state.token;
         let head = {
           headers: {
@@ -430,7 +426,6 @@ export default {
       this.inputService.name = data.name;
     },
     saveService: function (input) {
-      this.$store.state.showService = true;
       const data = this.$store.state.token;
         let head = {
           headers: {
@@ -457,7 +452,6 @@ export default {
       this.editService = false;
     },
     deleteServiceBtn: function(input){
-      this.$store.state.showService = true;
       const data = this.$store.state.token;
         let head = {
           headers: {
