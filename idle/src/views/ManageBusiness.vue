@@ -139,6 +139,36 @@ export default {
           console.log(error.response.data.message);
         });
       this.add = false;
+      this.$store.state.showService = false;
+
+      this.data[0].business = [];
+    axios
+      .get("http://localhost:3000/api/businesses", head)
+      .then((res) => {
+        var name;
+        var catcher = res.data.data;
+        for (var i = 0; i < catcher.length; i++) {
+          const addData = {
+            id: "",
+            name: "",
+            createdAt: "",
+          };
+          addData.id = catcher[i].id;
+          name = catcher[i].name;
+          addData.name = name;
+          var createdDate = catcher[i].createdAt.split("-")[2];
+          addData.createdAt =
+            catcher[i].createdAt.split("-")[1] +
+            "/" +
+            createdDate.split("T")[0] + 
+            "/" +
+            catcher[i].createdAt.split("-")[0];
+          this.data[0].business.push(addData);
+        }
+      })
+      .catch((error) => {
+        console.log(error.response.data.message);
+      });
     },
     editBusiness: function (data) {
       this.edit = true;
@@ -169,6 +199,34 @@ export default {
         .catch((error) => {
           console.log(error.response.data.message);
         })
+    this.data[0].business = [];
+    axios
+      .get("http://localhost:3000/api/businesses", head)
+      .then((res) => {
+        var name;
+        var catcher = res.data.data;
+        for (var i = 0; i < catcher.length; i++) {
+          const addData = {
+            id: "",
+            name: "",
+            createdAt: "",
+          };
+          addData.id = catcher[i].id;
+          name = catcher[i].name;
+          addData.name = name;
+          var createdDate = catcher[i].createdAt.split("-")[2];
+          addData.createdAt =
+            catcher[i].createdAt.split("-")[1] +
+            "/" +
+            createdDate.split("T")[0] + 
+            "/" +
+            catcher[i].createdAt.split("-")[0];
+          this.data[0].business.push(addData);
+        }
+      })
+      .catch((error) => {
+        console.log(error.response.data.message);
+      });
       this.edit = false;
     },
     deleteBusiness: function(input){
@@ -186,6 +244,34 @@ export default {
         .catch((error) => {
           console.log(error.response.data.message);
         });
+    this.data[0].business = [];
+    axios
+      .get("http://localhost:3000/api/businesses", head)
+      .then((res) => {
+        var name;
+        var catcher = res.data.data;
+        for (var i = 0; i < catcher.length; i++) {
+          const addData = {
+            id: "",
+            name: "",
+            createdAt: "",
+          };
+          addData.id = catcher[i].id;
+          name = catcher[i].name;
+          addData.name = name;
+          var createdDate = catcher[i].createdAt.split("-")[2];
+          addData.createdAt =
+            catcher[i].createdAt.split("-")[1] +
+            "/" +
+            createdDate.split("T")[0] + 
+            "/" +
+            catcher[i].createdAt.split("-")[0];
+          this.data[0].business.push(addData);
+        }
+      })
+      .catch((error) => {
+        console.log(error.response.data.message);
+      });
     },
     resetValues: function(){
       this.input = '';

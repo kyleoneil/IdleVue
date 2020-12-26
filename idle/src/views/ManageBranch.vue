@@ -415,6 +415,26 @@ export default {
           console.log(error.response.data.message);
         });
       this.addService = false;
+
+      this.services = [];
+      this.$store.state.showService = true;
+      axios
+        .get("http://localhost:3000/api/services?branchId="+this.serviceBranchId, head)
+        .then((res) => {
+          var catcher = res.data.data;
+          for(var i = 0; i < catcher.length; i++){
+            var addServiceData = {
+              id: '',
+              name: '',
+            };
+            addServiceData.id = catcher[i].id;
+            addServiceData.name = catcher[i].name;
+            this.services.push(addServiceData);
+          }
+        })  
+        .catch((err) => {
+          console.log(err.response.data.message);
+        });
     },
     editServiceBtn: function (data) {
       this.editService = true;
@@ -450,6 +470,25 @@ export default {
           console.log(error.response.data.message);
         })
       this.editService = false;
+      this.services = [];
+      this.$store.state.showService = true;
+      axios
+        .get("http://localhost:3000/api/services?branchId="+this.serviceBranchId, head)
+        .then((res) => {
+          var catcher = res.data.data;
+          for(var i = 0; i < catcher.length; i++){
+            var addServiceData = {
+              id: '',
+              name: '',
+            };
+            addServiceData.id = catcher[i].id;
+            addServiceData.name = catcher[i].name;
+            this.services.push(addServiceData);
+          }
+        })  
+        .catch((err) => {
+          console.log(err.response.data.message);
+        });
     },
     deleteServiceBtn: function(input){
       const data = this.$store.state.token;
@@ -465,6 +504,25 @@ export default {
         })
         .catch((error) => {
           console.log(error.response.data.message);
+        });
+      this.services = [];
+      this.$store.state.showService = true;
+      axios
+        .get("http://localhost:3000/api/services?branchId="+this.serviceBranchId, head)
+        .then((res) => {
+          var catcher = res.data.data;
+          for(var i = 0; i < catcher.length; i++){
+            var addServiceData = {
+              id: '',
+              name: '',
+            };
+            addServiceData.id = catcher[i].id;
+            addServiceData.name = catcher[i].name;
+            this.services.push(addServiceData);
+          }
+        })  
+        .catch((err) => {
+          console.log(err.response.data.message);
         });
     },
     resetValues: function(){
