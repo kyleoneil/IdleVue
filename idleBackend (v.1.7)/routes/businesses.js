@@ -37,7 +37,7 @@ router.post('/:id/tellers', (req, res) => {
     body.business_id = req.params.id;
 
     return authService.isAuthorized(roleName, 'BUSINESS_OWNER').then((result) => {
-        if (result && req.user.business_id === body.business_id) {
+        if (result && req.user.business_id == body.business_id) {
             if (!body.firstname || !body.lastname || !body.email || !body.password) {
                 res.status(400).json({message: "First name, last name, email and password are required."});
                 return;
