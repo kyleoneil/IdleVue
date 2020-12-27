@@ -48,7 +48,6 @@
                 <v-select
                   :items="branches"
                   v-model="input.branch"
-                  v-on:click="showBranches()"
                   label="Branch*"
                   outlined
                   hide-details
@@ -194,7 +193,8 @@
                 <v-select
                   :items="branches"
                   v-model="input.branch"
-                  v-on:click="showBranches()"
+                  item-text="text"
+                  item-value="value"
                   label="Branch*"
                   outlined
                   hide-details
@@ -382,7 +382,6 @@ export default {
           email: input.email,
           password: input.password,
           birthdate: date,
-          roleName: input.roleName,
           branch_id: input.branch,
         }
       } else {
@@ -477,6 +476,7 @@ export default {
             createdDate.split("T")[0] + 
             "/" +
             catcher[i].createdAt.split("-")[0];
+            addData.branch = catcher[i].BranchId;
           this.data[0].business.push(addData);
         }
       })
@@ -547,31 +547,6 @@ export default {
         console.log(error.response.data.message);
       });
     }
-    },
-    showBranches: function () {
-      const data = this.$store.state.token;
-      let head = {
-        headers: {
-          Authorization: data,
-        },
-      };
-      axios
-        .get("http://localhost:3000/api/branches?businessId="+this.businessId, head)
-        .then((res) => {
-          var catcher = res.data.data;
-          for(var i = 0; i < catcher.length; i++){
-            var addBranchData = {
-              text: "",
-              value: ""
-            };
-            addBranchData.text = catcher[i].name;
-            addBranchData.value = catcher[i].id;
-            this.branches.push(addBranchData);
-          }
-        })
-        .catch((error) => {
-          console.log(error.response.data.message);
-        });
     },
     deleteAccount: function (input) {
       console.log(data);
@@ -716,10 +691,11 @@ export default {
       this.input.id = data.id;
       this.input.firstname = data.name.split(" ")[0];
       this.input.lastname = data.name.split(" ")[1];
-      this.input.branch = data.branch;
       this.input.month = data.birthdate.split("/")[0];
       this.input.day = data.birthdate.split("/")[1];
       this.input.year = data.birthdate.split("/")[2];
+      this.input.branch = String(data.branch);
+      console.log(this.input.branch);
       this.input.email = data.email;
       if(this.role == 1){
         if(data.role == "Business Owner"){
@@ -739,10 +715,31 @@ export default {
         },
       };
       var date = input.month + "/" + input.day + "/" + input.year;
-      input.birthdate = date;
-      console.log(input)
+      var addData;
+      if(this.role == 1){
+        addData = {
+          firstname: input.firstname,
+          lastname: input.lastname,
+          email: input.email,
+          birthdate: date,
+          roleName: input.roleName,
+          business_id: '1'
+        }
+        console.log("Super");
+      } else {
+        addData = {
+          firstname: input.firstname,
+          lastname: input.lastname,
+          email: input.email,
+          birthdate: date,
+          business_id: this.businessId,
+          branch_id: input.branch,
+        }
+        console.log("admin");
+      }
+      console.log(addData);
       axios
-        .put("http://localhost:3000/api/users/"+input.id, input, head)
+        .put("http://localhost:3000/api/users/"+input.id, addData, head)
         .then((data) => {
           console.log(data.data);
         })
@@ -822,6 +819,7 @@ export default {
           addData.name = name;
           addData.email = catcher[i].email;
           addData.birthdate = bday;
+          addData.branch = catcher[i].BranchId;
           addData.email = catcher[i].email;
           var createdDate = catcher[i].createdAt.split("-")[2];
           addData.createdAt =
@@ -836,6 +834,23 @@ export default {
       .catch((error) => {
         console.log(error.response.data.message);
       });
+      axios
+        .get("http://localhost:3000/api/branches?businessId="+this.businessId, head)
+        .then((res) => {
+          var catcher = res.data.data;
+          for(var i = 0; i < catcher.length; i++){
+            var addBranchData = {
+              text: "",
+              value: ""
+            };
+            addBranchData.text = catcher[i].name;
+            addBranchData.value = String(catcher[i].id);
+            this.branches.push(addBranchData);
+          }
+        })
+        .catch((error) => {
+          console.log(error.response.data.message);
+        });
     } else if (this.role == 1) {
       this.data[0].headers = [
         { text: "ID", value: "id", align: "start" },
