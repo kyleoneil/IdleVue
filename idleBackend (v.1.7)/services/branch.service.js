@@ -42,19 +42,18 @@ module.exports = {
         const branch = {branch_details: data, business_details: business};
         return branch;
     },
-    
-    findBranches: async (pageNo, resultsPerPage, businessId) => {
-        const pageOffset = resultsPerPage * (pageNo - 1);
+    //pageNo, resultsPerPage, 
+    findBranches: async (businessId) => {
+        //const pageOffset = resultsPerPage * (pageNo - 1);
         const where = {};
         if(businessId) {
             where.business_id = businessId;
         }
 
         const total_queue_records =  (businessId) ? await Branch.count({where}) : await Branch.count();
-
         const branchPaginate = await Branch.findAll({
-            offset: pageOffset,
-            limit: resultsPerPage,
+            //offset: pageOffset, 
+            //limit: resultsPerPage
             where
         })
 

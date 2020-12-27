@@ -59,19 +59,20 @@ module.exports = {
    * @param resultsPerPage
    * @returns {Promise<{totalRecords: number, data: [{}]}>}
    */
-  findPaginated: async (pageNo, resultsPerPage, businessId) => {
+  //optional params: pageNo, resultsPerPage, 
+  findPaginated: async (businessId) => {
     // TODO: Implement this. Note: make sure password is removed prior to return
     // TODO Completed
     const where = {};
     if (businessId) {
       where.business_id = businessId;
     }
-    const pageOffset = resultsPerPage * (pageNo - 1);
+    //const pageOffset = resultsPerPage * (pageNo - 1);
     const total_queue_records = await User.count({where});
     const userPaginated = await User.findAll({
       where, 
-      offset: pageOffset, 
-      limit: resultsPerPage
+      //offset: pageOffset, 
+      //limit: resultsPerPage
     })
     return {
       totalRecords: total_queue_records,

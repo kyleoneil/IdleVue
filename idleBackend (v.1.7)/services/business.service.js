@@ -22,12 +22,13 @@ module.exports = {
   findBusinessByName: async (name) => Business.findOne({where: {name}}),
   findBusinessById: async (id) => Business.findOne({where: {id}}),
 
-  findBusinesses: async (pageNo, resultsPerPage) => {
-    const pageOffset = resultsPerPage * (pageNo - 1);
+  //pageNo, resultsPerPage
+  findBusinesses: async () => {
+    //const pageOffset = resultsPerPage * (pageNo - 1);
     const total_queue_records = await Business.count();
     const businessPaginate = await Business.findAll({
-      offset: pageOffset,
-      limit: resultsPerPage,
+      //offset: pageOffset, 
+      //limit: resultsPerPage
     })
 
     return {
