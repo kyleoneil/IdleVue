@@ -71,8 +71,7 @@ module.exports = {
     const userPaginated = await User.findAll({
       where, 
       offset: pageOffset, 
-      limit: resultsPerPage,
-      attributes: { exclude: ['password'] }
+      limit: resultsPerPage
     })
     return {
       totalRecords: total_queue_records,
@@ -89,8 +88,7 @@ module.exports = {
         role_id: 3
       }, 
       offset: pageOffset, 
-      limit: resultsPerPage,
-      attributes: { exclude: ['password'] }
+      limit: resultsPerPage
     })
     return {
       totalRecords: total_queue_records,
