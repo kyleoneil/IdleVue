@@ -20043,7 +20043,6 @@
 {"message":"GET /api/branches?businessId=1 304 22.093 ms - -","level":"info","timestamp":"2020-12-26T15:17:35.736Z"}
 {"message":"OPTIONS /api/services?branchId=3 204 0.079 ms - 0","level":"info","timestamp":"2020-12-26T15:17:36.756Z"}
 {"message":"GET /api/services?branchId=3 200 9.934 ms - 383","level":"info","timestamp":"2020-12-26T15:17:36.768Z"}
-<<<<<<< HEAD
 {"message":"OPTIONS /api/branches?businessId=1 204 0.230 ms - 0","level":"info","timestamp":"2020-12-26T15:22:27.487Z"}
 {"message":"OPTIONS /api/businesses/1 204 0.108 ms - 0","level":"info","timestamp":"2020-12-26T15:22:27.490Z"}
 {"message":"GET /api/businesses/1 304 10.056 ms - -","level":"info","timestamp":"2020-12-26T15:22:27.502Z"}
@@ -20103,6 +20102,71 @@
 {"message":"GET /api/businesses/1 304 7.653 ms - -","level":"info","timestamp":"2020-12-26T15:29:24.680Z"}
 {"message":"GET /api/branches?businessId=1 304 9.640 ms - -","level":"info","timestamp":"2020-12-26T15:29:24.682Z"}
 {"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-26T15:31:17.574Z"}
-=======
->>>>>>> 727407491ff675bde2767ac767bd7c834dad6f35
->>>>>>> de8a53b7e0adc44f1c3fd0ba31b6678c7d68f51b
+{"message":"App started at port 3000 with api root /api.","level":"info","timestamp":"2020-12-26T16:41:14.555Z"}
+{"message":"OPTIONS /api/auth/login 204 1.282 ms - 0","level":"info","timestamp":"2020-12-26T16:42:13.291Z"}
+{"message":"POST /api/auth/login 200 192.429 ms - 415","level":"info","timestamp":"2020-12-26T16:42:13.485Z"}
+{"message":"OPTIONS /api/businesses 204 0.142 ms - 0","level":"info","timestamp":"2020-12-26T16:42:13.548Z"}
+{"message":"GET /api/businesses 304 15.681 ms - -","level":"info","timestamp":"2020-12-26T16:42:13.566Z"}
+{"message":"OPTIONS /api/auth/logout 204 0.230 ms - 0","level":"info","timestamp":"2020-12-26T16:42:22.063Z"}
+{"message":"POST /api/auth/logout 200 12.119 ms - 32","level":"info","timestamp":"2020-12-26T16:42:22.077Z"}
+{"message":"OPTIONS /api/auth/login 204 0.158 ms - 0","level":"info","timestamp":"2020-12-26T16:45:39.196Z"}
+{"message":"POST /api/auth/login 200 157.775 ms - 415","level":"info","timestamp":"2020-12-26T16:45:39.355Z"}
+{"message":"OPTIONS /api/businesses 204 0.131 ms - 0","level":"info","timestamp":"2020-12-26T16:45:39.409Z"}
+{"message":"GET /api/businesses 304 7.729 ms - -","level":"info","timestamp":"2020-12-26T16:45:39.418Z"}
+{"message":"OPTIONS /api/users 204 0.117 ms - 0","level":"info","timestamp":"2020-12-26T16:47:30.726Z"}
+{"message":"GET /api/users 200 15.581 ms - 2665","level":"info","timestamp":"2020-12-26T16:47:30.744Z"}
+{"message":"OPTIONS /api/auth/logout 204 0.247 ms - 0","level":"info","timestamp":"2020-12-26T16:48:48.877Z"}
+{"message":"POST /api/auth/logout 200 13.032 ms - 32","level":"info","timestamp":"2020-12-26T16:48:48.892Z"}
+{"message":"OPTIONS /api/auth/login 204 0.119 ms - 0","level":"info","timestamp":"2020-12-26T16:48:55.858Z"}
+{"message":"POST /api/auth/login 200 150.293 ms - 432","level":"info","timestamp":"2020-12-26T16:48:56.009Z"}
+{"message":"OPTIONS /api/branches?businessId=1 204 0.125 ms - 0","level":"info","timestamp":"2020-12-26T16:48:56.049Z"}
+{"message":"OPTIONS /api/businesses/1 204 0.094 ms - 0","level":"info","timestamp":"2020-12-26T16:48:56.050Z"}
+{"message":"GET /api/businesses/1 304 14.626 ms - -","level":"info","timestamp":"2020-12-26T16:48:56.068Z"}
+{"message":"GET /api/branches?businessId=1 304 18.087 ms - -","level":"info","timestamp":"2020-12-26T16:48:56.073Z"}
+{"message":"OPTIONS /api/services?branchId=1 204 0.127 ms - 0","level":"info","timestamp":"2020-12-26T16:50:19.223Z"}
+{"message":"GET /api/services?branchId=1 304 16.392 ms - -","level":"info","timestamp":"2020-12-26T16:50:19.242Z"}
+{"message":"OPTIONS /api/businesses/1/tellers 204 0.132 ms - 0","level":"info","timestamp":"2020-12-26T16:51:38.005Z"}
+{"message":"GET /api/businesses/1/tellers 304 13.106 ms - -","level":"info","timestamp":"2020-12-26T16:51:38.021Z"}
+{"message":"OPTIONS /api/branches?businessId=1 204 0.093 ms - 0","level":"info","timestamp":"2020-12-26T16:53:00.999Z"}
+{"message":"OPTIONS /api/businesses/1 204 0.151 ms - 0","level":"info","timestamp":"2020-12-26T16:53:01.000Z"}
+{"message":"GET /api/businesses/1 304 14.606 ms - -","level":"info","timestamp":"2020-12-26T16:53:01.016Z"}
+{"message":"GET /api/branches?businessId=1 304 17.704 ms - -","level":"info","timestamp":"2020-12-26T16:53:01.020Z"}
+{"message":"OPTIONS /api/businesses/1/tellers 204 0.123 ms - 0","level":"info","timestamp":"2020-12-26T16:53:01.640Z"}
+{"message":"GET /api/businesses/1/tellers 304 10.570 ms - -","level":"info","timestamp":"2020-12-26T16:53:01.652Z"}
+{"message":"OPTIONS /api/auth/logout 204 0.167 ms - 0","level":"info","timestamp":"2020-12-26T16:53:02.948Z"}
+{"message":"POST /api/auth/logout 200 12.223 ms - 32","level":"info","timestamp":"2020-12-26T16:53:02.961Z"}
+{"message":"OPTIONS /api/auth/login 204 0.129 ms - 0","level":"info","timestamp":"2020-12-26T16:53:34.467Z"}
+{"message":"POST /api/auth/login 200 155.763 ms - 432","level":"info","timestamp":"2020-12-26T16:53:34.625Z"}
+{"message":"OPTIONS /api/services?branchId=1 204 0.092 ms - 0","level":"info","timestamp":"2020-12-26T16:53:34.652Z"}
+{"message":"GET /api/services?branchId=1 304 10.631 ms - -","level":"info","timestamp":"2020-12-26T16:53:34.664Z"}
+{"message":"OPTIONS /api/services/1/nextqueue 204 0.212 ms - 0","level":"info","timestamp":"2020-12-26T16:54:00.005Z"}
+{"message":"OPTIONS /api/queues?serviceId=1 204 0.157 ms - 0","level":"info","timestamp":"2020-12-26T16:54:00.009Z"}
+{"message":"GET /api/queues?serviceId=1 200 25.426 ms - 540","level":"info","timestamp":"2020-12-26T16:54:00.038Z"}
+{"message":"PATCH /api/services/1/nextqueue 200 32.726 ms - 49","level":"info","timestamp":"2020-12-26T16:54:00.040Z"}
+{"message":"OPTIONS /api/queues/5?status=COMPLETED 204 0.168 ms - 0","level":"info","timestamp":"2020-12-26T16:54:30.230Z"}
+{"message":"OPTIONS /api/services/1/nextqueue 204 0.136 ms - 0","level":"info","timestamp":"2020-12-26T16:54:30.233Z"}
+{"message":"OPTIONS /api/queues?serviceId=1 204 0.094 ms - 0","level":"info","timestamp":"2020-12-26T16:54:30.234Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-26T16:54:30.255Z"}
+{"message":"{\"message\":\"Cannot read property 'id' of null\",\"statusCode\":500}","level":"error","timestamp":"2020-12-26T16:54:30.256Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-26T16:54:30.256Z"}
+{"message":"PATCH /api/services/1/nextqueue 500 21.641 ms - 47","level":"info","timestamp":"2020-12-26T16:54:30.257Z"}
+{"message":"PATCH /api/queues/5?status=COMPLETED 200 33.003 ms - 215","level":"info","timestamp":"2020-12-26T16:54:30.264Z"}
+{"message":"GET /api/queues?serviceId=1 200 29.615 ms - 538","level":"info","timestamp":"2020-12-26T16:54:30.267Z"}
+{"message":"OPTIONS /api/queues/1?status=NO_SHOW 204 0.100 ms - 0","level":"info","timestamp":"2020-12-26T16:54:31.338Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-26T16:54:31.356Z"}
+{"message":"{\"message\":\"Cannot read property 'id' of null\",\"statusCode\":500}","level":"error","timestamp":"2020-12-26T16:54:31.356Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-26T16:54:31.356Z"}
+{"message":"PATCH /api/services/1/nextqueue 500 17.959 ms - 47","level":"info","timestamp":"2020-12-26T16:54:31.358Z"}
+{"message":"PATCH /api/queues/1?status=NO_SHOW 200 22.870 ms - 213","level":"info","timestamp":"2020-12-26T16:54:31.362Z"}
+{"message":"GET /api/queues?serviceId=1 200 24.317 ms - 534","level":"info","timestamp":"2020-12-26T16:54:31.365Z"}
+{"message":"OPTIONS /api/services/2/nextqueue 204 0.182 ms - 0","level":"info","timestamp":"2020-12-26T16:54:37.677Z"}
+{"message":"OPTIONS /api/queues?serviceId=2 204 0.272 ms - 0","level":"info","timestamp":"2020-12-26T16:54:37.680Z"}
+{"message":"GET /api/queues?serviceId=2 200 23.601 ms - 544","level":"info","timestamp":"2020-12-26T16:54:37.706Z"}
+{"message":"PATCH /api/services/2/nextqueue 200 27.271 ms - 49","level":"info","timestamp":"2020-12-26T16:54:37.709Z"}
+{"message":"OPTIONS /api/services/1/nextqueue 204 0.297 ms - 0","level":"info","timestamp":"2020-12-26T16:54:40.133Z"}
+{"message":"OPTIONS /api/queues?serviceId=1 204 0.170 ms - 0","level":"info","timestamp":"2020-12-26T16:54:40.136Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-26T16:54:40.148Z"}
+{"message":"{\"message\":\"Cannot read property 'id' of null\",\"statusCode\":500}","level":"error","timestamp":"2020-12-26T16:54:40.149Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-26T16:54:40.149Z"}
+{"message":"PATCH /api/services/1/nextqueue 500 15.798 ms - 47","level":"info","timestamp":"2020-12-26T16:54:40.150Z"}
+{"message":"GET /api/queues?serviceId=1 304 19.239 ms - -","level":"info","timestamp":"2020-12-26T16:54:40.157Z"}

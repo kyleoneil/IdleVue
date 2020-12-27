@@ -343,6 +343,13 @@ export default {
   },
   methods: {
     addAccount: function (input) {
+      const data = this.$store.state.token;
+      let head = {
+        headers: {
+          Authorization: data,
+        },
+      };
+      
       var date = input.month + "/" + input.day + "/" + input.year;
       if(this.role == 2){
         input.branch_id = input.branch;
@@ -413,6 +420,126 @@ export default {
           console.log(error.response.data.message);
         });
       this.add = false;
+      this.data[0].business = [];
+
+      if(this.role == 2){
+      this.data[0].headers = [
+        { text: "ID", value: "id", align: "start" },
+        { text: "Name", value: "name" },
+        { text: "Branch", value: "branch" },
+        { text: "Birthday", value: "birthdate" },
+        { text: "Email", value: "email" },
+        { text: "Date Created", value: "createdAt" },
+        { text: "", value: "controls", sortable: false, align: "end" },
+      ]
+      
+      axios
+      .get("http://localhost:3000/api/businesses/"+this.businessId+"/tellers", head)
+      .then((res) => {
+        var name, bday;
+        var catcher = res.data.data;
+        for (var i = 0; i < catcher.length; i++) {
+          console.log(catcher);
+          const addData = {
+            id: "",
+            name: "",
+            branch: "",
+            birthdate: "",
+            email: "",
+            createdAt: "",
+          };
+          addData.id = catcher[i].id;
+          name =
+            catcher[i].name.split(", ")[1] +
+            " " +
+            catcher[i].name.split(", ")[0];
+          bday =
+            catcher[i].birthdate.split("-")[1] +
+            "/" +
+            catcher[i].birthdate.split("-")[2] +
+            "/" +
+            catcher[i].birthdate.split("-")[0];
+          addData.name = name;
+          addData.email = catcher[i].email;
+          addData.birthdate = bday;
+          addData.email = catcher[i].email;
+          var createdDate = catcher[i].createdAt.split("-")[2];
+          addData.createdAt =
+            catcher[i].createdAt.split("-")[1] +
+            "/" +
+            createdDate.split("T")[0] + 
+            "/" +
+            catcher[i].createdAt.split("-")[0];
+          this.data[0].business.push(addData);
+        }
+      })
+      .catch((error) => {
+        console.log(error.response.data.message);
+      });
+    } else if (this.role == 1) {
+      this.data[0].headers = [
+        { text: "ID", value: "id", align: "start" },
+        { text: "Name", value: "name" },
+        { text: "User Type", value: "role"},
+        { text: "Birthday", value: "birthdate" },
+        { text: "Email", value: "email" },
+        { text: "Date Created", value: "createdAt" },
+        { text: "", value: "controls", sortable: false, align: "end" },
+      ]
+
+      axios
+      .get("http://localhost:3000/api/users", head)
+      .then((res) => {
+        var name, bday;
+        var catcher = res.data.data;
+        for (var i = 0; i < catcher.length; i++) {
+          const addData = {
+            id: "",
+            name: "",
+            role: "",
+            birthdate: "",
+            email: "",
+            createdAt: "",
+          };
+          addData.id = catcher[i].id;
+          name =
+            catcher[i].name.split(", ")[1] +
+            " " +
+            catcher[i].name.split(", ")[0];
+          bday =
+            catcher[i].birthdate.split("-")[1] +
+            "/" +
+            catcher[i].birthdate.split("-")[2] +
+            "/" +
+            catcher[i].birthdate.split("-")[0];
+          addData.name = name;
+          addData.email = catcher[i].email;
+          addData.birthdate = bday;
+          addData.email = catcher[i].email;
+          var createdDate = catcher[i].createdAt.split("-")[2];
+          addData.createdAt =
+            catcher[i].createdAt.split("-")[1] +
+            "/" +
+            createdDate.split("T")[0] + 
+            "/" +
+            catcher[i].createdAt.split("-")[0];
+          if(catcher[i].RoleId == 1){
+            addData.role = "Super Admin"
+          } else if(catcher[i].RoleId == 2){
+            addData.role = "Business Owner"
+          } else if(catcher[i].RoleId == 3){
+            addData.role = "Business Teller"
+          } else {
+            addData.role = "Customer"
+          }
+
+          this.data[0].business.push(addData);
+        }
+      })
+      .catch((error) => {
+        console.log(error.response.data.message);
+      });
+    }
     },
     showBranches: function () {
       const data = this.$store.state.token;
@@ -439,8 +566,143 @@ export default {
           console.log(error.response.data.message);
         });
     },
-    deleteAccount: function (data) {
+    deleteAccount: function (input) {
       console.log(data);
+      const data = this.$store.state.token;
+      let head = {
+        headers: {
+          Authorization: data,
+        },
+      };
+      axios
+        .delete("http://localhost:3000/api/users/"+input.id, head)
+        .then((response) => {
+          console.log(response.data);
+        })
+        .catch((error) => {
+          console.log(error.response.data.message);
+        });
+
+      this.data[0].business = [];
+
+      if(this.role == 2){
+      this.data[0].headers = [
+        { text: "ID", value: "id", align: "start" },
+        { text: "Name", value: "name" },
+        { text: "Branch", value: "branch" },
+        { text: "Birthday", value: "birthdate" },
+        { text: "Email", value: "email" },
+        { text: "Date Created", value: "createdAt" },
+        { text: "", value: "controls", sortable: false, align: "end" },
+      ]
+      
+      axios
+      .get("http://localhost:3000/api/businesses/"+this.businessId+"/tellers", head)
+      .then((res) => {
+        var name, bday;
+        var catcher = res.data.data;
+        for (var i = 0; i < catcher.length; i++) {
+          console.log(catcher);
+          const addData = {
+            id: "",
+            name: "",
+            branch: "",
+            birthdate: "",
+            email: "",
+            createdAt: "",
+          };
+          addData.id = catcher[i].id;
+          name =
+            catcher[i].name.split(", ")[1] +
+            " " +
+            catcher[i].name.split(", ")[0];
+          bday =
+            catcher[i].birthdate.split("-")[1] +
+            "/" +
+            catcher[i].birthdate.split("-")[2] +
+            "/" +
+            catcher[i].birthdate.split("-")[0];
+          addData.name = name;
+          addData.email = catcher[i].email;
+          addData.birthdate = bday;
+          addData.email = catcher[i].email;
+          var createdDate = catcher[i].createdAt.split("-")[2];
+          addData.createdAt =
+            catcher[i].createdAt.split("-")[1] +
+            "/" +
+            createdDate.split("T")[0] + 
+            "/" +
+            catcher[i].createdAt.split("-")[0];
+          this.data[0].business.push(addData);
+        }
+      })
+      .catch((error) => {
+        console.log(error.response.data.message);
+      });
+    } else if (this.role == 1) {
+      this.data[0].headers = [
+        { text: "ID", value: "id", align: "start" },
+        { text: "Name", value: "name" },
+        { text: "User Type", value: "role"},
+        { text: "Birthday", value: "birthdate" },
+        { text: "Email", value: "email" },
+        { text: "Date Created", value: "createdAt" },
+        { text: "", value: "controls", sortable: false, align: "end" },
+      ]
+
+      axios
+      .get("http://localhost:3000/api/users", head)
+      .then((res) => {
+        var name, bday;
+        var catcher = res.data.data;
+        for (var i = 0; i < catcher.length; i++) {
+          const addData = {
+            id: "",
+            name: "",
+            role: "",
+            birthdate: "",
+            email: "",
+            createdAt: "",
+          };
+          addData.id = catcher[i].id;
+          name =
+            catcher[i].name.split(", ")[1] +
+            " " +
+            catcher[i].name.split(", ")[0];
+          bday =
+            catcher[i].birthdate.split("-")[1] +
+            "/" +
+            catcher[i].birthdate.split("-")[2] +
+            "/" +
+            catcher[i].birthdate.split("-")[0];
+          addData.name = name;
+          addData.email = catcher[i].email;
+          addData.birthdate = bday;
+          addData.email = catcher[i].email;
+          var createdDate = catcher[i].createdAt.split("-")[2];
+          addData.createdAt =
+            catcher[i].createdAt.split("-")[1] +
+            "/" +
+            createdDate.split("T")[0] + 
+            "/" +
+            catcher[i].createdAt.split("-")[0];
+          if(catcher[i].RoleId == 1){
+            addData.role = "Super Admin"
+          } else if(catcher[i].RoleId == 2){
+            addData.role = "Business Owner"
+          } else if(catcher[i].RoleId == 3){
+            addData.role = "Business Teller"
+          } else {
+            addData.role = "Customer"
+          }
+
+          this.data[0].business.push(addData);
+        }
+      })
+      .catch((error) => {
+        console.log(error.response.data.message);
+      });
+    }
     },
     editAccount: function (data) {
       this.edit = true;
@@ -505,6 +767,16 @@ export default {
       this.role = 3;
     }
     if(this.role == 2){
+      this.data[0].headers = [
+        { text: "ID", value: "id", align: "start" },
+        { text: "Name", value: "name" },
+        { text: "Branch", value: "branch" },
+        { text: "Birthday", value: "birthdate" },
+        { text: "Email", value: "email" },
+        { text: "Date Created", value: "createdAt" },
+        { text: "", value: "controls", sortable: false, align: "end" },
+      ]
+
       axios
       .get("http://localhost:3000/api/businesses/"+this.businessId+"/tellers", head)
       .then((res) => {
@@ -549,6 +821,16 @@ export default {
         console.log(error.response.data.message);
       });
     } else if (this.role == 1) {
+      this.data[0].headers = [
+        { text: "ID", value: "id", align: "start" },
+        { text: "Name", value: "name" },
+        { text: "User Type", value: "role"},
+        { text: "Birthday", value: "birthdate" },
+        { text: "Email", value: "email" },
+        { text: "Date Created", value: "createdAt" },
+        { text: "", value: "controls", sortable: false, align: "end" },
+      ]
+
       axios
       .get("http://localhost:3000/api/users", head)
       .then((res) => {
@@ -614,28 +896,6 @@ export default {
       day.text = d.toString();
       day.value = d.toString();
       this.days.push(day);
-    }
-
-    if(this.role == 2){
-      this.data[0].headers = [
-        { text: "ID", value: "id", align: "start" },
-        { text: "Name", value: "name" },
-        { text: "Branch", value: "branch" },
-        { text: "Birthday", value: "birthdate" },
-        { text: "Email", value: "email" },
-        { text: "Date Created", value: "createdAt" },
-        { text: "", value: "controls", sortable: false, align: "end" },
-      ]
-    } else if (this.role == 1){
-      this.data[0].headers = [
-        { text: "ID", value: "id", align: "start" },
-        { text: "Name", value: "name" },
-        { text: "User Type", value: "role"},
-        { text: "Birthday", value: "birthdate" },
-        { text: "Email", value: "email" },
-        { text: "Date Created", value: "createdAt" },
-        { text: "", value: "controls", sortable: false, align: "end" },
-      ]
     }
   },
 };
