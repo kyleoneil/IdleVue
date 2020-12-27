@@ -97,8 +97,8 @@ router.put('/:id', (req, res) => {
   return authService.isAuthorized(roleName, 'BUSINESS_OWNER').then((result) => {
     if(result) {
       const body = req.body;
-      if (!body.firstname || !body.lastname || !body.email || !body.password) {
-        res.status(400).json({message: "First name, last name, email and password are required."});
+      if (!body.firstname || !body.lastname || !body.email) {
+        res.status(400).json({message: "First name, last name, and email are required."});
         return;
       }
 
