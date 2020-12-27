@@ -1,5 +1,5 @@
 
-const {User, Role} = require('./../models');
+const {User, Role, Queue} = require('./../models');
 const bcrypt = require('bcrypt');
 const {saltRounds} = require('./../config/config');
 const roleService = require('./role.service');
@@ -12,6 +12,14 @@ const findByEmail = (email, loadRole = false) => {
   }
   return User.findOne(findOptions)
 };
+
+const getIds = (models) => {
+  var Ids = [];
+  for (x in models) {
+    Ids.push(models[x].id);
+  }
+  return Ids;
+}
 
 module.exports = {
 
@@ -106,5 +114,14 @@ module.exports = {
     await user.save();
 
     return user.id;
+  },
+
+  //DELETE Operations
+  deleteUser: async (id) => {
+    await User.destroy({where: {id}}).then(async () => {
+      const queueIds = getIds(await Queue.findAll({where: {UserId: id}}));
+      await Queue.destroy({where:{UserId: id}});
+    })
+    return;
   }
 }

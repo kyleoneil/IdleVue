@@ -149,4 +149,24 @@ router.put('/:id', (req, res) => {
   
 });
 
+router.delete('/:id', (req, res) => {
+  const roleName = req.user.roleName;
+  return authService.isAuthorized(roleName, 'BUSINESS_OWNER').then((result) => {
+    if (result) {
+      userService.findById(req.params.id).then((user) => {
+        // if(roleName === 'BUSINESS_OWNER' && req.user.business_id !== exists.dataValues.BusinessId) {
+        //   res.status(400).json({message: "User is not in same business as owner."})
+        // } else {
+        return userService.deleteUser(req.params.id)
+          .then(() => res.json({message: "User deleted successfully."}))
+          .catch(errorHandler.handleError(res));
+        // }
+      })
+    } else {
+      res.status(400).json({message: "User is not authorized to make changes."});
+      return;
+    }
+  })
+})
+
 module.exports = router;

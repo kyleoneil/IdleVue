@@ -140,7 +140,7 @@ module.exports = {
 
   markQueueAsCompleted: async (id) => {
     const queue = await Queue.findOne({where: {id}});
-    if (queue.status !== 'IN_PROGRESS') {
+    if (queue.status !== ['IN_PROGRESS']) {
       throw new ServiceError('Queue is not in progress');
     }
     queue.status = 'COMPLETED';
