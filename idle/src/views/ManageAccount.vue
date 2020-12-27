@@ -190,20 +190,31 @@
                     ></v-text-field>
                   </v-col>
                 </v-row>
-
+                <template v-if="role==2">
                 <v-select
                   :items="branches"
                   v-model="input.branch"
                   v-on:click="showBranches()"
                   label="Branch*"
-                  item-text="text"
-                  item-value="value"
                   outlined
                   hide-details
                   class="mb-2"
                   prepend-icon="mdi-source-branch"
                   dense
                 ></v-select>
+                </template>
+                <template v-else-if="role==1">
+                  <v-select
+                  :items="userType"
+                  v-model="input.roleId"
+                  label="User Type*"
+                  outlined
+                  hide-details
+                  class="mb-2"
+                  prepend-icon="mdi-account-settings"
+                  dense
+                ></v-select>
+                </template>
                 <v-row>
                   <v-col sm="5">
                     <v-select
@@ -349,32 +360,33 @@ export default {
           Authorization: data,
         },
       };
-      
+
       var date = input.month + "/" + input.day + "/" + input.year;
       if(this.role == 2){
         input.branch_id = input.branch;
         input.roleId == 3;
       }
-      if(input.roleId == 1){
-        input.roleName = "SUPER_ADMIN";
-      } else if(input.roleId == 2){
+      if(input.roleId == 2){
         input.roleName = "BUSINESS_OWNER";
       } else if(input.roleId == 3){
         input.roleName = "BUSINESS_TELLER";
       } else {
         input.roleName = "CUSTOMER";
       }
-      var addData = {
-        firstname: input.firstname,
-        lastname: input.lastname,
-        email: input.email,
-        password: input.password,
-        birthdate: date,
-        roleName: input.roleName,
-      };
-      if(input.roleId == 3){
-        addData = {}
-        if(this.role == 2){
+      var addData;
+
+      if(this.role == 2){
+        addData = {
+          firstname: input.firstname,
+          lastname: input.lastname,
+          email: input.email,
+          password: input.password,
+          birthdate: date,
+          roleName: input.roleName,
+          branch_id: input.branch,
+        }
+      } else {
+        if(input.roleId == 3 || input.roleId == 2){
           addData = {
             firstname: input.firstname,
             lastname: input.lastname,
@@ -382,10 +394,8 @@ export default {
             password: input.password,
             birthdate: date,
             roleName: input.roleName,
-            branch_id: input.branch,
-            business_id: this.businessId
+            business_id: '1'
           }
-          console.log(addData);
         } else {
           addData = {
             firstname: input.firstname,
@@ -394,24 +404,11 @@ export default {
             password: input.password,
             birthdate: date,
             roleName: input.roleName,
-            business_id: input.roleId,
           }
         }
-      } else if (input.roleId == 2){
-        addData = {}
-        addData = {
-          firstname: input.firstname,
-          lastname: input.lastname,
-          email: input.email,
-          password: input.password,
-          birthdate: date,
-          roleName: input.roleName,
-          business_id: input.roleId,
-        }
       }
-      // input.business_id = this.businessId;
-      console.log(input);
-      axios
+      if(this.role == 1){
+        axios
         .post("http://localhost:3000/api/users", addData)
         .then((data) => {
           console.log(data.data);
@@ -419,6 +416,16 @@ export default {
         .catch((error) => {
           console.log(error.response.data.message);
         });
+      } else {
+        axios
+        .post("http://localhost:3000/api/businesses/"+this.businessId+"/tellers", addData, head)
+        .then((data) => {
+          console.log(data.data);
+        })
+        .catch((error) => {
+          console.log(error.response.data.message);
+        });
+      }
       this.add = false;
       this.data[0].business = [];
 
@@ -714,7 +721,15 @@ export default {
       this.input.day = data.birthdate.split("/")[1];
       this.input.year = data.birthdate.split("/")[2];
       this.input.email = data.email;
-      console.log(this.input);
+      if(this.role == 1){
+        if(data.role == "Business Owner"){
+          this.input.roleId = "2"
+        } else if(data.role == "Business Teller"){
+          this.input.roleId = "3"
+        } else if(data.role == "Customer"){
+          this.input.roleId = "4"
+        }
+      }
     },
     saveAccount: function(input){
       const data = this.$store.state.token;
@@ -725,6 +740,7 @@ export default {
       };
       var date = input.month + "/" + input.day + "/" + input.year;
       input.birthdate = date;
+      console.log(input)
       axios
         .put("http://localhost:3000/api/users/"+input.id, input, head)
         .then((data) => {
