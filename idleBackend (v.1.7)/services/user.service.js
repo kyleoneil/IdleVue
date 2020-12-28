@@ -108,7 +108,7 @@ module.exports = {
     user.BranchId = data.branch_id;
     user.name = `${data.lastname}, ${data.firstname}`;
     user.birthdate = new Date(data.birthdate);
-    user.password = bcrypt.hashSync(data.password, saltRounds);
+    //user.password = bcrypt.hashSync(data.password, saltRounds);
 
     await user.save();
 
