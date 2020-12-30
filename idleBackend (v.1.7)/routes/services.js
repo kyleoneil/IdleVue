@@ -46,7 +46,6 @@ router.post('/', (req, res) => {
 })
 
 router.get('/', (req, res) => {
- 
     let {pageNo, resultsPerPage, branchId} = req.query;
     let pgNum = pageNo ? parseInt(pageNo) : 1;
     let pgRes = resultsPerPage ? parseInt(resultsPerPage) : 10;

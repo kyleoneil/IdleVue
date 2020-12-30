@@ -26,8 +26,9 @@ module.exports = {
     return service;
   },
 
-  getServices: async (pageNo, resultsPerPage, branchId) => {
-    const pageOffset = resultsPerPage * (pageNo - 1);
+  //pageNo, resultsPerPage, 
+  getServices: async (branchId) => {
+    //const pageOffset = resultsPerPage * (pageNo - 1);
 
     const where = {};
     if(branchId) {
@@ -36,8 +37,8 @@ module.exports = {
     const total_queue_records = (branchId) ? await Service.count({where}) : await Service.count();
 
     const servicePaginate = await Service.findAll({
-      offset: pageOffset,
-      limit: resultsPerPage,
+      //offset: pageOffset, 
+      //limit: resultsPerPage
       where
     })
 
@@ -61,11 +62,11 @@ module.exports = {
   },
 
   getServiceQueue: async (serviceId, pageNo, resultsPerPage) => {
-    const pageOffset = resultsPerPage * (pageNo - 1);
+    //const pageOffset = resultsPerPage * (pageNo - 1);
     const total_queue_records = await Queue.findAndCountAll({
       where: {service_id: serviceId},
-      offset: pageOffset,
-      limit: resultsPerPage,
+      //offset: pageOffset, 
+      //limit: resultsPerPage
       include: [{
         model: User,
         attributes: {

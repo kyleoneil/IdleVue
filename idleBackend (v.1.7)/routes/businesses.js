@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { restart } = require('nodemon');
+const dateUtil = require('./../utils/dateUtil');
 const businessService = require('./../services/business.service');
 const userService = require('./../services/user.service');
 const authService = require('./../services/auth.service');
@@ -24,6 +25,64 @@ router.post('/', (req, res) => {
                 .catch(errorHandler.handleError(res));
         }
     })
+})
+
+router.post('/:id/tellers', (req, res) => {
+    /**
+     * @type {{firstname:string, lastname:string, birthdate:string, email:string,password:string}}
+     */
+    const roleName = req.user.roleName;
+    const body = req.body;
+    body.roleName = 'BUSINESS_TELLER';
+    body.business_id = req.params.id;
+
+    return authService.isAuthorized(roleName, 'BUSINESS_OWNER').then((result) => {
+        if (result && req.user.business_id == body.business_id) {
+            if (!body.firstname || !body.lastname || !body.email || !body.password) {
+                res.status(400).json({message: "First name, last name, email and password are required."});
+                return;
+            }
+            
+            if (body.birthdate && !dateUtil.isValidDateString(body.birthdate)) {
+                res.status(400).json({message: "Invalid birthdate format. Should be MM/dd/yyyy."});
+                return;
+            }
+        
+            if (body.business_id) {
+                businessService.findBusinessById(body.business_id).then((result) => {
+                if (!result) {
+                    res.status(400).json({message: "Given business is not registered."});
+                    return;
+                }
+            })
+            } else if (body.branch_id) {
+            branchService.findById(body.branch_id).then((results) => {
+                if (!results) {
+                    res.status(400).json({message: "Given branch is not registered."});
+                    return;
+                }
+            })
+            } else {
+                res.status(400).json({message: "Please enter valid business or branch."});
+                return;
+            }
+        
+          
+            return userService.userExists(body.email).then((exists) => {
+                if (exists) {
+                    res.status(400).json({message: "User already exists"});
+                } else {
+                    userService.create(body)
+                        .then((user) => res.json({id: user.id, message: "User successfully created."}))
+                        .catch(errorHandler.handleError(res));
+                }
+            })
+        } else {
+            res.status(400).json({message: "User is not authorized to make changes."});
+                return;
+        }
+    }) 
+        
 })
 
 router.get('/', (req, res) => {

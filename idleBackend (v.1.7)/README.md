@@ -7,20 +7,7 @@ Idle Backend is a service which holds all APIs for the entire IDLE ecosystem.
 ### Prerequisites
 - [NodeJS](https://nodejs.org/en/download) version 12.14.1 or higher
 - [GIT](https://git-scm.com/downloads)
-- Running [MariaDB 10.5](https://downloads.mariadb.org/mariadb/+releases/).
-- Create a db and name it `idle`
-- Create a user with username and password set to `idle`
-- Grant user `idle` full privilege to db `idle`
-- If you have docker, the previous 4 steps can be automated by executing:
-    ```shell
-      docker volume create idle-db # Only execute this once
-      docker run -d --name=idle-db -p 3306:3306 -v idle-db:/var/lib/mysql \
-      -e MYSQL_ROOT_PASSWORD=root \
-      -e MYSQL_USER=idle \
-      -e MYSQL_PASSWORD=idle \
-      -e MYSQL_DATABASE=idle \
-      mariadb:10.5  
-    ```
+- Create a db and name it `test-api`
 - Lastly, execute all sql files in [migrations](./migrations) folder
 
 ### Steps
@@ -36,9 +23,7 @@ Idle Backend is a service which holds all APIs for the entire IDLE ecosystem.
   ```
 3. Run the project
   ```shell
-    npm start
-    # or to run with hot reload enabled
-    npm run dev
+   nodemon server
   ```
   
 **Important!!!** In development mode, this will automatically create the tables.
@@ -73,7 +58,3 @@ We are doing hybrid approach in generating the models and doing [migrations](htt
 3. Go to [migrations](./migrations) and update the expected schema. See [sequelize migrations](https://sequelize.org/master/manual/migrations.html) for the guide.
 
 The other way is to manually copy existing models and migrations and do the necessary adjustments.
-
-## Notes
-
-- See [QueryInterface](https://github.com/sequelize/sequelize/blob/febc083adee2cd3e6f24b18a556acdc4c4f50f96/src/dialects/abstract/query-interface.js#L11) for available functions that can be used in [migrations](./migrations) scripts.

@@ -36,12 +36,12 @@ module.exports = {
       where.status = status;
     }
 
-    const pageOffset = resultsPerPage * (pageNo - 1);
+    //const pageOffset = resultsPerPage * (pageNo - 1);
 
     const total_queue_records = await Queue.count({where})
     const queuePaginate = await Queue.findAll({
-      offset: pageOffset,
-      limit: resultsPerPage,
+      //offset: pageOffset, 
+      //limit: resultsPerPage
       where,
       attributes: {
         exclude: ['updatedAt', 'deletedAt', 'UserId', 'ServiceId']
@@ -77,13 +77,14 @@ module.exports = {
     }
   },
 
-  getUserQueues: async (userId, pageNo, resultsPerPage, status = ['IN_QUEUE', 'IN_PROGRESS']) => {
-    const pageOffset = resultsPerPage * (pageNo - 1);
+  //pageNo, resultsPerPage, 
+  getUserQueues: async (userId, status = ['IN_QUEUE', 'IN_PROGRESS']) => {
+    //const pageOffset = resultsPerPage * (pageNo - 1);
     const where = {user_id: userId, status};
     const total_queue_records = await Queue.count({where})
     const queuePaginate = await Queue.findAll({
-      offset: pageOffset,
-      limit: resultsPerPage,
+      //offset: pageOffset, 
+      //limit: resultsPerPage
       where,
       attributes: {
         exclude: ['id','updatedAt', 'deletedAt', 'UserId', 'ServiceId']
@@ -140,7 +141,7 @@ module.exports = {
 
   markQueueAsCompleted: async (id) => {
     const queue = await Queue.findOne({where: {id}});
-    if (queue.status !== 'IN_PROGRESS') {
+    if (queue.status !== ['IN_PROGRESS']) {
       throw new ServiceError('Queue is not in progress');
     }
     queue.status = 'COMPLETED';

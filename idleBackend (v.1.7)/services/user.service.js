@@ -1,5 +1,5 @@
 
-const {User, Role} = require('./../models');
+const {User, Role, Queue} = require('./../models');
 const bcrypt = require('bcrypt');
 const {saltRounds} = require('./../config/config');
 const roleService = require('./role.service');
@@ -12,6 +12,14 @@ const findByEmail = (email, loadRole = false) => {
   }
   return User.findOne(findOptions)
 };
+
+const getIds = (models) => {
+  var Ids = [];
+  for (x in models) {
+    Ids.push(models[x].id);
+  }
+  return Ids;
+}
 
 module.exports = {
 
@@ -51,20 +59,20 @@ module.exports = {
    * @param resultsPerPage
    * @returns {Promise<{totalRecords: number, data: [{}]}>}
    */
-  findPaginated: async (pageNo, resultsPerPage, businessId) => {
+  //optional params: pageNo, resultsPerPage, 
+  findPaginated: async (businessId) => {
     // TODO: Implement this. Note: make sure password is removed prior to return
     // TODO Completed
     const where = {};
     if (businessId) {
       where.business_id = businessId;
     }
-    const pageOffset = resultsPerPage * (pageNo - 1);
+    //const pageOffset = resultsPerPage * (pageNo - 1);
     const total_queue_records = await User.count({where});
     const userPaginated = await User.findAll({
       where, 
-      offset: pageOffset, 
-      limit: resultsPerPage,
-      attributes: { exclude: ['password'] }
+      //offset: pageOffset, 
+      //limit: resultsPerPage
     })
     return {
       totalRecords: total_queue_records,
@@ -81,8 +89,7 @@ module.exports = {
         role_id: 3
       }, 
       offset: pageOffset, 
-      limit: resultsPerPage,
-      attributes: { exclude: ['password'] }
+      limit: resultsPerPage
     })
     return {
       totalRecords: total_queue_records,
@@ -101,10 +108,19 @@ module.exports = {
     user.BranchId = data.branch_id;
     user.name = `${data.lastname}, ${data.firstname}`;
     user.birthdate = new Date(data.birthdate);
-    user.password = bcrypt.hashSync(data.password, saltRounds);
+    //user.password = bcrypt.hashSync(data.password, saltRounds);
 
     await user.save();
 
     return user.id;
+  },
+
+  //DELETE Operations
+  deleteUser: async (id) => {
+    await User.destroy({where: {id}}).then(async () => {
+      const queueIds = getIds(await Queue.findAll({where: {UserId: id}}));
+      await Queue.destroy({where:{UserId: id}});
+    })
+    return;
   }
 }
