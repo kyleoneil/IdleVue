@@ -750,3 +750,15 @@
 {"status":404,"level":"error","message":"undefined","timestamp":"2020-12-27T12:01:55.389Z"}
 {"message":"{\"message\":\"API does not exist.\",\"statusCode\":404}","level":"error","timestamp":"2020-12-27T12:01:55.390Z"}
 {"status":404,"level":"error","message":"undefined","timestamp":"2020-12-27T12:01:55.390Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-30T11:42:42.550Z"}
+{"message":"{\"message\":\"Cannot read property 'id' of null\",\"statusCode\":500}","level":"error","timestamp":"2020-12-30T11:42:42.552Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-30T11:42:42.552Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-30T11:42:43.082Z"}
+{"message":"{\"message\":\"Cannot read property 'id' of null\",\"statusCode\":500}","level":"error","timestamp":"2020-12-30T11:42:43.083Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-30T11:42:43.083Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-30T13:11:02.025Z"}
+{"message":"{\"message\":\"Cannot read property 'id' of null\",\"statusCode\":500}","level":"error","timestamp":"2020-12-30T13:11:02.025Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-30T13:11:02.026Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-30T13:11:16.997Z"}
+{"message":"{\"message\":\"Cannot read property 'id' of null\",\"statusCode\":500}","level":"error","timestamp":"2020-12-30T13:11:16.998Z"}
+{"level":"error","message":"undefined","timestamp":"2020-12-30T13:11:16.999Z"}
